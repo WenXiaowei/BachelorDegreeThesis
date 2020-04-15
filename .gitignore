@@ -218,3 +218,9 @@ TSWLatexianTemp*
 
 # expex forward references with \gathertags
 *-tags.tex
+
+.idea/
+
+out/tesi.pdf
+
+tesi.pdf
