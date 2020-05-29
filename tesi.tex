@@ -13,16 +13,16 @@
                a4paper,                 % carta A4
                twoside,                 % impagina per fronte-retro
                openright,               % inizio capitoli a destra
-               english,                 
-               italian,                 
-               ]{book}    
+               english,
+               italian,
+                ctexart,
+               ]{book}
 
 %**************************************************************
 % Importazione package
 %************************************************************** 
-
 %\usepackage{amsmath,amssymb,amsthm}    % matematica
-
+\usepackage[UTF8]{ctex}
 \usepackage[T1]{fontenc}                % codifica dei font:
                                         % NOTA BENE! richiede una distribuzione *completa* di LaTeX
 
@@ -84,8 +84,8 @@
                                         % 4. compilare due volte tesi.tex.
 
 \usepackage[backend=biber,style=verbose-ibid,hyperref,backref]{biblatex}
-                                        % eccellente pacchetto per la bibliografia; 
-                                        % produce uno stile di citazione autore-anno; 
+                                        % eccellente pacchetto per la bibliografia;
+                                        % produce uno stile di citazione autore-anno;
                                         % lo stile "numeric-comp" produce riferimenti numerici
                                         % per includerlo nel documento bisogna:
                                         % 1. compilare una prima volta tesi.tex;
@@ -118,7 +118,7 @@
 \input{./capitoli/5_progettazione_codifica.tex}             % Product Prototype
 \input{./capitoli/6_verifica_validazione.tex}             % Product Design Freeze e SOP
 \input{./capitoli/7_conclusioni.tex}             % Conclusioni
-\appendix                               
+\appendix
 \input{capitoli/capitolo-A}             % Appendice A
 
 %**************************************************************

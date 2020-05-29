@@ -11,7 +11,36 @@
 
 %**************************************************************
 \section{Introduzione al progetto}
+Le applicazioni mobili rappresentano oggi una delle principali sfide per la sicurezza informatica: negli ultimi anni se la rapida diffusione degli smartphone ha visto emergere il mobile come uno dei principali canali per l'erogazione di servizi, sono aumentati esponenzialmente gli attacchi contro le piattaforme mobili.
 
+Le applicazioni mobili soffrono spesso di debolezze intrinseche dovute al design dell'applicazione e al suo sviluppo, debolezze che possono prevedere la memorizzazione di informazioni sensibili sul device, possibilità di modificare l'applicazione (mediante repackaging dell'App), o la possibilità di un semplice reverse engineering.
+
+Minacce tipiche dell'ambiente mobile sono:
+\begin{itemize}
+    \setlength\itemsep{0.1em}
+    \item Utilizzo improprio della piattaforma
+    \item Archiviazione dei dati non sicura
+    \item Comunicazione insicura
+    \item Autenticazione non sicura
+\end{itemize}
+
+Lo scopo dello stage è la realizzazione di un tool di analisi di applicazioni Android che permetta di automatizzare operazioni di reverse engineering dei pacchetti delle app mobile (APK), effettuando nell'ordine:
+\begin{enumerate}
+    \setlength\itemsep{0.1em}
+    \item decompilazione sorgenti
+    \item repackaging dell'applicativo
+    \item esecuzione di test suite automatiche (mediante integrazione con framework di test)
+\end{enumerate}
+
+Al termine dell'esecuzione dovranno essere rese disponibili informazioni quali:
+\begin{itemize}
+    \setlength\itemsep{0.1em}
+    \item sorgenti decompilati
+    \item stringhe estratte dai sorgenti per l'individuazione di chiavi hard coded
+    \item contenuto della storage area dell'app
+    \item stringhe estratte dalla storage area dell'app per l'inviduazione di informazioni sensibili
+    \item file di trace per le operazioni di rete effettuate (come file PCAP o in alternativa file HAR)
+\end{itemize}
 %**************************************************************
 \section{Analisi preventiva dei rischi}
 
