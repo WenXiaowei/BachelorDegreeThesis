@@ -4,16 +4,16 @@
 
 %**************************************************************
 \chapter{Descrizione dello stage}
-\label{cap:descrizione-stage}
+\label{ch:descrizione-stage}
 %**************************************************************
 
-\intro{Breve introduzione al capitolo}\\
+\intro{Questo capito contiene l'introduzione del progetto, l'analisi dei rischi, la specifica degli obiettivi e la pianificazione dei lavori.}\\
 
 %**************************************************************
-\section{Introduzione al progetto}
+\section{Introduzione al progetto}\label{sec:introduzione-al-progetto}
 Le applicazioni mobili rappresentano oggi una delle principali sfide per la sicurezza informatica: negli ultimi anni se la rapida diffusione degli smartphone ha visto emergere il mobile come uno dei principali canali per l'erogazione di servizi, sono aumentati esponenzialmente gli attacchi contro le piattaforme mobili.
 
-Le applicazioni mobili soffrono spesso di debolezze intrinseche dovute al design dell'applicazione e al suo sviluppo, debolezze che possono prevedere la memorizzazione di informazioni sensibili sul device, possibilità di modificare l'applicazione (mediante repackaging dell'App), o la possibilità di un semplice reverse engineering.
+Le applicazioni mobili soffrono spesso di debolezze intrinseche dovute al design dell'applicazione e al suo sviluppo, debolezze che possono prevedere la memorizzazione d'informazioni sensibili sul device, possibilità di modificare l'applicazione (mediante \gls{repackaging} dell'App), o la possibilità di un semplice reverse engineering.
 
 Minacce tipiche dell'ambiente mobile sono:
 \begin{itemize}
@@ -24,38 +24,46 @@ Minacce tipiche dell'ambiente mobile sono:
     \item Autenticazione non sicura
 \end{itemize}
 
+%**************************************************************
+\section{Analisi preventiva dei rischi}\label{sec:analisi-preventiva-dei-rischi}
+
+Durante la fase di analisi iniziale sono stati individuati alcuni possibili rischi a cui si potrà andare incontro.
+Si è quindi proceduto a elaborare delle possibili soluzioni per far fronte a tali rischi.\\
+
+\begin{risk}{Tecnologie/framework sconosciute}
+    \riskdescription{Durante lo svolgimento dello stage, sono richieste l'uso di alcune tecnologie o di framework fin'ora mai viste dallo stagista.}
+    \risksolution{\`{E} stato programmato un periodo di auto-formazione riguardanti le tecnologie che si prevede di utilizzare, inoltre, il tutor aziendale si è reso disponibile di aiutare lo stagista se necessario}
+    \label{risk:tecnologie-framework-sconosciute}
+\end{risk}
+
+%**************************************************************
+\section{Requisiti e obiettivi}\label{sec:requisiti-e-obiettivi}
 Lo scopo dello stage è la realizzazione di un tool di analisi di applicazioni Android che permetta di automatizzare operazioni di reverse engineering dei pacchetti delle app mobile (APK), effettuando nell'ordine:
 \begin{enumerate}
     \setlength\itemsep{0.1em}
-    \item decompilazione sorgenti
-    \item repackaging dell'applicativo
-    \item esecuzione di test suite automatiche (mediante integrazione con framework di test)
+    \item decompilazione sorgenti;
+    \item \gls{repackaging} dell'applicativo.
 \end{enumerate}
 
 Al termine dell'esecuzione dovranno essere rese disponibili informazioni quali:
 \begin{itemize}
     \setlength\itemsep{0.1em}
-    \item sorgenti decompilati
-    \item stringhe estratte dai sorgenti per l'individuazione di chiavi hard coded
-    \item contenuto della storage area dell'app
-    \item stringhe estratte dalla storage area dell'app per l'inviduazione di informazioni sensibili
-    \item file di trace per le operazioni di rete effettuate (come file PCAP o in alternativa file HAR)
+    \item sorgenti decompilati;
+    \item stringhe estratte dai sorgenti per l'individuazione di chiavi hard coded;
+    \item contenuto della storage area dell'app;
+    \item stringhe estratte dalla storage area dell'app per l'inviduazione d'informazioni sensibili;
+    \item file di trace per le operazioni di rete effettuate (come file PCAP o in alternativa file HAR).
 \end{itemize}
-%**************************************************************
-\section{Analisi preventiva dei rischi}
-
-Durante la fase di analisi iniziale sono stati individuati alcuni possibili rischi a cui si potrà andare incontro.
-Si è quindi proceduto a elaborare delle possibili soluzioni per far fronte a tali rischi.\\
-
-\begin{risk}{Performance del simulatore hardware}
-    \riskdescription{le performance del simulatore hardware e la comunicazione con questo potrebbero risultare lenti o non abbastanza buoni da causare il fallimento dei test}
-    \risksolution{coinvolgimento del responsabile a capo del progetto relativo il simulatore hardware}
-    \label{risk:hardware-simulator} 
-\end{risk}
 
 %**************************************************************
-\section{Requisiti e obiettivi}
-
-
-%**************************************************************
-\section{Pianificazione}
+\section{Pianificazione}\label{sec:pianificazione}
+\begin{tabularx}{\textwidth}{|c|X|}
+    \hline
+    \textbf{Durata in ore} & \textbf{Descrizione dell'attività} \\\hline
+    40 & Analisi dei requisiti \\\hline
+    40 & Studio e approfondimento delle tecnologie di sviluppo \\\hline
+    120 & Stesura del codice \\\hline
+    80 & Collaudo e risoluzione bug \\\hline
+    40 & Analisi delle performance e assestamento dei risultati \\\hline
+    \textbf{Totale ore} & \multicolumn{1}{|c|}{\textbf{320}} \\\hline
+\end{tabularx}
