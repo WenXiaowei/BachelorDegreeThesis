@@ -57,7 +57,11 @@ Lo scopo dello stage è la realizzazione di un tool di analisi di applicazioni A
 \begin{enumerate}
     \setlength\itemsep{0.1em}
     \item decompilazione sorgenti;
-    \item repackaging dell'applicativo.
+    \item analisi dei file sorgenti ottenuti dalla decompilazione;
+    \item generazione di un report dell'analisi;
+    \item creazione di un file \gls{cap} che contiene i dettagli delle attività di rete;
+    \item repackaging dell'applicativo;
+    \item firma dell'APK ottenuto dal repackaging.
 \end{enumerate}
 
 Al termine dell'esecuzione dovranno essere rese disponibili informazioni quali:
@@ -67,7 +71,7 @@ Al termine dell'esecuzione dovranno essere rese disponibili informazioni quali:
     \item stringhe estratte dai sorgenti per l'individuazione di chiavi hard coded;
     \item contenuto della storage area dell'app;
     \item stringhe estratte dalla storage area dell'app per l'inviduazione d'informazioni sensibili;
-    \item file di trace per le operazioni di rete effettuate (come file PCAP o in alternativa file HAR).
+    \item file di trace per le operazioni di rete effettuate in un file cap.
 \end{itemize}
 
 %**************************************************************
