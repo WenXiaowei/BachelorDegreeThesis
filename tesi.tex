@@ -13,16 +13,16 @@
                a4paper,                 % carta A4
                twoside,                 % impagina per fronte-retro
                openright,               % inizio capitoli a destra
-               english,                 
-               italian,                 
-               ]{book}    
+               english,
+               italian,
+                ctexart,
+               ]{book}
 
 %**************************************************************
 % Importazione package
 %************************************************************** 
-
 %\usepackage{amsmath,amssymb,amsthm}    % matematica
-
+\usepackage[UTF8]{ctex}
 \usepackage[T1]{fontenc}                % codifica dei font:
                                         % NOTA BENE! richiede una distribuzione *completa* di LaTeX
 
@@ -64,11 +64,12 @@
 
 \usepackage[font=small]{quoting}        % citazioni
 
-\usepackage{subfig}                     % sottofigure, sottotabelle
+%\usepackage{subfig}                     % sottofigure, sottotabelle
 
 \usepackage[italian]{varioref}          % riferimenti completi della pagina
 
 \usepackage[dvipsnames]{xcolor}         % colori
+\usepackage{formattazione}
 
 \usepackage{booktabs}                   % tabelle                                       
 \usepackage{tabularx}                   % tabelle di larghezza prefissata                                    
@@ -83,8 +84,8 @@
                                         % 4. compilare due volte tesi.tex.
 
 \usepackage[backend=biber,style=verbose-ibid,hyperref,backref]{biblatex}
-                                        % eccellente pacchetto per la bibliografia; 
-                                        % produce uno stile di citazione autore-anno; 
+                                        % eccellente pacchetto per la bibliografia;
+                                        % produce uno stile di citazione autore-anno;
                                         % lo stile "numeric-comp" produce riferimenti numerici
                                         % per includerlo nel documento bisogna:
                                         % 1. compilare una prima volta tesi.tex;
@@ -110,15 +111,15 @@
 % Materiale principale
 %**************************************************************
 \mainmatter
-\input{capitoli/capitolo-1}             % Introduzione
-\input{capitoli/capitolo-2}             % Processi
-\input{capitoli/capitolo-3}             % Kick-Off
-\input{capitoli/capitolo-4}             % Concept Preview
-\input{capitoli/capitolo-5}             % Product Prototype
-\input{capitoli/capitolo-6}             % Product Design Freeze e SOP
-\input{capitoli/capitolo-7}             % Conclusioni
-\appendix                               
-\input{capitoli/capitolo-A}             % Appendice A
+\input{./capitoli/1_introduzione.tex}             % Introduzione
+%\input{./capitoli/2_processi_metodologie.tex}             % Processi da togliere
+\input{./capitoli/3_descrizione_stage.tex}             % Kick-Off
+\input{./capitoli/4_0_analisi_dei_requisiti.tex}             % Concept Preview
+%\input{./capitoli/5_progettazione_codifica.tex}             % Product Prototype
+%\input{./capitoli/6_verifica_validazione.tex}             % Product Design Freeze e SOP
+%\input{./capitoli/7_conclusioni.tex}             % Conclusioni
+%\appendix
+%\input{capitoli/capitolo-A}             % Appendice A
 
 %**************************************************************
 % Materiale finale
