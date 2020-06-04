@@ -15,11 +15,29 @@
 
 Di seguito viene data una panoramica delle tecnologie e strumenti utilizzati.
 
-\subsection*{Tecnologia 1}
-Descrizione Tecnologia 1.
+\subsection*{CFR - decompilatore java}
+CFR è il decompilatore utilizzato per trasformare il codice bytecode \textit{.class} in \textit{.java};
+\url{http://www.benf.org/other/cfr/index.html}
 
-\subsection*{Tecnologia 2}
-Descrizione Tecnologia 2
+\subsection*{Apk Tool}
+Apktool è un tool per effettuare il reverse engineering delle applicazioni Android. Può decodificare le risorse contenute nell'APK in una forma quasi uguale a quelli originali, può anche di ricostruire l'APK dopo le modifiche alle risorse modificate.
+\url{https://ibotpeaches.github.io/Apktool/}
+\subsection*{Dex2Jar}
+Questo strumento permette di trasformare i file \textit{.dex} in formato \textit{.jar} in modo che possa essere letta attraverso un software di compressione, come 7Zip, per poter accedere quindi ai file di tipo \textit{.class}.
+\url{https://github.com/pxb1988/dex2jar}
+
+\subsection*{Android Emulator}
+Lo strumento che permette di avviare degli emulatori Android, conosciuti anche come AVD. \`{E} stato utilizzato per eseguire l'applicazione ricompilata, per poter fare il dump dei dati presenti nell'area di storage dell'applicazione, come i file JSON, XML e SQLite, o come il file delle attività di rete.
+
+\subsection*{Intellij IDEA}
+L'IDE utilizzato per la scrittura del codice in Java.
+
+\subsection*{Maven}
+\subsection*{Astah}
+
+\subsection*{Java}
+\subsection*{Json}
+
 
 %**************************************************************
 \section{Ciclo di vita del software}
@@ -29,17 +47,65 @@ Descrizione Tecnologia 2
 \section{Progettazione}
 \label{sec:progettazione}
 
-\subsubsection{Namespace 1} %**************************
-Descrizione namespace 1.
-
+\subsection{Package}\label{subsec:package}
 \begin{namespacedesc}
-    \classdesc{Classe 1}{Descrizione classe 1}
-    \classdesc{Classe 2}{Descrizione classe 2}
+    \classdesc{ApatLauncher}{}
+    \classdesc{Utils}{}
+\end{namespacedesc}
+
+\subsubsection{Package  it.imolinfo.apat.controller} %**************************
+Descrizione namespace 1
+\begin{namespacedesc}
+    \classdesc{AndroidManifestEditor.java}{\`{E} la classe che si occupa, dato un oggetto di tipo File Android Manifest, di modificare e/o aggiungere il tag \textit{debugabble} impostando il suo valore a \textit{true};}
+    \classdesc{Controller}{Descrizione classe 2}
+    \classdesc{MVCModule}{Descrizione classe 2}
+\end{namespacedesc}
+
+\subsubsection{Package  it.imolinfo.apat.model} %**************************
+\begin{namespacedesc}
+    \classdesc{Modello}{Descrizione classe 1}
+    \classdesc{ModelState}{Descrizione classe 2}
+    \classdesc{PDFWriter}{Descrizione classe 2}
+    \classdesc{Result}{Descrizione classe 2}
+    \classdesc{Unzipper}{Descrizione classe 2}
+\end{namespacedesc}
+
+\subsubsection{Package  it.imolinfo.apat.pattern} %**************************
+\begin{namespacedesc}
+    \classdesc{analyzer.Analyze}{Descrizione classe 1}
+    \classdesc{analyzer.BaseAnalyze}{Descrizione classe 1}
+    \classdesc{analyzer.BaseAnalyzeDecorator}{Descrizione classe 1}
+    \classdesc{analyzer.DumpedFilesAnalyzer}{Descrizione classe 1}
+    \classdesc{analyzer.FindDataBase}{Descrizione classe 1}
+    \classdesc{analyzer.LambdaCounter}{Descrizione classe 1}
+    \classdesc{analyzer.StringFinder}{Descrizione classe 1}
+\end{namespacedesc}
+\begin{namespacedesc}
+    \classdesc{observer.Observable}{observable}
+    \classdesc{observer.Observer}{observer}
+\end{namespacedesc}
+\begin{namespacedesc}
+    \classdesc{cliCommandFactory.CommandFactory}{observable}
+    \classdesc{cliCommandFactory.Commands}{observable}
+    \classdesc{cliCommandFactory.UnixCommandFactory}{observable}
+    \classdesc{cliCommandFactory.WindowsCommandFactory}{observable}
+\end{namespacedesc}
+
+\subsubsection{Package  it.imolinfo.apat.view} %**************************
+\begin{namespacedesc}
+    \classdesc{AnalysisChooser}{Descrizione classe 1}
+    \classdesc{ApkFilter}{Descrizione classe 1}
+    \classdesc{KeyStoreFilter}{Descrizione classe 1}
+    \classdesc{TextFilter}{Descrizione classe 1}
+    \classdesc{View}{Descrizione classe 1}
+    \classdesc{WaitAction}{Descrizione classe 1}
 \end{namespacedesc}
 
 
 %**************************************************************
 \section{Design Pattern utilizzati}\label{sec:design-pattern-utilizzati}
-
+\subsection{Model View Controller}\label{subsec:model-view-controller}
+\subsection{Observer}\label{subsec:observer}
+\subsection{Decorator}\label{subsec:decorator}
 %**************************************************************
 \section{Codifica}\label{sec:codifica}
