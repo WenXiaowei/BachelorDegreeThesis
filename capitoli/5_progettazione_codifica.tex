@@ -37,6 +37,7 @@ L'IDE utilizzato per la scrittura del codice in Java.
 
 \subsection*{Java}
 \subsection*{Json}
+\subsection*{Git - GitLab}
 
 
 %**************************************************************
@@ -48,57 +49,61 @@ L'IDE utilizzato per la scrittura del codice in Java.
 \label{sec:progettazione}
 
 \subsection{Package}\label{subsec:package}
+Questo è il root package del tool, contiene altri package e le due classi elencati successivamente.
 \begin{namespacedesc}
-    \classdesc{ApatLauncher}{}
-    \classdesc{Utils}{}
+    \classdesc{ApatLauncher}{\`{E} la classe di launcher del tool, si occupa principalmente di mettere in relazione di observed-observer i componenti della vista con i dati del modello;}
+    \classdesc{Utils}{La classe di utilities che ha delle funzioni statiche utilizzata nel tool per evitare la ripetizione del codice.}
 \end{namespacedesc}
 
-\subsubsection{Package  it.imolinfo.apat.controller} %**************************
-Descrizione namespace 1
+\subsubsection{Package it.imolinfo.apat.controller} %**************************
+Questo è il package che contiene la classe Controller e ciò che riguarda l'interazione del controller con il filesystem.
 \begin{namespacedesc}
     \classdesc{AndroidManifestEditor.java}{\`{E} la classe che si occupa, dato un oggetto di tipo File Android Manifest, di modificare e/o aggiungere il tag \textit{debugabble} impostando il suo valore a \textit{true};}
-    \classdesc{Controller}{Descrizione classe 2}
-    \classdesc{MVCModule}{Descrizione classe 2}
+    \classdesc{Controller}{\`{E} il controller del MVC, si occupa di effettuare le operazioni di decompilazione, ricompilazione, decodifica e analisi dei file;}
+    \classdesc{MVCModule}{\`{E} la classe di effettuare la dependency injection per la creazione del MVC.}
 \end{namespacedesc}
 
-\subsubsection{Package  it.imolinfo.apat.model} %**************************
+\subsubsection{Package it.imolinfo.apat.model} %**************************
+Questo package contiene le classi che riguardano il modello del pattern Model View Controller.
 \begin{namespacedesc}
-    \classdesc{Modello}{Descrizione classe 1}
-    \classdesc{ModelState}{Descrizione classe 2}
-    \classdesc{PDFWriter}{Descrizione classe 2}
-    \classdesc{Result}{Descrizione classe 2}
-    \classdesc{Unzipper}{Descrizione classe 2}
+    \classdesc{Modello}{La classe che contiene i dati utili al corretto funzionamento del tool;}
+    \classdesc{ModelState}{\`{E} la classe che viene usato per poter salvare lo stato del funzionamento del tool. Lo stato viene salvato quando viene chiuso il tool, e viene ricaricato al successivo avvio;}
+    \classdesc{PDFWriter}{\`{E} la classe wrapper che si occupa della creazione del file PDF per salvare i risultati dell'analisi;}
+    \classdesc{Result}{\`{E} la classe di messaggio che viene restituita quando il tool interagisce con il file system;}
+    \classdesc{Unzipper}{\`{E} la classe si occupa di decomprimere i file zip;}
+    \classdesc{Dumper}{\`{E} la classe che si occupa di effettuare il dump dei dati da un file con estensione \textit{db};}
 \end{namespacedesc}
 
-\subsubsection{Package  it.imolinfo.apat.pattern} %**************************
+\subsubsection{Package it.imolinfo.apat.pattern} %**************************
+Questo package contiene degli sotto-package ognuno dei quali rappresenta un design pattern utilizzato nello sviluppo del tool.
 \begin{namespacedesc}
-    \classdesc{analyzer.Analyze}{Descrizione classe 1}
-    \classdesc{analyzer.BaseAnalyze}{Descrizione classe 1}
-    \classdesc{analyzer.BaseAnalyzeDecorator}{Descrizione classe 1}
-    \classdesc{analyzer.DumpedFilesAnalyzer}{Descrizione classe 1}
-    \classdesc{analyzer.FindDataBase}{Descrizione classe 1}
-    \classdesc{analyzer.LambdaCounter}{Descrizione classe 1}
-    \classdesc{analyzer.StringFinder}{Descrizione classe 1}
+    \classdesc{analyzer.Analyze}{\`{E} l'interfaccia di base del pattern Decorator.}
+    \classdesc{analyzer.BaseAnalyze}{\`{E} la classe dell'oggetto base che viene decorato.}
+    \classdesc{analyzer.BaseAnalyzeDecorator}{\`{E} il classe astratta del decorator di base che implementa l'interfaccia Analyze, e ha un metodo astratto \textit{doAnalysis()} che deve essere implementato dai decorator concreti.}
+    \classdesc{analyzer.DumpDataBase}{\`{E} il decorator che si occupa di estrarre i contenuti dei file \textit{.db} scaricati dall'area di storage dell'app.}
+    \classdesc{analyzer.DumpedFilesAnalyzer}{\`{E} il decorator che si occupa di analizzare i file dell'area di storage dell'applicazione con estensione \textit{XML} e \textit{json}, principalmente, legge il contenuto di tali file, e in base ad una whitelist, seleziona quali risultati restituire al chiamante.}
+    \classdesc{analyzer.LambdaCounter}{\`{E} il decorator che conta il numero di lambda presente per ogni classe di codice \textit{.java} decompilato.}
+    \classdesc{analyzer.StringFinder}{\`{E} il decorator che analizza i file di tipo \textit{.java}, ed estrae le stringhe hardcoded, può essere utilizzato insieme a un blacklist delle stringhe che devono essere ignorate.}
 \end{namespacedesc}
 \begin{namespacedesc}
-    \classdesc{observer.Observable}{observable}
-    \classdesc{observer.Observer}{observer}
+    \classdesc{observer.Observable}{La classe parametrizzata T che può essere osservato;}
+    \classdesc{observer.Observer}{L'interfaccia parametrizzata che ha il ruolo dell'observer;}
 \end{namespacedesc}
 \begin{namespacedesc}
-    \classdesc{cliCommandFactory.CommandFactory}{observable}
-    \classdesc{cliCommandFactory.Commands}{observable}
-    \classdesc{cliCommandFactory.UnixCommandFactory}{observable}
-    \classdesc{cliCommandFactory.WindowsCommandFactory}{observable}
+    \classdesc{CliCommandFactory.Commands}{\`{E} l'interfaccia che contiene i metodi, dove ognuno dei quali deve generare delle istruzioni per la linea di comando.}
+    \classdesc{CliCommandFactory.CommandFactory}{\`{E} la classe astratta che implementa la precendente interfaccia, con un costruttore di base che richiede un path di base.}
+    \classdesc{CliCommandFactory.UnixCommandFactory}{\`{E} l'implementazione della classe astratta CommandFactory per il sistema UNIX.}
+    \classdesc{CliCommandFactory.WindowsCommandFactory}{\`{E} l'implementazione della classe astratta CommandFactory per il sistema Windows.}
 \end{namespacedesc}
 
-\subsubsection{Package  it.imolinfo.apat.view} %**************************
+\subsubsection{Package it.imolinfo.apat.view} %**************************
 \begin{namespacedesc}
-    \classdesc{AnalysisChooser}{Descrizione classe 1}
-    \classdesc{ApkFilter}{Descrizione classe 1}
-    \classdesc{KeyStoreFilter}{Descrizione classe 1}
-    \classdesc{TextFilter}{Descrizione classe 1}
-    \classdesc{View}{Descrizione classe 1}
-    \classdesc{WaitAction}{Descrizione classe 1}
+    \classdesc{AnalysisChooser}{\`{E} la finestra che mostra le opzioni di analisi.}
+    \classdesc{View}{\`{E} la finestra principale, dove permette di selezionare il file \textit{apk} da decompilare ed analizzare.}
+    \classdesc{WaitAction}{\`{E} un'implementazione della classe Action che permette di eseguire un processo mostrando la barra del caricamento.}
+    \classdesc{ApkFilter}{\`{E} l'implementazione dell'interfaccia \textbf{FileFilter} che accetta solo i file di tipo \textit{APK}}
+    \classdesc{KeyStoreFilter}{\`{E} l'implementazione dell'interfaccia \textbf{FileFilter} che accetta solo i file di tipo \textit{JKS}}
+    \classdesc{TextFilter}{\`{E} l'implementazione dell'interfaccia \textbf{FileFilter} che accetta solo i file di tipo \textit{txt}}
 \end{namespacedesc}
 
 
