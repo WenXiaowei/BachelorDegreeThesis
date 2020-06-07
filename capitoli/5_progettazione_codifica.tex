@@ -16,7 +16,7 @@
 Di seguito viene data una panoramica delle tecnologie e degli strumenti utilizzati.
 
 \subsection*{CFR - decompilatore java}
-CFR è il decompilatore utilizzato per trasformare il codice bytecode \textit{.class} in \textit{.java};
+CFR è il decompilatore utilizzato per trasformare il codice bytecode \textit{.class} in codice sorgente \textit{.java};
 \url{http://www.benf.org/other/cfr/index.html}
 
 \subsection*{Apk Tool}
@@ -26,9 +26,7 @@ Apktool è un tool per effettuare il reverse engineering delle applicazioni Andr
 Questo strumento permette di trasformare i file \textit{.dex} in formato \textit{.jar} in modo che possa essere letta attraverso un software di compressione, come 7Zip, per poter accedere quindi ai file di tipo \textit{.class}.
 \url{https://github.com/pxb1988/dex2jar}
 
-\subsection*{Android Emulator}
-Lo strumento che permette di avviare degli emulatori Android, conosciuti anche come AVD. È stato utilizzato per eseguire l'applicazione ricompilata, per poter fare il dump dei dati presenti nell'area di storage dell'applicazione, come i file JSON, XML e SQLite, o come il file delle attività di rete.
-\url{https://developer.android.com/studio/run/emulator}
+
 \subsection*{Java}
 In informatica, Java è un linguaggio di programmazione ad alto livello, orientato agli oggetti e tipizzazione statica, che si appoggia sull'omonima piattaforma software di esecuzione, specificamente progettato per essere il più possibile indipendente dalla piattaforma hardware di esecuzione.
 \subsection*{Json}
@@ -36,13 +34,18 @@ JSON (JavaScript Object Notation) è un semplice formato per lo scambio di dati.
 JSON è basato su due strutture:
 \begin{itemize}
     \item un insieme di coppie nome/valore, in diversi linguaggi, questo è realizzato come un oggetto, un record, uno struct, un dizionario, una tabella hash, un elenco di chiavi o un array associativo.
-    \item Un elenco ordinato di valori, nella maggior parte dei linguaggi questo si realizza con un array, un vettore o una sequenza.
+    \item un elenco ordinato di valori, nella maggior parte dei linguaggi questo si realizza con un array, un vettore o una sequenza.
 \end{itemize}
 \url{https://www.json.org/json-it.html}
 \section{Strumenti}\label{sec:strumenti}
+
 \subsection*{Intellij IDEA}
 L'IDE utilizzato per la scrittura del codice in Java sviluppato da JetBrains.
 \url{https://www.jetbrains.com/idea/}
+
+\subsection*{Android Emulator}
+Lo strumento che permette di avviare degli emulatori Android, conosciuti anche come AVD. È stato utilizzato per eseguire l'applicazione ricompilata, per poter fare il dump dei dati presenti nell'area di storage dell'applicazione, come i file JSON, XML e SQLite, o come il file delle attività di rete.
+\url{https://developer.android.com/studio/run/emulator}
 
 \subsection*{Maven}
 Maven è un tool di build automation, basato sul concetto di Project Object Model (POM), maven può gestire i build, fare il report e la documentazione da un singolo centro di informazione.
@@ -124,12 +127,33 @@ I pattern utilizzati sono
 
 
 %**************************************************************
+
 \section{Design Pattern utilizzati}\label{sec:design-pattern-utilizzati}
-Di seguito, sono elencati i design pattern utilizzati durante la creazione del tool. Per ognuno di questo, verrà fornita il diagramma delle classi, e una descrizione.
+Di seguito, sono elencati i design pattern utilizzati durante la creazione del tool. Per ognuno di questo, verrà fornita il diagramma delle classi e una descrizione.
 \subsection{Model View Controller}\label{subsec:model-view-controller}
 
 \subsection{Observer}\label{subsec:observer}
-
+Il pattern observer permette di definire una dipendenza uno a molti fra oggetti, in modo tale che se un oggetto cambia il suo stato, tutti gli oggetti dipendenti da questo siano notificati e aggiornati automaticamente.\\
+Tale pattern viene applicato nel tool perché i componenti delle viste possano osservare il contenuto del modello.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=14cm, height=8cm]{./immagini/diagrammi_uml/Observer.png}
+    \caption{Diagramma delle classi del pattern Observer}\label{fig:observer}
+\end{figure}
 \subsection{Decorator}\label{subsec:decorator}
+% todo descrivere il decorator
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=14cm, height=10cm]{./immagini/diagrammi_uml/Decorator.png}
+    \caption{Diagramma delle classi del pattern Decorator}\label{fig:decorator}
+\end{figure}
+
+\subsection{Factory Method}\label{subsec:factory-method}
+% todo descrivere il factory method
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=14cm, height=12cm]{./immagini/diagrammi_uml/CommandFactory.png}
+    \caption{Diagramma delle classi del pattern FactoryMethod}\label{fig:factory-method}
+\end{figure}
 %**************************************************************
 \section{Codifica}\label{sec:codifica}
