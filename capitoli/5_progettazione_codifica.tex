@@ -3,6 +3,8 @@
 % !TEX root = ../tesi.tex
 
 %**************************************************************
+
+
 \chapter{Progettazione e codifica}
 \label{ch:progettazione-e-codifica}
 %**************************************************************
@@ -10,6 +12,8 @@
 \intro{In questo capitolo vengono presentate le tecnologie e gli strumenti utilizzati, il ciclo di sviluppo del software adottato e i design pattern utilizzati.}\\
 
 %**************************************************************
+
+
 \section{Tecnologie}\label{sec:tecnologie}
 
 Di seguito viene data una panoramica delle tecnologie e degli strumenti utilizzati.
@@ -65,6 +69,8 @@ Gitlab è una piattaforma web open-source che permette la gestione di repository
 Questa è un'istanza privata dell'azienda Imola Informatica S.p.A.
 \url{https://git.imolinfo.it/users/sign_in}
 %**************************************************************
+
+
 \section{Ciclo di vita del software}\label{sec:ciclo-vita-software}
 Il modello adottato per lo sviluppo del progetto è il modello incrementale, permettendo così di suddividere la durata del progetto in diversi incrementi, in ognuno dei quali sono stati definiti degli obiettivi/requisiti da raggiungere.
 Inoltre, tale modello di sviluppo ha come conseguenza i seguenti vantaggi:
@@ -75,6 +81,9 @@ Inoltre, tale modello di sviluppo ha come conseguenza i seguenti vantaggi:
     \item a ogni incremento vengono aggiunte delle funzionalità corrette e funzionanti, allora il prodotto finale soddisfa i requisiti del cliente;
 \end{itemize}
 %**************************************************************
+\newpage %fixme
+
+
 \section{Progettazione}
 \label{sec:progettazione}
 
@@ -140,6 +149,7 @@ I pattern utilizzati sono
 
 %**************************************************************
 
+
 \section{Design Pattern utilizzati}\label{sec:design-pattern-utilizzati}
 Di seguito, sono elencati i design pattern utilizzati durante la creazione del tool. Per ognuno di questi, verrà fornito il diagramma delle classi e una descrizione.
 \subsection*{Model View Controller}\label{subsec:model-view-controller}
@@ -175,4 +185,72 @@ Allo start-up del tool, viene letta una dalla JVM una variabile chiamata \textit
     \caption{Diagramma delle classi del pattern FactoryMethod}\label{fig:factory-method}
 \end{figure}
 %**************************************************************
+
+
 \section{Codifica}\label{sec:codifica}
+Per la fase di codifica sono state adottate le seguenti convenzioni:
+\begin{itemize}
+    \item il nome delle classi seguirà la notazione a Cammello, un esempio corretto è: \textit{WindowsCommandFactory};
+    \item il nome degli attributi seguirà sempre la notazione a Cammello, ma con la prima lettera in minuscolo, un esempio corretto è: \textit{commandsFactory};
+    \item ove possibile, si deve utilizzare le espressioni lambda;
+    \item la gestione delle eccezioni deve essere venir fatta sempre dal chiamante;
+    \item per ogni classe e ogni metodo deve essere fornita una descrizione in JavaDoc.
+\end{itemize}
+
+\subsection{Analisi del codice e generazione del pdf}\label{subsec:analisi-del-codice-e-generazione-del-pdf}
+Dopo aver decompilato un file \textit{.apk}, e decodificato i file \textit{dex} l'utente può scegliere di effettuare l'operazione di analisi offerta dal tool.
+Questa funzionalità si deve istanziare un oggetto di tipo BaseAnalyzer, e in base alle opzioni di analisi che l'utente ha scelta dalla vista:
+\begin{figure}[H]
+    \centering
+    \includegraphics{./immagini/tool/analysis_chooser.png}
+    \caption{Schermata delle opzioni dell'analisi}\label{fig:analysis_chooser}
+\end{figure}
+Di seguito è il codice che si occupa di "decorare" l'oggetto base, effettuare l'analisi e quindi generare un file pdf contenente il risultato:
+
+\begin{lstlisting}[label={lst:analyze}]
+public void analyze(Map< String, Boolean > thingsTodo, File blackList, File whiteList) {
+        ...
+Analyze analyze = new BaseAnalyzer(thingsTodo.get(AnalysisChooser.LIST_FILE), decompiledFiles);
+...
+// se analyzeString==true, allora analizzo le stringhe
+if (thingsTodo.get(AnalysisChooser.FIND_STRING)) {
+        analyze = new StringFinder(analyze, blackList);
+}
+        // se analyzeLambda==true, allora analizzo le lambda
+if (thingsTodo.get(AnalysisChooser.COUNT_LAMBDA)) {
+        analyze = new LambdaCounter(analyze);
+}
+        if (thingsTodo.get(AnalysisChooser.DUMPED_FILE)) {
+        analyze = new DumpedFilesAnalyzer(analyze, whiteList);
+}
+        if (thingsTodo.get(AnalysisChooser.LIST_DBS)) {
+        analyze = new DumpDataBase(analyze);
+}
+        ...
+PDFWriter pdfWriter = new PDFWriter(resultFile);
+pdfWriter.addParagraphs(analyze.getResult());
+...
+}
+\end{lstlisting}
+
+Con l'utilizzo del pattern decorator \`{e} estremamente semplice aggiungere un tipo di analisi, poiché è sufficiente aggiungere nella map \textit{thingsToDo} al momento della chiamata del metodo \textit{analyze}, creare una nuova classe che eredita dalla classe base dei decorator implementandone il metodo astratto e aggiungere due righe d'istruzione.
+
+\subsection{Istanziazione di Commands}\label{subsec:istanziazione-di-commands}
+Per il corretto funzionamento del tool è necessario che all'avvio venga instanziata una delle seguenti classi:
+\begin{itemize}
+    \item WindowsCommandFactory;
+    \item LinuxCommandFactory.
+\end{itemize}
+Il seguente segmento di codice risolve tale problema:
+
+\begin{lstlisting}[label={lst:commands}]
+Commands commands;
+String osInfo = System.getProperty("os.name");
+if (containsIgnoreCase(osInfo, "windows")) {
+    commands = new WindowsCommandFactory(model.getBasePath().getValue(), "cmd.exe", "/c");
+} else {
+    commands = new UnixCommandFactory(model.getBasePath().getValue(), "bash", "-c");
+}
+Controller controller = new Controller(model, commands);
+
+\end{lstlisting}
