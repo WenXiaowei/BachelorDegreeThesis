@@ -1,8 +1,6 @@
 % !TEX encoding = UTF-8
 % !TEX TS-program = pdflatex
 % !TEX root = ../tesi.tex
-
-\newpage
 \section{Design Pattern utilizzati}\label{sec:design-pattern-utilizzati}
 Di seguito, sono elencati i design pattern utilizzati durante la creazione del tool. Per ognuno di questi, verrà fornito il diagramma delle classi e una descrizione.
 \subsection{Model View Controller}\label{subsec:model-view-controller}
@@ -41,6 +39,6 @@ Questo pattern è stato utilizzato per poter fornire al controller dei comandi d
 Allo start-up del tool, viene letta una dalla JVM una variabile chiamata \textit{os.name}, e dipendentemente da valore letto, viene deciso quale delle sottoclassi istanziare per il corretto funzionamento del tool.
 \begin{figure}[H]
     \centering
-    \includegraphics[width=14cm, height=12cm]{./immagini/diagrammi_uml/CommandFactory.png}
+    \includegraphics[width=14cm, height=14cm]{./immagini/diagrammi_uml/CommandFactory.png}
     \caption{Diagramma delle classi del pattern FactoryMethod}\label{fig:factory-method}
 \end{figure}

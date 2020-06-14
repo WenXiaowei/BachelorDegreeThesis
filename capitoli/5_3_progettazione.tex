@@ -15,14 +15,23 @@ Questo è il root package del tool, contiene altri package e le due classi elenc
 
 \subsubsection{Package it.imolinfo.apat.controller} %**************************
 Questo è il package che contiene la classe Controller e ciò che riguarda l'interazione del controller con il filesystem.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=14cm,height=8cm]{./immagini/diagrammi_uml/controller.png}
+    \caption{Package Controller}\label{fig:controller_diagram}
+\end{figure}
 \begin{namespacedesc}
     \classdesc{AndroidManifestEditor.java}{È la classe che si occupa, dato un oggetto di tipo File Android Manifest, di modificare e/o aggiungere il tag \textit{debugabble} impostando il suo valore a \textit{true};}
     \classdesc{Controller}{È il controller del MVC, si occupa di effettuare le operazioni di decompilazione, ricompilazione, decodifica e analisi dei file;}
-    \classdesc{MVCModule}{È la classe di effettuare la dependency injection per la creazione del MVC.}
 \end{namespacedesc}
 
 \subsubsection{Package it.imolinfo.apat.model} %**************************
 Questo package contiene le classi che riguardano il modello del pattern Model View Controller.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=14cm,height=8cm]{./immagini/diagrammi_uml/model.png}
+    \caption{Package Model}\label{fig:model_diagram}
+\end{figure}
 \begin{namespacedesc}
     \classdesc{Modello}{La classe che contiene i dati utili al corretto funzionamento del tool;}
     \classdesc{ModelState}{È la classe che viene usato per poter salvare lo stato del funzionamento del tool. Lo stato viene salvato quando viene chiuso il tool, e viene ricaricato al successivo avvio;}
@@ -56,6 +65,11 @@ I pattern utilizzati sono
 \end{namespacedesc}
 
 \subsubsection{Package it.imolinfo.apat.view} %**************************
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=14cm,height=10cm]{./immagini/diagrammi_uml/view.png}
+    \caption{Package View}\label{fig:view_diagram}
+\end{figure}
 \begin{namespacedesc}
     \classdesc{AnalysisChooser}{È la finestra che mostra le opzioni di analisi.}
     \classdesc{View}{È la finestra principale, dove permette di selezionare il file \textit{apk} da decompilare ed analizzare.}

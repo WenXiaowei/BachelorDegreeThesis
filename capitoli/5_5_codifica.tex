@@ -38,7 +38,6 @@ Di seguito è il codice che si occupa di "decorare" l'oggetto base, effettuare l
 
 \begin{lstlisting}[caption={Decorator},label={lst:analyze}]
 public void analyze(Map< String, Boolean > thingsTodo, File blackList, File whiteList) {
-...
 Analyze analyze = new BaseAnalyzer(thingsTodo.get(AnalysisChooser.LIST_FILE), decompiledFiles);
 ...
 // se analyzeString==true, allora analizzo le stringhe
@@ -50,10 +49,8 @@ if (thingsTodo.get(AnalysisChooser.DUMPED_FILE))
     analyze = new DumpedFilesAnalyzer(analyze, whiteList);
 if (thingsTodo.get(AnalysisChooser.LIST_DBS))
     analyze = new DumpDataBase(analyze);
-...
 PDFWriter pdfWriter = new PDFWriter(resultFile);
 pdfWriter.addParagraphs(analyze.getResult());
-...
 }
 \end{lstlisting}
 
