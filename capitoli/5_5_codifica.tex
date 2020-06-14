@@ -42,19 +42,14 @@ public void analyze(Map< String, Boolean > thingsTodo, File blackList, File whit
 Analyze analyze = new BaseAnalyzer(thingsTodo.get(AnalysisChooser.LIST_FILE), decompiledFiles);
 ...
 // se analyzeString==true, allora analizzo le stringhe
-if (thingsTodo.get(AnalysisChooser.FIND_STRING)) {
+if (thingsTodo.get(AnalysisChooser.FIND_STRING))
     analyze = new StringFinder(analyze, blackList);
-}
-    // se analyzeLambda==true, allora analizzo le lambda
-if (thingsTodo.get(AnalysisChooser.COUNT_LAMBDA)) {
+if (thingsTodo.get(AnalysisChooser.COUNT_LAMBDA))
     analyze = new LambdaCounter(analyze);
-}
-    if (thingsTodo.get(AnalysisChooser.DUMPED_FILE)) {
+if (thingsTodo.get(AnalysisChooser.DUMPED_FILE))
     analyze = new DumpedFilesAnalyzer(analyze, whiteList);
-}
-    if (thingsTodo.get(AnalysisChooser.LIST_DBS)) {
+if (thingsTodo.get(AnalysisChooser.LIST_DBS))
     analyze = new DumpDataBase(analyze);
-}
 ...
 PDFWriter pdfWriter = new PDFWriter(resultFile);
 pdfWriter.addParagraphs(analyze.getResult());
