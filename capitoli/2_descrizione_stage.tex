@@ -10,20 +10,7 @@
 \intro{Questo capitolo contiene l'introduzione del progetto, l'analisi dei rischi, la specifica degli obiettivi e la pianificazione dei lavori.}\\
 
 %**************************************************************
-\section{Introduzione al progetto}\label{sec:introduzione-al-progetto}
-Le applicazioni mobili rappresentano oggi una delle principali sfide per la sicurezza informatica: negli ultimi anni se la rapida diffusione degli smartphone ha visto emergere il mobile come uno dei principali canali per l'erogazione di servizi, sono aumentati esponenzialmente gli attacchi contro le piattaforme mobili.
 
-Le applicazioni mobili soffrono spesso di debolezze intrinseche dovute al design dell'applicazione e al suo sviluppo, debolezze che possono prevedere la memorizzazione d'informazioni sensibili sul device, possibilità di modificare l'applicazione (mediante repackaging dell'App), o la possibilità di un semplice reverse engineering.
-
-L'obiettivo del progetto è di creare un tool di analisi che supporta le seguenti operazioni:
-\begin{enumerate}
-    \item decompilazione di un file apk;
-    \item ricompilazione del file apk e la conseguente firma;
-    \item decodifica dei file \textit{dex} in codice sorgente \textit{java};
-    \item dump dell'area di storage dell'applicazione (compresi i file json, xml e database SQLite);
-    \item avvio dell'Android emulator device con le opzioni di proxy e permettere la registrazione delle attività di rete;
-    \item eseguire l'analisi del codice sorgente e dei file ottenuti dal passo 4 e infine estrarre i dati dai file di database generando, al termine dell'operazione di analisi, un file di resoconto con i risultati dell'analisi.
-\end{enumerate}
 %**************************************************************
 \section{Analisi preventiva dei rischi}\label{sec:analisi-preventiva-dei-rischi}
 

@@ -17,19 +17,13 @@ In questa sezione viene fatta una breve presentazione dell'azienda Imola Informa
 %citazione\footcite{womak:lean-thinking} \\
 
 %**************************************************************
-\section{L'azienda}\label{sec:l'azienda}
-
-Imola Informatica è una società indipendente di consulenza IT, entra in gioco ogni volta in cui una azienda pubblica o privata vuole migliorare i propri servizi. Innovare i propri processi di lavoro, gli approcci di management per cogliere le opportunità business offerte dalla trasformazione digitale.
-
-È a servizio dei principali gruppi finanziari e assicurativi e ogni giorno è a fianco di grandi aziende e piccole startup nel gestire il cambiamento tecnologico e culturale.
-
-Fa parte di una rete che condivide l’idea di fare innovazione a misura delle persone, delle imprese e della collettività. Sono impegnati per lo sviluppo consapevole di comunità locali e smart cities.
 
 %**************************************************************
 \section{L'idea}\label{sec:l'idea}
 
 Le applicazioni mobili rappresentano oggi una delle principali sfide per la sicurezza informatica: negli ultimi anni se la rapida diffusione degli smartphone ha visto emergere il mobile come uno dei principali canali per l'erogazione di servizi, sono aumentati esponenzialmente gli attacchi contro le piattaforme mobili.\\
-Le principali minacce del mondo delle applicazioni mobile sono:
+
+Le principali minacce\footcite{site:owasp} del mondo delle applicazioni mobile sono:
 \begin{itemize}
     \item \textit{Improper platform usage:} questa categoria di rischi comprende l'uso scorretto delle funzionalità offerte dalle piattaforme o il fallimento nell'utilizzo dei controlli di sicurezza offerti dalle piattaforme.
     \item \textit{Insecure data storage:} le minacce possono essere una di queste:
@@ -59,6 +53,30 @@ Le principali minacce del mondo delle applicazioni mobile sono:
     L'attaccante in genere sfrutta funzionalità estranee direttamente dai propri sistemi senza alcun coinvolgimento da parte degli utenti finali.
 \end{itemize}
 Le applicazioni mobili soffrono spesso di debolezze intrinseche dovute al design dell'applicazione e al suo sviluppo, debolezze che possono prevedere la memorizzazione d'informazioni sensibili sul device, possibilità di modificare l'applicazione (mediante \gls{repackaging} dell'App), o la possibilità di un semplice reverse engineering.
+
+%**************************************************************
+\section{Introduzione al progetto}\label{sec:introduzione-al-progetto}
+Le applicazioni mobili rappresentano oggi una delle principali sfide per la sicurezza informatica: negli ultimi anni se la rapida diffusione degli smartphone ha visto emergere il mobile come uno dei principali canali per l'erogazione di servizi, sono aumentati esponenzialmente gli attacchi contro le piattaforme mobili.
+
+Le applicazioni mobili soffrono spesso di debolezze intrinseche dovute al design dell'applicazione e al suo sviluppo, debolezze che possono prevedere la memorizzazione d'informazioni sensibili sul device, possibilità di modificare l'applicazione (mediante repackaging dell'App), o la possibilità di un semplice reverse engineering.
+
+L'obiettivo del progetto è di creare un tool di analisi che supporta le seguenti operazioni:
+\begin{enumerate}
+    \item decompilazione di un file apk;
+    \item ricompilazione del file apk e la conseguente firma;
+    \item decodifica dei file \textit{dex} in codice sorgente \textit{java};
+    \item dump dell'area di storage dell'applicazione (compresi i file json, xml e database SQLite);
+    \item avvio dell'Android emulator device con le opzioni di proxy e permettere la registrazione delle attività di rete;
+    \item eseguire l'analisi del codice sorgente e dei file ottenuti dal passo 4 e infine estrarre i dati dai file di database generando, al termine dell'operazione di analisi, un file di resoconto con i risultati dell'analisi.
+\end{enumerate}
+%**************************************************************
+\section{L'azienda}\label{sec:l'azienda}
+
+Imola Informatica è una società indipendente di consulenza IT, entra in gioco ogni volta in cui una azienda pubblica o privata vuole migliorare i propri servizi. Innovare i propri processi di lavoro, gli approcci di management per cogliere le opportunità business offerte dalla trasformazione digitale.
+
+È a servizio dei principali gruppi finanziari e assicurativi e ogni giorno è a fianco di grandi aziende e piccole startup nel gestire il cambiamento tecnologico e culturale.
+
+Fa parte di una rete che condivide l’idea di fare innovazione a misura delle persone, delle imprese e della collettività. Sono impegnati per lo sviluppo consapevole di comunità locali e smart cities.
 
 %**************************************************************
 \section{Organizzazione del testo}\label{sec:organizzazione-del-testo}
