@@ -1,6 +1,7 @@
 % !TEX encoding = UTF-8
 % !TEX TS-program = pdflatex
 % !TEX root = ../tesi.tex
+
 \section{Design Pattern utilizzati}\label{sec:design-pattern-utilizzati}
 Di seguito, sono elencati i design pattern utilizzati durante la creazione del tool. Per ognuno di questi, verrà fornito il diagramma delle classi e una descrizione.
 \subsection{Model View Controller}\label{subsec:model-view-controller}
@@ -14,7 +15,7 @@ L'applicazione di tale pattern avviene attraverso il pattern Observer, nello spe
 
 \newpage
 \subsection{Observer}\label{subsec:observer}
-Il pattern observer\footcite{womak:decorator} permette di definire una dipendenza uno a molti fra oggetti, in modo tale che se un oggetto cambia il suo stato, tutti gli oggetti dipendenti da questo siano notificati e aggiornati automaticamente.\\
+Il pattern observer\footcite{womak:observer} permette di definire una dipendenza uno a molti fra oggetti, in modo tale che se un oggetto cambia il suo stato, tutti gli oggetti dipendenti da questo siano notificati e aggiornati automaticamente.\\
 L'implementazione di tale pattern avviene attraverso una classe \textit{Observable} e un'interfaccia \textit{Observer} entrambe template, per modificare il valore dell'observable è sufficiente utilizzare il metodo \textit{setValue(newValue:T)}, in questo modo, su ogni elemento della lista \textit{observables} viene invocato il metodo \textit{onChanged} passando il nuovo valore.\\
 Tale pattern viene applicato nel tool perché i componenti delle viste possano osservare il contenuto del modello.
 \begin{figure}[H]
