@@ -4,12 +4,12 @@
 \section{L'idea}\label{sec:l'idea}
 
 Le applicazioni mobili rappresentano oggi una delle principali sfide per la sicurezza informatica: negli ultimi anni se la rapida diffusione degli smartphone ha visto emergere il mobile come uno dei principali canali per l'erogazione di servizi, sono aumentati esponenzialmente gli attacchi contro le piattaforme mobili.\\
-L'applicazione quindi deve garantire l'integrità, la confidenzialità, la disponibilità dati e che questi ultimi siano siano disponibili solo agli soggetti che dispongono dell'autenticazione e dell'autorizzazione.
+L'applicazione quindi deve garantire l'integrità, la confidenzialità, la disponibilità dati e che questi ultimi siano disponibili solo agli soggetti che dispongono dell'autenticazione e dell'autorizzazione.
 
-Quindi la sicurezza delle applicazioni non può essere garantita solo dall'attività di verifica, ma l'obiettivo della sicurezza deve perpetuare nelle diverse fasi dello sviluppo software, come per esempio nel Secure Software Development Lifecycle\footcite{site:ssdl} la sicurezza la si persegue in diverse fasi:
+Quindi la sicurezza delle applicazioni non può essere garantita solo dall'attività di verifica, ma l'obiettivo di raggiungere la sicurezza intrinseca deve perpetuare nelle diverse fasi dello sviluppo software, come per esempio nel Secure Software Development Lifecycle\footcite{site:ssdl} la sicurezza la si persegue in diverse fasi:
 \begin{itemize}
     \item \textit{Analisi:} in questa fase bisogna individuare quali sono i rischi che il software è sottoposto, quindi individuare i requisiti che il software deve soddisfare per contrastare i potenziali attacchi,
-    \item \textit{Progettazione:} in questa fase è necessario prestare attenzione nell'adozione delle librerie esterne, assicurandosi che quest'ultime non sia abbiano falle di sicurezza che minano l'integrità dell'intero software, inoltre, è necessario adottare i standard di sicurezza consolidati;
+    \item \textit{Progettazione:} in questa fase è necessario prestare attenzione nell'adozione delle librerie esterne, assicurandosi che quest'ultime non abbiano falle di sicurezza che minano l'integrità dell'intero software, inoltre, è necessario adottare i standard di sicurezza consolidati;
     \item \textit{Sviluppo:} in questa fase le azioni\footcite{site:security-best-practice} che si possono adottare sono molteplici, per esempio:
     \begin{itemize}
         \item validazione dell'input;
@@ -19,10 +19,10 @@ Quindi la sicurezza delle applicazioni non può essere garantita solo dall'attiv
         \item gestione degli utenti, sessioni e dei permessi;
         \item standardizzare la documentazione in modo da facilitare la manutenzione del codice;
         \item adottare la pratica del code review;
-        \item adottare il principio KISS, Keep It Simple Stupid;
-        \item adottare la pratica del \textbf{Static Application Security Testing} e \textbf{Software component Analysis}.
+        \item adottare il principio \gls{KISS};
+        \item adottare la pratica del \gls{SAST} e \gls{SCA}.
     \end{itemize}
-    \item \textit{Test:} in questa fase è necessario invece adottare la \textbf{Dynamic Application Security Testing}.
+    \item \textit{Test:} in questa fase è necessario invece adottare la \gls{DAST}.
 \end{itemize}
 
 Le principali minacce\footcite{site:owasp} del mondo delle applicazioni mobile sono:

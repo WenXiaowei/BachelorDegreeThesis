@@ -42,8 +42,8 @@ Questo package contiene le classi che riguardano il modello del pattern Model Vi
 \end{namespacedesc}
 
 \subsection{Package it.imolinfo.apat.pattern}\label{subsec:package-it.imolinfo.apat.pattern} %**************************
-Questo package contiene degli sotto-package ognuno dei quali rappresenta un design pattern utilizzato nello sviluppo del tool.
-I pattern utilizzati sono
+Questo package contiene degli sotto-package ognuno dei quali rappresenta un design pattern utilizzato nello sviluppo del tool.\\
+Il package analyzer è composto da seguenti classi:
 \begin{namespacedesc}
     \classdesc{analyzer.Analyze}{È l'interfaccia di base del pattern Decorator.}
     \classdesc{analyzer.BaseAnalyzer}{È la classe dell'oggetto base che viene decorato.}
@@ -53,15 +53,17 @@ I pattern utilizzati sono
     \classdesc{analyzer.LambdaCounter}{È il decorator che conta il numero di lambda presente per ogni classe di codice \textit{.java} decompilato.}
     \classdesc{analyzer.StringFinder}{È il decorator che analizza i file di tipo \textit{.java}, ed estrae le stringhe hardcoded, può essere utilizzato insieme a un blacklist delle stringhe che devono essere ignorate.}
 \end{namespacedesc}
+Il package observer è composto da seguenti classi:
 \begin{namespacedesc}
     \classdesc{observer.Observable}{La classe parametrizzata T che può essere osservato;}
     \classdesc{observer.Observer}{L'interfaccia parametrizzata che ha il ruolo dell'observer;}
 \end{namespacedesc}
+Il package factory method è composto da seguenti classi:
 \begin{namespacedesc}
-    \classdesc{CliCommandFactory.Commands}{È l'interfaccia che contiene i metodi, dove ognuno dei quali deve generare delle istruzioni per la linea di comando.}
-    \classdesc{CliCommandFactory.CommandFactory}{È la classe astratta che implementa la precendente interfaccia, con un costruttore di base che richiede un path di base.}
-    \classdesc{CliCommandFactory.UnixCommandFactory}{È l'implementazione della classe astratta CommandFactory per il sistema UNIX.}
-    \classdesc{CliCommandFactory.WindowsCommandFactory}{È l'implementazione della classe astratta CommandFactory per il sistema Windows.}
+    \classdesc{cliCommandFactory.Commands}{È l'interfaccia che contiene i metodi, dove ognuno dei quali deve generare delle istruzioni per la linea di comando.}
+    \classdesc{cliCommandFactory.CommandFactory}{È la classe astratta che implementa la precendente interfaccia, con un costruttore di base che richiede un path di base.}
+    \classdesc{cliCommandFactory.UnixCommandFactory}{È l'implementazione della classe astratta CommandFactory per il sistema UNIX.}
+    \classdesc{cliCommandFactory.WindowsCommandFactory}{È l'implementazione della classe astratta CommandFactory per il sistema Windows.}
 \end{namespacedesc}
 
 \subsection{Package it.imolinfo.apat.view}\label{subsec:package-it.imolinfo.apat.view} %**************************
