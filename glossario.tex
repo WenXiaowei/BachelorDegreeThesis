@@ -1,88 +1,165 @@
-
 %**************************************************************
 % Acronimi
 %**************************************************************
 \renewcommand{\acronymname}{Acronimi e abbreviazioni}
+%**************************************************************
 
-\newacronym[description={\glslink{apig}{Application Program Interface}}]
-    {api}{Application Program Interface}{API}
+\newacronym[description={\glslink{apig}{Application Programming Interface}}]
+{api}{API}{Application Programming Interface}
+\newglossaryentry{apig}
+{
+name=\glslink{api}{API},
+text= Application Programming Interface,
+sort= api,
+description={in informatica con il termine \emph{Application Programming Interface API} (ing. interfaccia di programmazione di un'applicazione) si indica ogni insieme di procedure disponibili al programmatore, di solito raggruppate a formare un set di strumenti specifici per l'espletamento di un determinato compito all'interno di un certo programma. La finalità è ottenere un'astrazione, di solito tra l'hardware e il programmatore o tra software a basso e quello ad alto livello semplificando così il lavoro di programmazione}
+}
+%**************************************************************
 
-\newacronym[description={\glslink{umlg}{Unified Modeling Language}}]
-    {uml}{Unified Modeling Language}{UML}
+\newacronym[description={\glslink{umlg}{Unified Modelling Language}}]
+{uml}{UML}{Unified Modelling Language}
+\newglossaryentry{umlg}
+{
+name=\glslink{uml}{UML},
+text= Unified Modelling Language,
+sort= UML,
+description={In ingegneria del software \emph{UML, Unified Modeling Language} (ing. linguaggio di modellazione unificato) è un linguaggio di modellazione e specifica basato sul paradigma object-oriented. L'\emph{UML} svolge un'importantissima funzione di ``lingua franca'' nella comunità della progettazione e programmazione a oggetti. Gran parte della letteratura di settore usa tale linguaggio per descrivere soluzioni analitiche e progettuali in modo sintetico e comprensibile a un vasto pubblico}
+}
 
-\newacronym[description={\glslink{APK}{Android PacKage}}]
-    {apk}{Android PacKage}{APK}
+%**************************************************************
 
 \newacronym[description={\glslink{dexg}{Dalvik Executable}}]
-    {dex}{Dalvik Executable}{DEX}
+{dex}{DEX}{Dalvik Executable}
+\newglossaryentry{dexg}
+{
+name=\glslink{dex}{DEX},
+text= Dalvik Executable,
+sort= dex,
+description={File eseguibili Dalvik sono file di sviluppo apposte con il .dex estensione, e questi file DEX vengono utilizzati per inizializzare ed eseguire applicazioni sviluppate per il sistema operativo mobile Android.
+I dati memorizzati in questi file DEX include compilato il codice che individua e inizializza altri file di programma dell'applicazione associata necessario per eseguire il programma}
+}
+%**************************************************************
 
+\newacronym[description={\glslink{apkg}{Android Package}}]
+{apk}{APK}{ Android Package }
+\newglossaryentry{apkg}
+{
+name=\glslink{apk}{APK},
+text= Android Package,
+sort= apk,
+description={L'estensione APK indica un file Android Package.
+Questo formato di file, una variante del formato .JAR, è utilizzato per la distribuzione e l'installazione di componenti in dotazione sulla piattaforma per dispositivi mobili Android}
+}
+%**************************************************************
 
+\newacronym[description={\glslink{kissg}{Keep It Simple Stupid}}]
+{kiss}{KISS}{Keep It Simple Stupid}
+\newglossaryentry{kissg}
+{
+name=\glslink{kiss}{KISS},
+text= Keep It Simple Stupid,
+sort= kiss,
+description={Il principio utilizzato nel mondo dell'informatica per indicare maggior parte dei sistemi semplici hanno una prestazione maggiore rispetto ai sistemi complicati.
+Anche se, la semplicità deve essere un obiettivo da perseguire nella progettazione e la complessità aggiuntiva non necessaria deve essere evitata}
+}
+%**************************************************************
 
-\newacronym[description={\glslink{KISS}{Il principio utilizzato nel mondo dell'informatica per indicare maggior parte dei sistemi semplici hanno una prestazione maggiore rispetto ai sistemi complicati. Anche se, la semplicità deve essere un obiettivo da perseguire nella progettazione e la complessità aggiuntiva non necessaria deve essere evitata}}]
-    {KISS}{Keep It Simple Stupid}{KISS}
+\newacronym[description={\glslink{scag}{Security Component Analysis}}]
+{sca}{SCA}{ Security Component Analysis }
+\newglossaryentry{scag}
+{
+name=\glslink{sca}{SCA},
+text= Security Component Analysis,
+sort= sca,
+description={Descrizoine SCA} % todo
+}
+%**************************************************************
 
-\newacronym[description={\glslink{SAST}{Static Application Security Testing}}]
-    {SAST}{Static Application Security Testing}{SAST}
+\newacronym[description={\glslink{sastg}{Static Application Security Testing}}]
+{sast}{SAST}{ Static Application Security Testing }
+\newglossaryentry{sastg}
+{
+name=\glslink{sast}{SAST},
+text= Static Application Security Testing,
+sort= sast,
+description={Descrizoine sast}% todo
+}
 
-\newacronym[description={\glslink{SCA}{Security Component Analysis}}]
-    {SCA}{Security Component Analysis}{SCA}
-\newacronym[description={\glslink{DAST}{Dynamic Application Security Testing}}]
-    {DAST}{Dynamic Application Security Testing}{DAST}
-%\newacronym[description={\glslink{}{}}]
-%    {}{}{}
+%**************************************************************
+
+\newacronym[description={\glslink{dastg}{Dynamic Application Security Testing}}]
+{dast}{DAST}{Dynamic Application Security Testing}
+\newglossaryentry{dastg}
+{
+name=\glslink{dast}{DAST},
+text= Dynamic Application Security Testing,
+sort= dast,
+description={Descrizoine dast} % todo
+}
+
+%**************************************************************
+
+%\newacronym[description={\glslink{testoConG}{TestoXEsteso}}]
+%{TESTO_DA_CATTURARE}{ACRONIMO}{ TestoXEsteso }
+%\newglossaryentry{ testoConG }
+%{
+%name=\glslink{ TESTO_DA_CATTURARE }{ ACRONIMO },
+%text= TestoXEsteso,
+%sort= TESTO_DA_ORDINARE,
+%description={Descrizoine}
+%}
+
+%\newacronym[description={\glslink{testoConG}{TestoXEsteso}}]
+%{TESTO_DA_CATTURARE}{ACRONIMO}{ TestoXEsteso }
+%\newglossaryentry{ testoConG }
+%{
+%name=\glslink{ TESTO_DA_CATTURARE }{ ACRONIMO },
+%text= TestoXEsteso,
+%sort= TESTO_DA_ORDINARE,
+%description={Descrizoine}
+%}
+
+%\newacronym[description={\glslink{testoConG}{TestoXEsteso}}]
+%{TESTO_DA_CATTURARE}{ACRONIMO}{ TestoXEsteso }
+%\newglossaryentry{ testoConG }
+%{
+%name=\glslink{ TESTO_DA_CATTURARE }{ ACRONIMO },
+%text= TestoXEsteso,
+%sort= TESTO_DA_ORDINARE,
+%description={Descrizoine}
+%}
+
+%\newacronym[description={\glslink{testoConG}{TestoXEsteso}}]
+%{TESTO_DA_CATTURARE}{ACRONIMO}{ TestoXEsteso }
+%\newglossaryentry{ testoConG }
+%{
+%name=\glslink{ TESTO_DA_CATTURARE }{ ACRONIMO },
+%text= TestoXEsteso,
+%sort= TESTO_DA_ORDINARE,
+%description={Descrizoine}
+%}
 
 %**************************************************************
 % Glossario
 %**************************************************************
 %\renewcommand{\glossaryname}{Glossario}
 
-\newglossaryentry{apig}
-{
-    name=\glslink{api}{API},
-    text=Application Program Interface,
-    sort=api,
-    description={in informatica con il termine \emph{Application Programming Interface API} (ing. interfaccia di programmazione di un'applicazione) si indica ogni insieme di procedure disponibili al programmatore, di solito raggruppate a formare un set di strumenti specifici per l'espletamento di un determinato compito all'interno di un certo programma. La finalità è ottenere un'astrazione, di solito tra l'hardware e il programmatore o tra software a basso e quello ad alto livello semplificando così il lavoro di programmazione}
-}
 
-\newglossaryentry{umlg}
-{
-    name=\glslink{uml}{UML},
-    text=UML,
-    sort=uml,
-    description={in ingegneria del software \emph{UML, Unified Modeling Language} (ing. linguaggio di modellazione unificato) è un linguaggio di modellazione e specifica basato sul paradigma object-oriented. L'\emph{UML} svolge un'importantissima funzione di ``lingua franca'' nella comunità della progettazione e programmazione a oggetti. Gran parte della letteratura di settore usa tale linguaggio per descrivere soluzioni analitiche e progettuali in modo sintetico e comprensibile a un vasto pubblico}
-}
 
 \newglossaryentry{repackaging}
 {
-    name=\glslink{repackaging}{repackaging},
-    text=repackaging,
-    sort=repackaging,
-    description={in ingegneria del software, il termine repackaging indica il processo di creazione del pacchetto d'installazione a seguito di un processo di trasformazione contraria}
-}
-
-\newglossaryentry{dexg}
-{
-    name=\glslink{dex}{dex},
-    text=DEX,
-    sort=dex,
-    description={File eseguibili Dalvik sono file di sviluppo apposte con il .dex estensione, e questi file DEX vengono utilizzati per inizializzare ed eseguire applicazioni sviluppate per il sistema operativo mobile Android.
-    I dati memorizzati in questi file DEX include compilato il codice che individua e inizializza altri file di programma dell'applicazione associata necessario per eseguire il programma.}
-}
-\newglossaryentry{APK}
-{
-    name=\glslink{apk}{APK},
-    text=APK,
-    sort=apk,
-    description={L'estensione APK indica un file Android Package. Questo formato di file, una variante del formato .JAR, è utilizzato per la distribuzione e l'installazione di componenti in dotazione sulla piattaforma per dispositivi mobili Android}
+name=\glslink{repackaging}{repackaging},
+text=repackaging,
+sort=repackaging,
+description={in ingegneria del software, il termine repackaging indica il processo di creazione del pacchetto d'installazione a seguito di un processo di trasformazione contraria}
 }
 
 \newglossaryentry{pcap}
 {
-    name=\glslink{pcap}{pcap},
-    text=pcap,
-    sort=pcap,
-    description={I file con estensione .CAP contengono dati acquisiti dai programmi di tracciamento del pacchetto di trasmissione dati. I dati sono in forma grezza, il che significa esattamente la stessa forma in cui è stato catturato.
-    I file sono spesso definiti come file di traccia o file ossei. Salvare i pacchetti catturati usando il formato CAP può essere fatto da molti tipi di app, chiamati sniffer. Questi programmi quindi analizzano i dati acquisiti come richiesto dall'utente, applicando la filtrazione e l'elaborazione appropriate.}
+name=\glslink{pcap}{pcap},
+text=pcap,
+sort=pcap,
+description={I file con estensione .CAP contengono dati acquisiti dai programmi di tracciamento del pacchetto di trasmissione dati. I dati sono in forma grezza, il che significa esattamente la stessa forma in cui è stato catturato.
+I file sono spesso definiti come file di traccia o file ossei. Salvare i pacchetti catturati usando il formato CAP può essere fatto da molti tipi di app, chiamati sniffer. Questi programmi quindi analizzano i dati acquisiti come richiesto dall'utente, applicando la filtrazione e l'elaborazione appropriate.}
 }
 %\newglossaryentry{}
 %{
