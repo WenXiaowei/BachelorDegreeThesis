@@ -6,14 +6,14 @@
 \section{Progettazione}
 \label{sec:progettazione}
 
-\subsection*{Package}\label{subsec:package}
+\subsection{Package}\label{subsec:package}
 Questo è il root package del tool, contiene altri package e le due classi elencati successivamente.
 \begin{namespacedesc}
     \classdesc{ApatLauncher}{È la classe di launcher del tool, si occupa principalmente di mettere in relazione di observed-observer i componenti della vista con i dati del modello;}
     \classdesc{Utils}{La classe di utilities che ha delle funzioni statiche utilizzata nel tool per evitare la ripetizione del codice.}
 \end{namespacedesc}
 
-\subsubsection{Package it.imolinfo.apat.controller} %**************************
+\subsection{Package it.imolinfo.apat.controller}\label{subsec:package-it.imolinfo.apat.controller} %**************************
 Questo è il package che contiene la classe Controller e ciò che riguarda l'interazione del controller con il filesystem.
 \begin{figure}[H]
     \centering
@@ -25,7 +25,7 @@ Questo è il package che contiene la classe Controller e ciò che riguarda l'int
     \classdesc{Controller}{È il controller del MVC, si occupa di effettuare le operazioni di decompilazione, ricompilazione, decodifica e analisi dei file;}
 \end{namespacedesc}
 
-\subsubsection{Package it.imolinfo.apat.model} %**************************
+\subsection{Package it.imolinfo.apat.model}\label{subsec:package-it.imolinfo.apat.model} %**************************
 Questo package contiene le classi che riguardano il modello del pattern Model View Controller.
 \begin{figure}[H]
     \centering
@@ -41,7 +41,7 @@ Questo package contiene le classi che riguardano il modello del pattern Model Vi
     \classdesc{Dumper}{È la classe che si occupa di effettuare il dump dei dati da un file con estensione \textit{db};}
 \end{namespacedesc}
 
-\subsubsection{Package it.imolinfo.apat.pattern} %**************************
+\subsection{Package it.imolinfo.apat.pattern}\label{subsec:package-it.imolinfo.apat.pattern} %**************************
 Questo package contiene degli sotto-package ognuno dei quali rappresenta un design pattern utilizzato nello sviluppo del tool.
 I pattern utilizzati sono
 \begin{namespacedesc}
@@ -64,7 +64,7 @@ I pattern utilizzati sono
     \classdesc{CliCommandFactory.WindowsCommandFactory}{È l'implementazione della classe astratta CommandFactory per il sistema Windows.}
 \end{namespacedesc}
 
-\subsubsection{Package it.imolinfo.apat.view} %**************************
+\subsection{Package it.imolinfo.apat.view}\label{subsec:package-it.imolinfo.apat.view} %**************************
 \begin{figure}[H]
     \centering
     \includegraphics[width=14cm,height=10cm]{./immagini/diagrammi_uml/view.png}
