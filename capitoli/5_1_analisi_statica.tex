@@ -1,1 +1,17 @@
 \section{Analisi statica}\label{sec:analisi-statica}
+
+L'analisi statica del codice\footcite{site:analisi_static} è l'analisi del software che è effettuato senza eseguire il codice, in contrasto con l'analisi dinamica che invece richiede l'esecuzione del programma.
+Il termine è spesso utilizzato per indicare l'analisi eseguito dai tool automatici, nel caso del coinvolgimento dell'umano diventa code review che può essere di due tipi, \gls{walkthrough} e \gls{inspection}.
+
+Il tool utilizzato per l'analisi statica automatizzata è un plugin di Maven chiamato checkstyle\footcite{site:checkstyle} che è capace di generare un report indicando la presenza o meno del codice che non sono conforme alle convenzioni definite precedentemente.
+In questo progetto sono state definite le seguenti regole:
+\begin{itemize}
+    \item complessità delle espressioni booleane: massimo 3;
+    \item \gls{ciclomatica}: 16;
+    \item lunghezza massima di ogni riga: 150 caratteri;
+    \item lunghezza massima di ogni metodo: 100 righe;
+    \item lunghezza massima di ogni file: 1000 righe;
+    \item la presenza dei blocchi di catch vuoi: vietata.
+\end{itemize}
+
+Il risultato dell'analisi è stato positivo, poiché non presenta nessuna riga del codice che non rispetti le regole sopracitate.
