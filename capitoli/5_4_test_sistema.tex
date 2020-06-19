@@ -4,66 +4,55 @@
 \subsection{Specifica dei test}\label{subsec:specifica-dei-test-sistema}
 Di seguito sono riportati i test d'integrazione che verificano il corretto funzionamento del sistema.
 \begin{center}
-    \begin{longtable}{ | C{2.5cm} |C{2cm} |C{7cm} |C{1.5cm}|} \hline
-        \textbf{Identificativo} & \textbf{Requisito}   & \textbf{Descrizione} & \textbf{Stato} \\\hline
+    \begin{longtable}{ | C{2.5cm} |C{2cm} |C{7cm} |C{1.5cm}|}
+        \hline
+        \textbf{Identificativo} & \textbf{Requisito} & \textbf{Descrizione} & \textbf{Stato} \\\hline
 
-        \idTest{TS}             & \idRequisiti{F-O}    &                      & I              \\\hline
-        \idTest{TS}             & \idRequisitiSub{F-O} &                      & I              \\\hline
-        \setcounter{subCount}{0}
-        \idTest{TS}             & \idRequisiti{F-O}    &                      & I              \\\hline
-        \idTest{TS}             & \idRequisitiSub{F-O} &                      & I              \\\hline
-        \idTest{TS}             & \idRequisitiSub{F-O} &                      & I              \\\hline
-        \setcounter{subCount}{0}
-        \idTest{TS}             & \idRequisiti{F-O}    &                      & I              \\\hline
-        \idTest{TS}             & \idRequisiti{F-O}    &                      & I              \\\hline
-        \idTest{TS}             & \idRequisitiSub{F-D} &                      & I              \\\hline
-        \idTest{TS}             & \idRequisitiSub{F-D} &                      & I              \\\hline
-        \idTest{TS}             & \idRequisitiSub{F-O} &                      & I              \\\hline
-        \idTest{TS}             & \idRequisitiSub{F-O} &                      & I              \\\hline
-        \idTest{TS}             & \idRequisitiSub{F-O} &                      & I              \\\hline
-        \idTest{TS}             & \idRequisitiSub{F-O} &                      & I              \\\hline
-        \setcounter{subCount}{0}
-        \idTest{TS}             & \idRequisiti{F-O}    &                      & I              \\\hline
-        \idTest{TS}             & \idRequisiti{F-O}    &                      & I              \\\hline
-        \idTest{TS}             & \idRequisiti{F-O}    &                      & I              \\\hline
-        \idTest{TS}             & \idRequisitiSub{F-O} &                      & I              \\\hline
-        \setcounter{subCount}{0}
-        \idTest{TS}             & \idRequisiti{F-D}    &                      & I              \\\hline
-        \idTest{TS}             & \idRequisitiSub{F-O} &                      & I              \\\hline
-        \idTest{TS}             & \idRequisitiSub{F-O} &                      & I              \\\hline
-        \idTest{TS}             & \idRequisitiSub{F-O} &                      & I              \\\hline
-        \idTest{TS}             & \idRequisitiSub{F-O} &                      & I              \\\hline
-        \setcounter{subCount}{0}
-        \idTest{TS}             & \idRequisiti{F-O}    &                      & I              \\\hline
-        \idTest{TS}             & \idRequisiti{F-F}    &                      & I              \\\hline
-        \idTest{TS}             & \idRequisitiSub{F-F} &                      & I              \\\hline
-        \idTest{TS}             & \idRequisitiSub{F-F} &                      & I              \\\hline
-        \idTest{TS}             & \idRequisitiSub{F-F} &                      & I              \\\hline
-        \idTest{TS}             & \idRequisitiSub{F-F} &                      & I              \\\hline
-        \setcounter{subCount}{0}
+        \idTest{TS}             & R-1-F-O            &                      & I              \\\hline
+        \idTest{TS}             & R-1.1-F-O          &                      & I              \\\hline
+        \idTest{TS}             & R-2-F-O            &                      & I              \\\hline
+        \idTest{TS}             & R-2.1-F-O          &                      & I              \\\hline
+        \idTest{TS}             & R-2.2-F-O          &                      & I              \\\hline
+        \idTest{TS}             & R-3-F-O            &                      & I              \\\hline
+        \idTest{TS}             & R-4-F-O            &                      & I              \\\hline
+        \idTest{TS}             & R-4.1-F-D          &                      & I              \\\hline
+        \idTest{TS}             & R-4.2-F-D          &                      & I              \\\hline
+        \idTest{TS}             & R-4.3-F-O          &                      & I              \\\hline
+        \idTest{TS}             & R-4.4-F-O          &                      & I              \\\hline
+        \idTest{TS}             & R-4.5-F-O          &                      & I              \\\hline
+        \idTest{TS}             & R-4.6-F-O          &                      & I              \\\hline
+        \idTest{TS}             & R-5-F-O            &                      & I              \\\hline
+        \idTest{TS}             & R-6-F-O            &                      & I              \\\hline
+        \idTest{TS}             & R-7-F-O            &                      & I              \\\hline
+        \idTest{TS}             & R-7.1-F-O          &                      & I              \\\hline
+        \idTest{TS}             & R-8-F-D            &                      & I              \\\hline
+        \idTest{TS}             & R-8.1-F-O          &                      & I              \\\hline
+        \idTest{TS}             & R-8.2-F-O          &                      & I              \\\hline
+        \idTest{TS}             & R-8.3-F-O          &                      & I              \\\hline
+        \idTest{TS}             & R-8.4-F-O          &                      & I              \\\hline
+        \idTest{TS}             & R-9-F-O            &                      & I              \\\hline
+        \idTest{TS}             & R-10-F-F           &                      & I              \\\hline
+        \idTest{TS}             & R-10.1-F-F         &                      & I              \\\hline
+        \idTest{TS}             & R-10.2-F-F         &                      & I              \\\hline
+        \idTest{TS}             & R-10.3-F-F         &                      & I              \\\hline
+        \idTest{TS}             & R-10.4-F-F         &                      & I              \\\hline
 
-        \idTest{TS}             & \idRequisiti{F-F}    &                      & I              \\\hline
-        \idTest{TS}             & \idRequisiti{F-O}    &                      & I              \\\hline
-        \idTest{TS}             & \idRequisiti{F-O}    &                      & I              \\\hline
-        \idTest{TS}             & \idRequisiti{F-O}    &                      & I              \\\hline
-        \idTest{TS}             & \idRequisitiSub{F-O} &                      & I              \\\hline
-        \idTest{TS}             & \idRequisitiSub{F-O} &                      & I              \\\hline
-        \setcounter{subCount}{0}
-
-        \idTest{TS}             & \idRequisiti{F-D}    &                      & I              \\\hline
-        \idTest{TS}             & \idRequisitiSub{F-D} &                      & I              \\\hline
-        \idTest{TS}             & \idRequisitiSub{F-D} &                      & I              \\\hline
-        \idTest{TS}             & \idRequisitiSub{F-D} &                      & I              \\\hline
-        \setcounter{subCount}{0}
-
-        \idTest{TS}             & \idRequisiti{F-D}    &                      & I              \\\hline
-        \idTest{TS}             & \idRequisitiSub{F-D} &                      & I              \\\hline
-        \idTest{TS}             & \idRequisitiSub{F-D} &                      & I              \\\hline
-        \setcounter{subCount}{0}
-        \idTest{TS}             & \idRequisiti{F-D}    &                      & I              \\\hline
-        \idTest{TS}             & \idRequisitiSub{F-D} &                      & I              \\\hline
-        \idTest{TS}             & \idRequisitiSub{F-D} &                      & I              \\\hline
-        \idTest{TS}             & \idRequisitiSub{F-D} &                      & I              \\\hline
+        \idTest{TS}             & R-11-F-F           &                      & I              \\\hline
+        \idTest{TS}             & R-12-F-O           &                      & I              \\\hline
+        \idTest{TS}             & R-13-F-O           &                      & I              \\\hline
+        \idTest{TS}             & R-14-F-O           &                      & I              \\\hline
+        \idTest{TS}             & R-14.1-F-O         &                      & I              \\\hline
+        \idTest{TS}             & R-14.2-F-O         &                      & I              \\\hline
+        \idTest{TS}             & R-15-F-D           &                      & I              \\\hline
+        \idTest{TS}             & R-15.1-F-D         &                      & I              \\\hline
+        \idTest{TS}             & R-15.2-F-D         &                      & I              \\\hline
+        \idTest{TS}             & R-16-F-D           &                      & I              \\\hline
+        \idTest{TS}             & R-16.1-F-D         &                      & I              \\\hline
+        \idTest{TS}             & R-16.2-F-D         &                      & I              \\\hline
+        \idTest{TS}             & R-17-F-D           &                      & I              \\\hline
+        \idTest{TS}             & R-17.1-F-D         &                      & I              \\\hline
+        \idTest{TS}             & R-17.2-F-D         &                      & I              \\\hline
+        \idTest{TS}             & R-17.3-F-D         &                      & I              \\\hline
 
         \caption{Tabella dei test di sistema}
     \end{longtable}

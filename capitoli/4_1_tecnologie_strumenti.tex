@@ -10,7 +10,10 @@ CFR è il decompilatore utilizzato per trasformare il codice bytecode \textit{.c
 \url{http://www.benf.org/other/cfr/index.html}
 
 \subsection*{Apk Tool}
-Apktool è un tool per effettuare il reverse engineering delle applicazioni Android. Può decodificare le risorse contenute nell'APK in una forma quasi uguale a quelli originali, può anche di ricostruire l'APK dopo le modifiche alle risorse modificate.
+Apktool è un tool per effettuare il reverse engineering delle applicazioni Android.
+Può decodificare le risorse contenute nell'APK in una forma quasi uguale a quelli originali, può anche di ricostruire l'APK dopo le modifiche alle risorse modificate.
+Nel tool APAT è stato utilizzato per poter decompattare un'APK in questo modo permette di avere a disposizione i file che compongono l'APK originale.
+L'apktool permette anche di ricomporre un'apk utilizzando le risorse ottenute precedentemente.
 \url{https://ibotpeaches.github.io/Apktool/}
 \begin{figure}[H]
     \centering
@@ -24,6 +27,7 @@ Questo strumento permette di trasformare i file \textit{.dex} in formato \textit
 
 \subsection*{Java}
 In informatica, Java\footcite{womak:effective-java} è un linguaggio di programmazione ad alto livello, orientato agli oggetti e tipizzazione statica, che si appoggia sull'omonima piattaforma software di esecuzione, specificamente progettato per essere il più possibile indipendente dalla piattaforma hardware di esecuzione.
+Nell'APAT è stato utilizzato per la stesura del codice, in particolare, per l'interfaccia grafica è stata utilizzata la libreria di java    \gls{swing}.
 \begin{figure}[H]
     \centering
     \includegraphics[width=8cm, height=5cm]{./immagini/java.jpg}
@@ -38,6 +42,7 @@ JSON è basato su due strutture:
     \item un insieme di coppie nome/valore, in diversi linguaggi, questo è realizzato come un oggetto, un record, uno struct, un dizionario, una tabella hash, un elenco di chiavi o un array associativo.
     \item un elenco ordinato di valori, nella maggior parte dei linguaggi questo si realizza con un array, un vettore o una sequenza.
 \end{itemize}
+Nell'APAT è stato utilizzato per contenere i dati di stato del tool quando viene chiuso e alcuni dati che indicano i percorsi ai tool di terze parti.
 \url{https://www.json.org/json-it.html}
 \begin{figure}[H]
     \centering
@@ -47,12 +52,13 @@ JSON è basato su due strutture:
 
 \subsection*{XPath}\label{subsec:xpath}
 In informatica XPath è un linguaggio, parte della famiglia XML, che permette di individuare i nodi all'interno di un documento XML. Le espressioni XPath, a differenza delle espressioni XML, non servono a identificare la struttura di un documento, bensì a localizzarne con precisione i nodi.
+Nell'APAT è stato utilizzato per poter estrapolare alcuni dati necessari per poter effettuare il dump dei dati dall'area di storage dell'app e ottenere le informazioni per poter decompilare solamente presenti nel package dell'applicazione.
 
 
 \section{Strumenti}\label{sec:strumenti}
 
 \subsection*{Intellij IDEA}
-L'IDE utilizzato per la scrittura del codice in Java sviluppato da JetBrains.
+L'\gls{ide} utilizzato per la scrittura del codice in Java sviluppato da JetBrains.
 \url{https://www.jetbrains.com/idea/}
 \begin{figure}[H]
     \centering
@@ -70,13 +76,14 @@ Lo strumento che permette di avviare degli emulatori Android, conosciuti anche c
 \end{figure}
 
 \subsection*{Maven}
-Maven è un tool di build automation, basato sul concetto di Project Object Model (POM), maven può gestire i build, fare il report e la documentazione da un singolo centro di informazione.
+Maven è un tool di \gls{buildautomation}, basato sul concetto di Project Object Model (POM), maven può gestire i build, fare il report e la documentazione da un singolo centro di informazione.
 \url{https://maven.apache.org/}
 \begin{figure}[H]
     \centering
     \includegraphics[width=6cm, height=3cm]{./immagini/maven.png}
     \caption{Icona Maven}\label{fig:maven}
 \end{figure}
+Nel caso dell'APAT è stato utilizzato per la build del tool, generando in questo modo il file jar.
 
 \subsection*{Astah UML}
 Astah è uno strumento di modellazione UML. Permette di creare vari diagrammi UML, come quelli di classe, di package, di sequenza e di attività.
