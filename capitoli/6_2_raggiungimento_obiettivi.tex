@@ -1,6 +1,66 @@
-% !TEX encoding = UTF-8
-% !TEX TS-program = pdflatex
-% !TEX root = ../tesi.tex
+% !TEX encoding = UTF-8 % !TEX TS-program = pdflatex % !TEX root = ../tesi.tex %**************************************************************
 
-%**************************************************************
+
 \section{Raggiungimento degli obiettivi}\label{sec:raggiungimento-degli-obiettivi}
+\begin{longtable}{|C{7cm}|C{3cm}|C{3cm}|}
+    \hline
+    \textbf{Obiettivo} &
+    \textbf{Tipologia} &
+    \textbf{Stato} \\\hline
+    Decompilazione sorgenti.
+    & Obbligatorio & Completato \\\hline
+    Repackaging dell'applicativo.
+    & Obbligatorio & Completato \\\hline
+    Analisi dei file sorgenti ottenuti dalla decompilazione.
+    & Obbligatorio & Completato \\\hline
+    Firma dell'APK ottenuto dal repackaging.
+    & Obbligatorio & Completato \\\hline
+    Installazione dell'APK ricompilato.
+    & Desiderabile & Completato \\\hline
+    Dump dei dati dall'AVD.
+    & Obbligatorio & Completato \\\hline
+    Generazione di un report dell'analisi.
+    & Obbligatorio & Completato \\\hline
+    Creazione di un file \gls{pcap} che contiene i dettagli delle attività di rete.
+    & Desiderabile & Completato \\\hline
+    Avvio dell'AVD con opzioni di proxy.
+    & Facoltativo  & Completato \\\hline
+\end{longtable}
+\begin{longtable}{| C{3cm}|C{7cm} |C{3cm}|}
+    \hline
+    \textbf{Requisito} & \textbf{Descrizione}& \textbf{Stato di completamento} \\\hline
+    R-1-F-O& Il tool deve permettere di selezionare un file APK. & Completato                      \\\hline
+    R-2-F-O & Il tool deve permettere di avviare la decompilazione dell'APK selezionato.
+    & Completato \\\hline
+    R-3-F-O & Il tool deve permettere di visualizzare il messaggio di errore quando la decompilazione non è terminato con successo.
+    & Completato \\\hline
+    R-4-F-O & Il tool deve permettere d'installare l'APK decompilato e manomesso su un AVD.
+    & Completato \\\hline
+    R-5-F-O & Il tool deve permettere di visualizzare il messaggio quando non sono stati rilevati nessun AVD.
+    & Completato \\\hline
+    R-6-F-O & Il tool deve permettere di visualizzare il messaggio di errore se l'AVD selezionato non si è avviato correttamente.
+    & Completato \\\hline
+    R-7-F-O & Il tool deve permettere di fare il dump dello storage interna dell'applicazione.
+    & Completato \\\hline
+    R-8-F-D & Il tool deve permettere di visualizzare i dex ottenuti dalla decompilazione.
+    & Completato \\\hline
+    R-9-F-O & Il tool deve permettere di visualizzare il messaggio d'errore se la decodifica non è andato a buon fine.
+    & Completato \\\hline
+    R-10-F-F & Il tool deve permettere di firmare l'APK ricompilato.
+    & Completato \\\hline
+    R-11-F-F & Il tool deve permettere di mostrare dei messaggi quando le credenziali inseriti non sono corretti.
+    & Completato \\\hline
+    R-12-F-O & Il tool deve permettere di mostrare dei messaggi quando è stato selezionato un file non valido.
+    & Completato \\\hline
+    R-13-F-O & Il tool deve permettere di decodificare i file .dex in .java.
+    & Completato \\\hline
+    R-14-F-O & Il tool deve permettere di permettere di effettuare dell'analisi del codice java.
+    & Completato \\\hline
+    R-15-F-D & Il tool deve permettere di avviare un'AVD presente nel sistema.
+    & Completato \\\hline
+    R-16-F-D & Il tool deve permettere d'inserire le informazioni per il proxy.
+    & Completato \\\hline
+    R-17-F-D & Il tool deve permettere di registrare il traffico di rete.
+    & Completato \\\hline
+    \caption{Stato completamento requisiti.}
+\end{longtable}
