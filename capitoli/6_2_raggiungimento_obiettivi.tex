@@ -1,11 +1,16 @@
-% !TEX encoding = UTF-8 % !TEX TS-program = pdflatex % !TEX root = ../tesi.tex %**************************************************************
+% !TEX encoding = UTF-8
+% !TEX TS-program = pdflatex
+% !TEX root = ../tesi.tex
+%**************************************************************
 
 
 \section{Raggiungimento degli obiettivi}\label{sec:raggiungimento-degli-obiettivi}
+Gli obiettivi dello stage erano molteplici e ognuno dei quali aveva una priorità, nella seguente tabella vengono presentati gli obiettivi, priorità e lo stato di completamento.
+
 \begin{longtable}{|C{7cm}|C{3cm}|C{3cm}|}
     \hline
     \textbf{Obiettivo} &
-    \textbf{Tipologia} &
+    \textbf{Priorità} &
     \textbf{Stato} \\\hline
     Decompilazione sorgenti.
     & Obbligatorio & Completato \\\hline
@@ -26,10 +31,11 @@
     Avvio dell'AVD con opzioni di proxy.
     & Facoltativo  & Completato \\\hline
 \end{longtable}
+Di seguito vengono presentati i requisiti individuati nella  \hyperref[subsec:classificazione]{sezione dei requisiti} con lo stato di completamento per ognuno di essi.
 \begin{longtable}{| C{3cm}|C{7cm} |C{3cm}|}
     \hline
-    \textbf{Requisito} & \textbf{Descrizione}& \textbf{Stato di completamento} \\\hline
-    R-1-F-O& Il tool deve permettere di selezionare un file APK. & Completato                      \\\hline
+    \textbf{Requisito} & \textbf{Descrizione}                                & \textbf{Stato di completamento} \\\hline
+    R-1-F-O            & Il tool deve permettere di selezionare un file APK. & Completato                      \\\hline
     R-2-F-O & Il tool deve permettere di avviare la decompilazione dell'APK selezionato.
     & Completato \\\hline
     R-3-F-O & Il tool deve permettere di visualizzare il messaggio di errore quando la decompilazione non è terminato con successo.
@@ -64,3 +70,18 @@
     & Completato \\\hline
     \caption{Stato completamento requisiti.}
 \end{longtable}
+Come si nota dalle precedenti tabelle, gli obiettivi fissati inizialmente e i requisiti individuati durante l'analisi dei requisiti sono stati tutti raggiunti e soddisfatti.\\
+L'azienda si è mostrata soddisfatta delle funzionalità offerte dal tool e anche delle prestazioni in termini di tempo impiegato per effettuare le operazioni, di seguito viene fatta una comparativa dei tempi tra diversi file APK, il primo è l'applicazione Stalker realizzato dallo stagista e dal suo gruppo durante il progetto di Ingegneria del Software, il secondo è un'applicazione per home-baking prodotto dall'azienda Imola Informatica S.p.A. per un suo cliente, il terzo e il quarto sono due applicazioni android base ma sviluppate con linguaggio di programmazione differente.
+\begin{longtable}{| C{2cm}| C{2cm}| C{2.5cm}| C{2.5cm}| C{2.5cm}|}
+    \hline
+    - & \textbf{XXX Bank} & \textbf{Stalker} & \textbf{App base 1} & \textbf{App base 2} \\\hline
+    \textbf{Decompile}    & 25.06             & 47.06            & 16.57               & 17.29               \\\hline
+    \textbf{Recompile}    & 60.46             & 97.37            & 30.65               & 39.39               \\\hline
+    \textbf{Decode}       & 24.05             & 46.42            & 15.33               & 23.59               \\\hline
+    \textbf{Analyze}      & 7.2               & 7.06             & 9.55                & 13.56               \\\hline
+    \textbf{Clean up}     & 11.93             & 30.76            & 5.93                & 8.52                \\\hline
+    \textbf{Totale}       & 128.70            & 228.67           & 78.03               & 91.35               \\\hline
+    \textbf{Linguaggio}   & Kotlin            & Java             & Kotlin              & Java                \\\hline
+    \caption{Tempi di esecuzione del tool in secondi.}
+\end{longtable}
+%todo parla dei risultati ottenuti, se sono accettabili o meno
