@@ -71,17 +71,20 @@ Di seguito vengono presentati i requisiti individuati nella  \hyperref[subsec:cl
     \caption{Stato completamento requisiti.}
 \end{longtable}
 Come si nota dalle precedenti tabelle, gli obiettivi fissati inizialmente e i requisiti individuati durante l'analisi dei requisiti sono stati tutti raggiunti e soddisfatti.\\
-L'azienda si è mostrata soddisfatta delle funzionalità offerte dal tool e anche delle prestazioni in termini di tempo impiegato per effettuare le operazioni, di seguito viene fatta una comparativa dei tempi tra diversi file APK, il primo è l'applicazione Stalker realizzato dallo stagista e dal suo gruppo durante il progetto di Ingegneria del Software, il secondo è un'applicazione per home-baking prodotto dall'azienda Imola Informatica S.p.A. per un suo cliente, il terzo e il quarto sono due applicazioni android base ma sviluppate con linguaggio di programmazione differente.
+L'azienda si è mostrata soddisfatta delle funzionalità offerte dal tool e anche delle prestazioni in termini di tempo impiegato per effettuare le operazioni, di seguito viene fatta una comparativa dei tempi tra diversi file APK, il primo è un'applicazione per home-banking prodotto dall'azienda Imola Informatica S.p.A. per un suo cliente, il secondo è l'applicazione Stalker realizzato dallo stagista e dal suo gruppo durante il progetto d'Ingegneria del Software, il terzo e il quarto sono due applicazioni android base ma sviluppate con linguaggio di programmazione differente.
 \begin{longtable}{| C{2cm}| C{2cm}| C{2.5cm}| C{2.5cm}| C{2.5cm}|}
     \hline
-    - & \textbf{XXX Bank} & \textbf{Stalker} & \textbf{App base 1} & \textbf{App base 2} \\\hline
-    \textbf{Decompile}    & 25.06             & 47.06            & 16.57               & 17.29               \\\hline
-    \textbf{Recompile}    & 60.46             & 97.37            & 30.65               & 39.39               \\\hline
-    \textbf{Decode}       & 24.05             & 46.42            & 15.33               & 23.59               \\\hline
-    \textbf{Analyze}      & 7.2               & 7.06             & 9.55                & 13.56               \\\hline
-    \textbf{Clean up}     & 11.93             & 30.76            & 5.93                & 8.52                \\\hline
-    \textbf{Totale}       & 128.70            & 228.67           & 78.03               & 91.35               \\\hline
-    \textbf{Linguaggio}   & Kotlin            & Java             & Kotlin              & Java                \\\hline
+    -                   & \textbf{XXX Bank} & \textbf{Stalker} & \textbf{App base 1} & \textbf{App base 2} \\\hline
+    \textbf{Decompile}  & 25.06             & 47.06            & 16.57               & 17.29               \\\hline
+    \textbf{Recompile}  & 60.46             & 97.37            & 30.65               & 39.39               \\\hline
+    \textbf{Decode}     & 24.05             & 46.42            & 15.33               & 23.59               \\\hline
+    \textbf{Analyze}    & 7.2               & 7.06             & 3.55                & 4.56               \\\hline
+    \textbf{Clean up}   & 11.93             & 30.76            & 5.93                & 8.52                \\\hline
+    \textbf{Totale}     & 128.70            & 228.67           & 78.03               & 91.35               \\\hline
+    \textbf{Linguaggio} & Kotlin            & Java             & Kotlin              & Java                \\\hline
     \caption{Tempi di esecuzione del tool in secondi.}
 \end{longtable}
-%todo parla dei risultati ottenuti, se sono accettabili o meno
+Come si nota dalla Tabella 6.4 esiste una differenza sostanziale nella durata per le applicazioni sviluppate in Java e quelle in Kotlin, questa differenza è dovuta al tool esterno.
+Più in specifico, per le operazioni di decompile, recompile e decode la differenza è più notevole, mentre per l'attività di analisi la differenza è meno evidente.
+I dati sono stati misurati manualmente e le prime due applicazioni hanno sostanziali differenze, partendo dalla differenza in linguaggio di programmazione utilizzato, la dimensione dell'applicazione in termine di \gls{sloc} e di file, per cui non possono essere presi per la comparazione.
+La terza e la quarta applicazione sono due versioni dello stesso progetto messo a disposizione da \gls{android_studio} con l'unica differenza del linguaggio di programmazione utilizzato, con la differenza di circa \textit{15.58\%}.
