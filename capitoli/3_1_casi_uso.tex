@@ -347,6 +347,52 @@
         \item l'attore seleziona la voce avvia AVD.
     \end{itemize}
 \end{itemize}
+\subsubsection*{UC-17.1 Selezione voce Avvia con proxy}
+\begin{itemize}
+    \item \textbf{attori:} attore generico;
+    \item \textbf{descrizione:} l'utente vuole avviare l'AVD con le opzioni di proxy;
+    \item \textbf{pre-condizioni:} il tool è stato avviato correttamente ed è riuscito a rilevare gli AVD presenti nel sistema;
+    \item \textbf{post-condizioni:} l'opzione di proxy è stato selezionato;
+    \item \textbf{flusso degli eventi principali:}
+    \begin{itemize}
+        \item l'utente seleziona la voce per avviare l'AVD.
+    \end{itemize}
+\end{itemize}
+\subsubsection*{UC-17.2 selezione voce avvio AVD}
+\begin{itemize}
+    \item \textbf{attori:} attore generico;
+    \item \textbf{descrizione:} l'utente avviare l'AVD;
+    \item \textbf{pre-condizioni:} l'utente ha selezionato le opzioni per avviare l'AVD;
+    \item \textbf{post-condizioni:} il tool avvia l'AVD;
+    \item \textbf{flusso degli eventi principali:}
+    \begin{itemize}
+        \item il tool seleziona la voce avvio di avviare l'AVD.
+    \end{itemize}
+\end{itemize}
+\subsubsection*{UC-17.3 inserimento indirizzo e porta proxy}
+\begin{itemize}
+    \item \textbf{attori:} attore generico;
+    \item \textbf{descrizione:} serve all'attore per inserire i dati del proxy;
+    \item \textbf{pre-condizioni:} l'utente ha selezionato l'opzione di avviare l'AVD con il proxy;
+    \item \textbf{post-condizioni:} i dati sono stati inseriti correttamente;
+    \item \textbf{flusso degli eventi principali:}
+    \begin{itemize}
+        \item l'utente inserisce l'indirizzo IP del server proxy;
+        \item l'utente inserisce il numero della porta del server proxy.
+    \end{itemize}
+\end{itemize}
+\subsubsection*{UC-17.4 conferma dei dati}
+\begin{itemize}
+    \item \textbf{attori:} attore generico;
+    \item \textbf{descrizione:} serve all'utente per confermare i dati inseriti per avviare l'AVD;
+    \item \textbf{pre-condizioni:} l'utente ha inserito le opzioni di proxy correttamente;
+    \item \textbf{post-condizioni:} l'AVD è stato avviato correttamente con le opzioni di proxy;
+    \item \textbf{flusso degli eventi principali:}
+    \begin{itemize}
+        \item l'utente conferma le informazioni inserite e avvia l'AVD.
+    \end{itemize}
+\end{itemize}
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=10cm, height=8cm]{./immagini/usecase/uc_17.png}
