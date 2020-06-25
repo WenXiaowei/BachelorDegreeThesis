@@ -12,162 +12,158 @@ Nel caso del progetto \gls{apat} i test unitari sono stati fatti utilizzando il 
 
 \subsection{Specifica dei test}\label{subsec:specifica-dei-test-unitari}
 Di seguito sono riportati i test d'unità che verificano il corretto funzionamento delle singole unità.
-\begin{center}
-    \begin{longtable}{ |C{3cm} | C{8.5cm}| C{1.5cm} |}
-        \hline
-        \textbf{Identificativo} &
-        \textbf{Descrizione} &
-        \textbf{Stato} \\\hline
-        \idTest{TU} & Verificare che il file AndroidManifest.xml venga modificato correttamente.
-        & I \\\hline
-        \idTest{TU} & Verificare che dal file AndroidManifest.xml venga estratto il package corretto.
-        & I \\\hline
-        \idTest{TU} & Verificare che il nuovo path dell'APK venga aggiornato correttamente.
-        & I \\\hline
-        \idTest{TU} & Verificare che la lista delle AVD venga ottenuta correttamente.
-        & I \\\hline
-        \idTest{TU} & Verificare che l'AVD venga avviato con i parametri corretti.
-        & I \\\hline
-        \idTest{TU} & Verificare che i file dex vengano decompilati correttamente.
-        & I \\\hline
-        \idTest{TU} & Verificare che elenco dei file presenti nella cartella ./tmp sia corretto.
-        & I \\\hline
-        \idTest{TU} & Verificare che i file presenti nella cartella ./tmp vengano rimossi correttamente.
-        & I \\\hline
-        \idTest{TU} & Verificare che la ricompilazione dell'APK avvenga correttamente.
-        & I \\\hline
-        \idTest{TU} & Verificare che la signing dell'APK ricompilato avvenga correttamente.
-        & I \\\hline
-        \idTest{TU} & Verificare che l'apk venga installato correttamente nell'AVD.
-        & I \\\hline
-        \idTest{TU} & Verificare che i dati scaricati dall'AVD siano quelli presenti nell'areas di storage dell'applicazione.
-        & I \\\hline
-        \idTest{TU} & Verificare che i file DEX vengano decompilati correttamente.
-        & I \\\hline
-        \idTest{TU} & Verificare che il pdf generato sia corretto.
-        & I \\\hline
-        \idTest{TU} & Verificare che lo stato del tool caricato sia corretto.
-        & I \\\hline
-        \idTest{TU} & Verificare che lo stato del tool venga salvato correttamente.
-        & I \\\hline
-        \idTest{TU} & Verificare che lo stato del tool venga resettato correttamente.
-        & I \\\hline
-        \idTest{TU} & Verificare che i paragrafi venga inseriti nel pdf correttamente.
-        & I \\\hline
-        \idTest{TU} & Verificare che il file zip venga estratto correttamente.
-        & I \\\hline
-        \idTest{TU} & Verificare che il paragrafo generato corretto rispetto all'elenco dei file dati.
-        & I \\\hline
-        \idTest{TU} & Verificare che il paragrafo generato corretto rispetto all'elenco dei file dati.
-        & I \\\hline
-        \idTest{TU} & Verificare che il paragrafo generato corretto rispetto all'elenco dei file dati.
-        & I \\\hline
-        \idTest{TU} & Verificare che il paragrafo generato corretto rispetto all'elenco dei file dati.
-        & I \\\hline
-        \idTest{TU} & Verificare che il commando generato per decompilare l'APK sia corretto.
-        & I \\\hline
-        \idTest{TU} & Verificare che il commando generato per ricompilare l'APK sia corretto.
-        & I \\\hline
-        \idTest{TU} & Verificare che il commando generato per firmare l'APK ricompilato sia corretto.
-        & I \\\hline
-        \idTest{TU} & Verificare che il commando generato per ottenere l'elenco delle AVD sia corretto.
-        & I \\\hline
-        \idTest{TU} & Verificare che il commando generato per avviare l'AVD sia corretto.
-        & I \\\hline
-        \idTest{TU} & Verificare che il commando generato per installare l'APK sull'AVD sia corretto.
-        & I \\\hline
-        \idTest{TU} & Verificare che il commando generato per scaricare l'area di storage dell'app installato sia corretto.
-        & I \\\hline
-        \idTest{TU} & Verificare che il commando generato per convertire i file .class in .java sia corretto.
-        & I \\\hline
-        \idTest{TU} & Verificare che il commando generato per rimuovere i file decompilati sia corretto.
-        & I \\\hline
-        \idTest{TU} & Verificare che il commando generato per connettersi all'AVD come root sia corretto.
-        & I \\\hline
-        \idTest{TU} & Verificare che il commando generato per connettersi all'AVD normalmente sia corretto.
-        & I \\\hline
-        \idTest{TU} & Verificare che il commando generato per ottenere i parametri del terminale sia corretto.
-        & I \\\hline
-        \idTest{TU} & Verificare che la mappa restituita contenga esattamente le scelte dell'utente.
-        & I \\\hline
-        \idTest{TU} & Verificare che vengano accettati solo i file di tipo APK.
-        & I \\\hline
-        \idTest{TU} & Verificare che la descrizione restituita sia corretta.
-        & I \\\hline
-        \idTest{TU} & Verificare che vengano accettati solo i file di tipo KJS.
-        & I \\\hline
-        \idTest{TU} & Verificare che la descrizione restituita sia corretta.
-        & I \\\hline
-        \idTest{TU} & Verificare che vengano accettati solo i file di tipo TXT.
-        & I \\\hline
-        \idTest{TU} & Verificare che la descrizione restituita sia corretta.
-        & I \\\hline
-        \idTest{TU} & Verificare che la stringa restituita sia corretta.
-        & I \\\hline
-        \idTest{TU} & Verificare che l'elenco dei file ottenuto sia corretto.
-        & I \\\hline
-        \idTest{TU} & Verificare che l'arrotondamento avviene correttamente.
-        & I \\\hline
-        \caption{Test d'unità}
-    \end{longtable}
-\end{center}
+\begin{longtable}{ |C{3cm} | C{8.5cm}| C{1.5cm} |}
+    \hline
+    \textbf{Identificativo} &
+    \textbf{Descrizione} &
+    \textbf{Stato} \\\hline
+    \idTest{TU} & Verificare che il file AndroidManifest.xml venga modificato correttamente.
+    & I \\\hline
+    \idTest{TU} & Verificare che dal file AndroidManifest.xml venga estratto il package corretto.
+    & I \\\hline
+    \idTest{TU} & Verificare che il nuovo path dell'APK venga aggiornato correttamente.
+    & I \\\hline
+    \idTest{TU} & Verificare che la lista delle AVD venga ottenuta correttamente.
+    & I \\\hline
+    \idTest{TU} & Verificare che l'AVD venga avviato con i parametri corretti.
+    & I \\\hline
+    \idTest{TU} & Verificare che i file dex vengano decompilati correttamente.
+    & I \\\hline
+    \idTest{TU} & Verificare che elenco dei file presenti nella cartella ./tmp sia corretto.
+    & I \\\hline
+    \idTest{TU} & Verificare che i file presenti nella cartella ./tmp vengano rimossi correttamente.
+    & I \\\hline
+    \idTest{TU} & Verificare che la ricompilazione dell'APK avvenga correttamente.
+    & I \\\hline
+    \idTest{TU} & Verificare che la signing dell'APK ricompilato avvenga correttamente.
+    & I \\\hline
+    \idTest{TU} & Verificare che l'apk venga installato correttamente nell'AVD.
+    & I \\\hline
+    \idTest{TU} & Verificare che i dati scaricati dall'AVD siano quelli presenti nell'areas di storage dell'applicazione.
+    & I \\\hline
+    \idTest{TU} & Verificare che i file DEX vengano decompilati correttamente.
+    & I \\\hline
+    \idTest{TU} & Verificare che il pdf generato sia corretto.
+    & I \\\hline
+    \idTest{TU} & Verificare che lo stato del tool caricato sia corretto.
+    & I \\\hline
+    \idTest{TU} & Verificare che lo stato del tool venga salvato correttamente.
+    & I \\\hline
+    \idTest{TU} & Verificare che lo stato del tool venga resettato correttamente.
+    & I \\\hline
+    \idTest{TU} & Verificare che i paragrafi venga inseriti nel pdf correttamente.
+    & I \\\hline
+    \idTest{TU} & Verificare che il file zip venga estratto correttamente.
+    & I \\\hline
+    \idTest{TU} & Verificare che il paragrafo generato corretto rispetto all'elenco dei file dati.
+    & I \\\hline
+    \idTest{TU} & Verificare che il paragrafo generato corretto rispetto all'elenco dei file dati.
+    & I \\\hline
+    \idTest{TU} & Verificare che il paragrafo generato corretto rispetto all'elenco dei file dati.
+    & I \\\hline
+    \idTest{TU} & Verificare che il paragrafo generato corretto rispetto all'elenco dei file dati.
+    & I \\\hline
+    \idTest{TU} & Verificare che il commando generato per decompilare l'APK sia corretto.
+    & I \\\hline
+    \idTest{TU} & Verificare che il commando generato per ricompilare l'APK sia corretto.
+    & I \\\hline
+    \idTest{TU} & Verificare che il commando generato per firmare l'APK ricompilato sia corretto.
+    & I \\\hline
+    \idTest{TU} & Verificare che il commando generato per ottenere l'elenco delle AVD sia corretto.
+    & I \\\hline
+    \idTest{TU} & Verificare che il commando generato per avviare l'AVD sia corretto.
+    & I \\\hline
+    \idTest{TU} & Verificare che il commando generato per installare l'APK sull'AVD sia corretto.
+    & I \\\hline
+    \idTest{TU} & Verificare che il commando generato per scaricare l'area di storage dell'app installato sia corretto.
+    & I \\\hline
+    \idTest{TU} & Verificare che il commando generato per convertire i file .class in .java sia corretto.
+    & I \\\hline
+    \idTest{TU} & Verificare che il commando generato per rimuovere i file decompilati sia corretto.
+    & I \\\hline
+    \idTest{TU} & Verificare che il commando generato per connettersi all'AVD come root sia corretto.
+    & I \\\hline
+    \idTest{TU} & Verificare che il commando generato per connettersi all'AVD normalmente sia corretto.
+    & I \\\hline
+    \idTest{TU} & Verificare che il commando generato per ottenere i parametri del terminale sia corretto.
+    & I \\\hline
+    \idTest{TU} & Verificare che la mappa restituita contenga esattamente le scelte dell'utente.
+    & I \\\hline
+    \idTest{TU} & Verificare che vengano accettati solo i file di tipo APK.
+    & I \\\hline
+    \idTest{TU} & Verificare che la descrizione restituita sia corretta.
+    & I \\\hline
+    \idTest{TU} & Verificare che vengano accettati solo i file di tipo KJS.
+    & I \\\hline
+    \idTest{TU} & Verificare che la descrizione restituita sia corretta.
+    & I \\\hline
+    \idTest{TU} & Verificare che vengano accettati solo i file di tipo TXT.
+    & I \\\hline
+    \idTest{TU} & Verificare che la descrizione restituita sia corretta.
+    & I \\\hline
+    \idTest{TU} & Verificare che la stringa restituita sia corretta.
+    & I \\\hline
+    \idTest{TU} & Verificare che l'elenco dei file ottenuto sia corretto.
+    & I \\\hline
+    \idTest{TU} & Verificare che l'arrotondamento avviene correttamente.
+    & I \\\hline
+    \caption{Test d'unità}
+\end{longtable}
 \setcounter{rowcount}{0}
 
 \subsection{Tracciamento}\label{subsec:tracciamento-unitari}
 La seguente tabella associa ogni singolo test unitario all'unità verificata.
-\begin{center}
-    \begin{longtable}{ |C{3cm} |C{10.5cm}|}
-        \hline
-        \textbf{Identificativo} &
-        \textbf{Componente} \\\hline
-        \idTest{TU} & AndroidManifest.editDebugAttribute()       \\\hline
-        \idTest{TU} & AndroidManifest.getPackageName()           \\\hline
-        \idTest{TU} & Controller.updateApkPath()                 \\\hline
-        \idTest{TU} & Controller.refreshAVDList()                \\\hline
-        \idTest{TU} & Controller.startAvd()                      \\\hline
-        \idTest{TU} & Controller.decompile()                     \\\hline
-        \idTest{TU} & Controller.listFolderElements()            \\\hline
-        \idTest{TU} & Controller.removeDecompiledFiles()         \\\hline
-        \idTest{TU} & Controller.recompile()                     \\\hline
-        \idTest{TU} & Controller.signAPK()                       \\\hline
-        \idTest{TU} & Controller.installCompiledApk()            \\\hline
-        \idTest{TU} & Controller.dumpDataFromAVD()               \\\hline
-        \idTest{TU} & Controller.decodeDex()                     \\\hline
-        \idTest{TU} & Controller.analyze()                       \\\hline
-        \idTest{TU} & Controller.loadState()                     \\\hline
-        \idTest{TU} & Controller.saveState()                     \\\hline
-        \idTest{TU} & Controller.resetModelState()               \\\hline
-        \idTest{TU} & PDFWriter.addParagraphs()                  \\\hline
-        \idTest{TU} & Unzipper.unzip()                           \\\hline
-        \idTest{TU} & DumpDataBase.doAnalysis()                  \\\hline
-        \idTest{TU} & DumpedFilesAnalyzer.doAnalysis()           \\\hline
-        \idTest{TU} & LambdaCounter.doAnalysis()                 \\\hline
-        \idTest{TU} & StringFinder.doAnalysis()                  \\\hline
-        \idTest{TU} & Commands.getDecompileCommand()             \\\hline
-        \idTest{TU} & Commands.getCompileApkCommand()            \\\hline
-        \idTest{TU} & Commands.getSigningApkCommand()            \\\hline
-        \idTest{TU} & Commands.getListOfAvds()                   \\\hline
-        \idTest{TU} & Commands.getStartAvdCommand()              \\\hline
-        \idTest{TU} & Commands.getInstallAPK()                   \\\hline
-        \idTest{TU} & Commands.getDumpApplicationDataCommand()   \\\hline
-        \idTest{TU} & Commands.getConvertToJavaCommand()         \\\hline
-        \idTest{TU} & Commands.getRemoveDecompiledFilesCommand() \\\hline
-        \idTest{TU} & Commands.connectToAdbAsRoot()              \\\hline
-        \idTest{TU} & Commands.getAttachToAvdCommand()           \\\hline
-        \idTest{TU} & Commands.getCli()                          \\\hline
-        \idTest{TU} & Analysis.chooser()                         \\\hline
-        \idTest{TU} & APKFilter.accept()                         \\\hline
-        \idTest{TU} & APKFilter.getDescription()                 \\\hline
-        \idTest{TU} & KeystoreFilter.accept()                    \\\hline
-        \idTest{TU} & KeystoreFilter.getDescription()            \\\hline
-        \idTest{TU} & TxtFilter.accept()                         \\\hline
-        \idTest{TU} & TxtFilter.getDescription()                 \\\hline
-        \idTest{TU} & Utils.getDate()                            \\\hline
-        \idTest{TU} & Utils.listAllFiles()                       \\\hline
-        \idTest{TU} & Utils.round()                              \\\hline
-        \caption{Tracciamento dei test d'unità}
-    \end{longtable}
-\end{center}
+\begin{longtable}{ |C{3cm} |C{10.5cm}|}
+    \hline
+    \textbf{Identificativo} &
+    \textbf{Componente} \\\hline
+    \idTest{TU} & AndroidManifest.editDebugAttribute()       \\\hline
+    \idTest{TU} & AndroidManifest.getPackageName()           \\\hline
+    \idTest{TU} & Controller.updateApkPath()                 \\\hline
+    \idTest{TU} & Controller.refreshAVDList()                \\\hline
+    \idTest{TU} & Controller.startAvd()                      \\\hline
+    \idTest{TU} & Controller.decompile()                     \\\hline
+    \idTest{TU} & Controller.listFolderElements()            \\\hline
+    \idTest{TU} & Controller.removeDecompiledFiles()         \\\hline
+    \idTest{TU} & Controller.recompile()                     \\\hline
+    \idTest{TU} & Controller.signAPK()                       \\\hline
+    \idTest{TU} & Controller.installCompiledApk()            \\\hline
+    \idTest{TU} & Controller.dumpDataFromAVD()               \\\hline
+    \idTest{TU} & Controller.decodeDex()                     \\\hline
+    \idTest{TU} & Controller.analyze()                       \\\hline
+    \idTest{TU} & Controller.loadState()                     \\\hline
+    \idTest{TU} & Controller.saveState()                     \\\hline
+    \idTest{TU} & Controller.resetModelState()               \\\hline
+    \idTest{TU} & PDFWriter.addParagraphs()                  \\\hline
+    \idTest{TU} & Unzipper.unzip()                           \\\hline
+    \idTest{TU} & DumpDataBase.doAnalysis()                  \\\hline
+    \idTest{TU} & DumpedFilesAnalyzer.doAnalysis()           \\\hline
+    \idTest{TU} & LambdaCounter.doAnalysis()                 \\\hline
+    \idTest{TU} & StringFinder.doAnalysis()                  \\\hline
+    \idTest{TU} & Commands.getDecompileCommand()             \\\hline
+    \idTest{TU} & Commands.getCompileApkCommand()            \\\hline
+    \idTest{TU} & Commands.getSigningApkCommand()            \\\hline
+    \idTest{TU} & Commands.getListOfAvds()                   \\\hline
+    \idTest{TU} & Commands.getStartAvdCommand()              \\\hline
+    \idTest{TU} & Commands.getInstallAPK()                   \\\hline
+    \idTest{TU} & Commands.getDumpApplicationDataCommand()   \\\hline
+    \idTest{TU} & Commands.getConvertToJavaCommand()         \\\hline
+    \idTest{TU} & Commands.getRemoveDecompiledFilesCommand() \\\hline
+    \idTest{TU} & Commands.connectToAdbAsRoot()              \\\hline
+    \idTest{TU} & Commands.getAttachToAvdCommand()           \\\hline
+    \idTest{TU} & Commands.getCli()                          \\\hline
+    \idTest{TU} & Analysis.chooser()                         \\\hline
+    \idTest{TU} & APKFilter.accept()                         \\\hline
+    \idTest{TU} & APKFilter.getDescription()                 \\\hline
+    \idTest{TU} & KeystoreFilter.accept()                    \\\hline
+    \idTest{TU} & KeystoreFilter.getDescription()            \\\hline
+    \idTest{TU} & TxtFilter.accept()                         \\\hline
+    \idTest{TU} & TxtFilter.getDescription()                 \\\hline
+    \idTest{TU} & Utils.getDate()                            \\\hline
+    \idTest{TU} & Utils.listAllFiles()                       \\\hline
+    \idTest{TU} & Utils.round()                              \\\hline
+    \caption{Tracciamento dei test d'unità}
+\end{longtable}
 
 I test sopraelencati sono stati superati con successo, con una \gls{codecoverage} del \textit{84.2\%}.
 \newpage
