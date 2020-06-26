@@ -15,9 +15,9 @@ L'applicazione di tale pattern avviene attraverso il pattern Observer, nello spe
 
 \newpage
 \subsection{Observer}\label{subsec:observer}
-Il pattern observer\footcite{womak:observer} permette di definire una dipendenza uno a molti fra oggetti, in modo tale che se un oggetto cambia il suo stato, tutti gli oggetti dipendenti da questo siano notificati e aggiornati automaticamente.\\
+Il pattern observer\footcite{womak:observer} permette di definire una dipendenza uno a molti fra gli oggetti, in modo tale che se un oggetto cambia il proprio stato, tutti gli oggetti dipendenti da questo siano notificati e aggiornati automaticamente.\\
 L'implementazione di tale pattern avviene attraverso una classe \textit{Observable} e un'interfaccia \textit{Observer} entrambe template, per modificare il valore dell'observable è sufficiente utilizzare il metodo \textit{setValue(newValue:T)}, in questo modo, su ogni elemento della lista \textit{observables} viene invocato il metodo \textit{onChanged} passando il nuovo valore.\\
-Tale pattern viene applicato nel tool perché i componenti delle viste possano osservare il contenuto del modello.
+Tale pattern viene applicato nel tool perché i componenti delle viste possano osservare i contenuti del modello.
 \begin{figure}[H]
     \centering
     \includegraphics[width=14cm, height=8cm]{./immagini/diagrammi_uml/Observer.png}
@@ -37,7 +37,7 @@ Il vantaggio ottenuto per aver utilizzato questo pattern è quello di poter "dec
 \newpage
 \subsection{Factory Method}\label{subsec:factory-method}
 Il pattern factory method\footcite{womak:factory-method} è stato utilizzato per poter fornire al controller dei comandi da eseguire nei processi, essendo i comandi dipendente dal sistema operativo, sono state create due classi, una per Windows chiamata \textit{WindowsCommandFactory} e una per Linux chiamata \textit{LinuxCommandFactory}.
-Allo start-up del tool, viene letta una dalla JVM una variabile chiamata \textit{os.name}, e dipendentemente da valore letto, viene deciso quale delle sottoclassi istanziare per il corretto funzionamento del tool.
+Allo start-up del tool, viene letta dalla JVM una variabile chiamata \textit{os.name}, e dipendentemente da valore letto, viene deciso quale delle sottoclassi istanziare per il corretto funzionamento del tool.
 \begin{figure}[H]
     \centering
     \includegraphics[width=14cm, height=14cm]{./immagini/diagrammi_uml/CommandFactory.png}
