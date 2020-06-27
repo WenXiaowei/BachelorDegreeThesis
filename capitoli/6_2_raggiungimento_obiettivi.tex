@@ -1,0 +1,91 @@
+% !TEX encoding = UTF-8
+% !TEX TS-program = pdflatex
+% !TEX root = ../tesi.tex
+%**************************************************************
+
+
+\section{Raggiungimento degli obiettivi}\label{sec:raggiungimento-degli-obiettivi}
+Gli obiettivi dello stage erano molteplici, ognuno dei quali aveva una priorità, nella seguente tabella vengono presentati gli obiettivi, priorità e lo stato di completamento.
+
+\begin{longtable}{|C{7cm}|C{3cm}|C{3cm}|}
+    \hline
+    \textbf{Obiettivo} &
+    \textbf{Priorità} &
+    \textbf{Stato} \\\hline
+    Decompilazione sorgenti.
+    & Obbligatorio & Soddisfatto \\\hline
+    Repackaging dell'applicativo.
+    & Obbligatorio & Soddisfatto \\\hline
+    Analisi dei file sorgenti ottenuti dalla decompilazione.
+    & Obbligatorio & Soddisfatto \\\hline
+    Firma dell'APK ottenuto dal repackaging.
+    & Obbligatorio & Soddisfatto \\\hline
+    Installazione dell'APK ricompilato.
+    & Desiderabile & Soddisfatto \\\hline
+    Dump dei dati dall'AVD.
+    & Obbligatorio & Soddisfatto \\\hline
+    Generazione di un report dell'analisi.
+    & Obbligatorio & Soddisfatto \\\hline
+    Creazione di un file \gls{pcap} che contiene i dettagli delle attività di rete.
+    & Desiderabile & Soddisfatto \\\hline
+    Avvio dell'AVD con opzioni di proxy.
+    & Facoltativo  & Soddisfatto \\\hline
+\end{longtable}
+Gli obiettivi dello stage fissati nel piano di lavoro sono tutti soddisfatti.\\
+Di seguito vengono presentati i requisiti individuati nella  \hyperref[subsec:classificazione]{sezione dei requisiti} con lo stato di completamento per ognuno di essi.
+\begin{longtable}{| C{3cm}|C{7cm} |C{3cm}|}
+    \hline
+    \textbf{Requisito} & \textbf{Descrizione}                                & \textbf{Stato di completamento} \\\hline
+    R-1-F-O            & Il tool deve permettere di selezionare un file APK. & Completato                      \\\hline
+    R-2-F-O & Il tool deve permettere di avviare la decompilazione dell'APK selezionato.
+    & Completato \\\hline
+    R-3-F-O & Il tool deve permettere di visualizzare il messaggio di errore quando la decompilazione non è terminato con successo.
+    & Completato \\\hline
+    R-4-F-O & Il tool deve permettere d'installare l'APK decompilato e manomesso su un AVD.
+    & Completato \\\hline
+    R-5-F-O & Il tool deve permettere di visualizzare il messaggio quando non sono stati rilevati nessun AVD.
+    & Completato \\\hline
+    R-6-F-O & Il tool deve permettere di visualizzare il messaggio di errore se l'AVD selezionato non si è avviato correttamente.
+    & Completato \\\hline
+    R-7-F-O & Il tool deve permettere di fare il dump dello storage interna dell'applicazione.
+    & Completato \\\hline
+    R-8-F-D & Il tool deve permettere di visualizzare i dex ottenuti dalla decompilazione.
+    & Completato \\\hline
+    R-9-F-O & Il tool deve permettere di visualizzare il messaggio d'errore se la decodifica non è andato a buon fine.
+    & Completato \\\hline
+    R-10-F-F & Il tool deve permettere di firmare l'APK ricompilato.
+    & Completato \\\hline
+    R-11-F-F & Il tool deve permettere di mostrare dei messaggi quando le credenziali inseriti non sono corretti.
+    & Completato \\\hline
+    R-12-F-O & Il tool deve permettere di mostrare dei messaggi quando è stato selezionato un file non valido.
+    & Completato \\\hline
+    R-13-F-O & Il tool deve permettere di decodificare i file .dex in .java.
+    & Completato \\\hline
+    R-14-F-O & Il tool deve permettere di permettere di effettuare dell'analisi del codice java.
+    & Completato \\\hline
+    R-15-F-D & Il tool deve permettere di avviare un'AVD presente nel sistema.
+    & Completato \\\hline
+    R-16-F-D & Il tool deve permettere d'inserire le informazioni per il proxy.
+    & Completato \\\hline
+    R-17-F-D & Il tool deve permettere di registrare il traffico di rete.
+    & Completato \\\hline
+    \caption{Stato completamento requisiti.}
+\end{longtable}
+I requisiti della precedente tabella, individuati durante l'analisi dei requisiti, sono stati soddisfatti tutti.\\
+L'azienda si è mostrata soddisfatta delle funzionalità offerte dal tool e anche delle prestazioni in termini di tempo impiegato per effettuare le operazioni, di seguito viene fatta una comparativa dei tempi tra diversi file APK, il primo è un'applicazione per home-banking prodotto dall'azienda Imola Informatica S.p.A. per un suo cliente, il secondo è l'applicazione Stalker realizzato dallo stagista e dal suo gruppo durante il progetto d'Ingegneria del Software, il terzo e il quarto sono due applicazioni android base ma sviluppate con linguaggio di programmazione differente.
+\begin{longtable}{| C{2cm}| C{2cm}| C{2.5cm}| C{2.5cm}| C{2.5cm}|}
+    \hline
+    & \textbf{XYZ Bank} & \textbf{Stalker} & \textbf{App base 1} & \textbf{App base 2} \\\hline
+    \textbf{Decompile}  & 25.06             & 47.06            & 16.57               & 17.29               \\\hline
+    \textbf{Recompile}  & 60.46             & 97.37            & 30.65               & 39.39               \\\hline
+    \textbf{Decode}     & 24.05             & 46.42            & 15.33               & 23.59               \\\hline
+    \textbf{Analyze}    & 7.20              & 7.06             & 3.55                & 4.56                \\\hline
+    \textbf{Clean up}   & 11.93             & 30.76            & 5.93                & 8.52                \\\hline
+    \textbf{Totale}     & 128.70            & 228.67           & 78.03               & 91.35               \\\hline
+    \textbf{Linguaggio} & Kotlin            & Java             & Kotlin              & Java                \\\hline
+    \caption{Tempi di esecuzione del tool in secondi.}
+\end{longtable}
+Come si nota dalla Tabella 6.4 esiste una differenza sostanziale nella durata per le applicazioni sviluppate in Java e quelle in Kotlin, questa differenza è dovuta al tool esterno.
+Più in specifico, per le operazioni di decompile, recompile e decode la differenza è più notevole, mentre per l'attività di analisi la differenza è meno evidente.
+I dati sono stati misurati manualmente e le prime due applicazioni hanno sostanziali differenze, partendo dalla differenza in linguaggio di programmazione utilizzato, la dimensione dell'applicazione in termine di \gls{sloc} e di file, per cui non possono essere presi per la comparazione.
+La terza e la quarta applicazione sono due versioni dello stesso progetto messo a disposizione da \gls{android_studio} con l'unica differenza del linguaggio di programmazione utilizzato, con la differenza di circa \textit{15.58\%}, questa differenza è dovuta ai tool esterni che il APAT utilizza, per cui non è stato possibile migliorare la prestazione da questo punto di vista.

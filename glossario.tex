@@ -1,82 +1,351 @@
-
 %**************************************************************
 % Acronimi
 %**************************************************************
 \renewcommand{\acronymname}{Acronimi e abbreviazioni}
+%**************************************************************
 
-\newacronym[description={\glslink{apig}{Application Program Interface}}]
-    {api}{API}{Application Program Interface}
+\newacronym[description={\glslink{apig}{Application Programming Interface}}]
+{api}{API}{Application Programming Interface}
+\newglossaryentry{apig}
+{
+name=\glslink{api}{API},
+text= Application Programming Interface,
+sort= api,
+description={in informatica con il termine \emph{Application Programming Interface API} (interfaccia di programmazione di un'applicazione) si indica ogni insieme di procedure disponibili al programmatore, di solito raggruppate a formare un set di strumenti specifici per l'espletamento di un determinato compito all'interno di un certo programma.
+La finalità è ottenere un'astrazione, di solito tra l'hardware e il programmatore o tra software a basso e quello ad alto livello semplificando così il lavoro di programmazione}
+}
+%**************************************************************
 
-\newacronym[description={\glslink{umlg}{Unified Modeling Language}}]
-    {uml}{UML}{Unified Modeling Language}
+\newacronym[description={\glslink{umlg}{Unified Modelling Language}}]
+{uml}{UML}{Unified Modelling Language}
+\newglossaryentry{umlg}
+{
+name=\glslink{uml}{UML},
+text= Unified Modelling Language,
+sort= UML,
+description={In ingegneria del software \emph{UML, Unified Modeling Language} (ing. linguaggio di modellazione unificato) è un linguaggio di modellazione e specifica basato sul paradigma object-oriented. L'\emph{UML} svolge un'importantissima funzione di ``lingua franca'' nella comunità della progettazione e programmazione a oggetti. Gran parte della letteratura di settore usa tale linguaggio per descrivere soluzioni analitiche e progettuali in modo sintetico e comprensibile a un vasto pubblico}
+}
 
-\newacronym[description={\glslink{APK}{Android PacKage}}]
-    {apk}{APK}{Android PacKage}
+%**************************************************************
 
 \newacronym[description={\glslink{dexg}{Dalvik Executable}}]
-    {dex}{DEX}{Dalvik Executable}
+{dex}{DEX}{Dalvik Executable}
+\newglossaryentry{dexg}
+{
+name=\glslink{dex}{DEX},
+text= Dalvik Executable,
+sort= dex,
+description={File eseguibili Dalvik sono file di sviluppo apposte con il .dex estensione, e questi file DEX vengono utilizzati per inizializzare ed eseguire applicazioni sviluppate per il sistema operativo mobile Android.
+I dati memorizzati in questi file DEX include compilato il codice che individua e inizializza altri file di programma dell'applicazione associata necessario per eseguire il programma}
+}
+%**************************************************************
 
+\newacronym[description={\glslink{apkg}{Android Package}}]
+{apk}{APK}{ Android Package }
+\newglossaryentry{apkg}
+{
+name=\glslink{apk}{APK},
+text= Android Package,
+sort= apk,
+description={L'estensione APK indica un file Android Package.
+Questo formato di file, una variante del formato .JAR, è utilizzato per la distribuzione e l'installazione di componenti in dotazione sulla piattaforma per dispositivi mobili Android}
+}
+%**************************************************************
 
-%
-%\newacronym[description={\glslink{}{}}]
-%    {}{}{}
-%
-%\newacronym[description={\glslink{}{}}]
-%    {}{}{}
+\newacronym[description={\glslink{kissg}{Keep It Simple Stupid}}]
+{kiss}{KISS}{Keep It Simple Stupid}
+\newglossaryentry{kissg}
+{
+name=\glslink{kiss}{KISS},
+text= Keep It Simple Stupid,
+sort= kiss,
+description={Il principio utilizzato nel mondo dell'informatica per indicare maggior parte dei sistemi semplici hanno una prestazione maggiore rispetto ai sistemi complicati.
+Anche se, la semplicità deve essere un obiettivo da perseguire nella progettazione e la complessità aggiuntiva non necessaria deve essere evitata}
+}
+%**************************************************************
+
+\newacronym[description={\glslink{scag}{Software Component Analysis}}]
+{sca}{SCA}{ Software Component Analysis }
+\newglossaryentry{scag}
+{
+name=\glslink{sca}{SCA},
+text= Software Component Analysis,
+sort= sca,
+description={Software Component Analysis è una parte dell'industria del software relativamente nuova. Questi strumenti sono spesso costruiti assemblando componenti terze parti o open-source, integrate con codice con il codice orginale.\footcite{site:sca}}
+}
+%**************************************************************
+
+\newacronym[description={\glslink{sastg}{Static Application Security Testing}}]
+{sast}{SAST}{ Static Application Security Testing }
+\newglossaryentry{sastg}
+{
+name=\glslink{sast}{SAST},
+text= Static Application Security Testing,
+sort= sast,
+description={Static Application Security Testing\footcite{site:sast} è una tecnologia che è frequentemente utilizzato come un tool di analisi del codice sorgente.
+Il metodo analizza il codice sorgente dal punto di vista della vulnerabilità anche se potrebbe produrre alcuni falsi positivi ma per la maggior parte delle implementazioni richiede l'accesso al codice sorgente, complicate configurazioni e alta potenza di calcolo.}
+}
+
+%**************************************************************
+
+\newacronym[description={\glslink{dastg}{Dynamic Application Security Testing}}]
+{dast}{DAST}{Dynamic Application Security Testing}
+\newglossaryentry{dastg}
+{
+name=\glslink{dast}{DAST},
+text= Dynamic Application Security Testing,
+sort= dast,
+description={Dynamic Application Security Testing è una tecnologia che è capace di trovare vulnerabilità eseguendo l'applicazione.
+Questo metodo è altamente scalabile, facilmente e velocemente integrabile.
+Il punto debole del DAST è che ha bisogno della configurazione esperta e potrebbe produrre sia falsi positivi che negativi.}
+}
+
+%**************************************************************
+
+\newacronym[description={\glslink{ideg}{Integrated Development Environment}}]
+{ide}{IDE}{Integrated Development Environment}
+\newglossaryentry{ideg}
+{
+name=\glslink{ide}{IDE},
+text=Integrated Development Environment,
+sort=ide,
+description={ è un software che, in fase di programmazione, aiuta i programmatori nello sviluppo del codice sorgente di un programma.
+Spesso l’IDE aiuta lo sviluppatore segnalando errori di sintassi del codice direttamente nella fase di scrittura, oltre a tutta una serie di strumenti e funzionalità di supporto alla fase di sviluppo e debugging}
+}
+
+%**************************************************************
+
+\newacronym[description={\glslink{avdg}{Android Virtual Device}}]
+{avd}{AVD}{Android Virtual Device}
+\newglossaryentry{avdg}
+{
+name=\glslink{avd}{AVD},
+text= Android Virtual Device,
+sort= avd,
+description={è una macchina virtuale fornito da Google che permette di avere un'istanza di qualsiasi versione del sistema operativo Android in esecuzione nei computer per poter testare le applicazioni android senza dover utilizzare uno smartphone}
+}
+
+%**************************************************************
+
+\newacronym[description={\glslink{apatg}{Android Package Analysis Tool}}]
+{apat}{APAT}{Android Package Analysis Tool}
+\newglossaryentry{apatg}
+{
+name=\glslink{apat}{APAT},
+text= Android Package Analysis Tool,
+sort= apat,
+description={è un tool che, dato un file APK, può effettuare una serie di operazioni di decompilazioni, decodifica, ricompilazione e l'analisi del codice sorgente generando al termine un file di report}
+}
+
+%**************************************************************
+
+\newacronym[description={\glslink{slocg}{Source Line Of Code}}]
+{sloc}{SLOC}{Source Line Of Code}
+\newglossaryentry{slocg}
+{
+name=\glslink{sloc}{SLOC},
+text= Source Line Of Code,
+sort= Source Line Of Code,
+description={è una metrica software che misura le dimensioni di un software basandosi sul numero di linee di codice sorgente.
+Questo metodo di misura viene utilizzato per stabilire la complessità di un software e per stimare le risorse necessarie per la produzione e il mantenimento del software.
+Se il software è di grandi dimensioni, possono essere utilizzate anche le unità di misura KLOC (1 000 LOC) e MLOC (1 000 000 LOC)}
+}
+
+%**************************************************************
+%\newacronym[description={\glslink{testoConG}{TestoXEsteso}}]
+%{TESTO_DA_CATTURARE}{ACRONIMO}{TestoXEsteso}
+%\newglossaryentry{testoConG}
+%{
+%name=\glslink{TESTO_DA_CATTURARE}{ACRONIMO},
+%text= TestoXEsteso,
+%sort= TESTO_DA_ORDINARE,
+%description={Descrizoine}
+%}
+%\newacronym[description={\glslink{testoConG}{TestoXEsteso}}]
+%{TESTO_DA_CATTURARE}{ACRONIMO}{TestoXEsteso}
+%\newglossaryentry{testoConG}
+%{
+%name=\glslink{TESTO_DA_CATTURARE}{ACRONIMO},
+%text= TestoXEsteso,
+%sort= TESTO_DA_ORDINARE,
+%description={Descrizoine}
+%}
+%\newacronym[description={\glslink{testoConG}{TestoXEsteso}}]
+%{TESTO_DA_CATTURARE}{ACRONIMO}{TestoXEsteso}
+%\newglossaryentry{testoConG}
+%{
+%name=\glslink{TESTO_DA_CATTURARE}{ACRONIMO},
+%text= TestoXEsteso,
+%sort= TESTO_DA_ORDINARE,
+%description={Descrizoine}
+%}
+%\newacronym[description={\glslink{testoConG}{TestoXEsteso}}]
+%{TESTO_DA_CATTURARE}{ACRONIMO}{TestoXEsteso}
+%\newglossaryentry{testoConG}
+%{
+%name=\glslink{TESTO_DA_CATTURARE}{ACRONIMO},
+%text= TestoXEsteso,
+%sort= TESTO_DA_ORDINARE,
+%description={Descrizoine}
+%}
+
 
 %**************************************************************
 % Glossario
 %**************************************************************
 %\renewcommand{\glossaryname}{Glossario}
 
-\newglossaryentry{apig}
-{
-    name=\glslink{api}{API},
-    text=Application Program Interface,
-    sort=api,
-    description={in informatica con il termine \emph{Application Programming Interface API} (ing. interfaccia di programmazione di un'applicazione) si indica ogni insieme di procedure disponibili al programmatore, di solito raggruppate a formare un set di strumenti specifici per l'espletamento di un determinato compito all'interno di un certo programma. La finalità è ottenere un'astrazione, di solito tra l'hardware e il programmatore o tra software a basso e quello ad alto livello semplificando così il lavoro di programmazione}
-}
 
-\newglossaryentry{umlg}
-{
-    name=\glslink{uml}{UML},
-    text=UML,
-    sort=uml,
-    description={in ingegneria del software \emph{UML, Unified Modeling Language} (ing. linguaggio di modellazione unificato) è un linguaggio di modellazione e specifica basato sul paradigma object-oriented. L'\emph{UML} svolge un'importantissima funzione di ``lingua franca'' nella comunità della progettazione e programmazione a oggetti. Gran parte della letteratura di settore usa tale linguaggio per descrivere soluzioni analitiche e progettuali in modo sintetico e comprensibile a un vasto pubblico}
-}
 
 \newglossaryentry{repackaging}
 {
-    name=\glslink{repackaging}{repackaging},
-    text=repackaging,
-    sort=repackaging,
-    description={in ingegneria del software, il termine repackaging indica il processo di creazione del pacchetto d'installazione a seguito di un processo di trasformazione contraria}
+name=\glslink{repackaging}{repackaging},
+text=repackaging,
+sort=repackaging,
+description={in ingegneria del software, il termine repackaging indica il processo di creazione del pacchetto d'installazione a seguito di un processo di trasformazione contraria}
 }
 
-\newglossaryentry{dexg}
+\newglossaryentry{pcap}
 {
-    name=\glslink{dex}{dex},
-    text=DEX,
-    sort=dex,
-    description={File eseguibili Dalvik sono file di sviluppo apposte con il .dex estensione, e questi file DEX vengono utilizzati per inizializzare ed eseguire applicazioni sviluppate per il sistema operativo mobile Android.
-    I dati memorizzati in questi file DEX include compilato il codice che individua e inizializza altri file di programma dell'applicazione associata necessario per eseguire il programma.}
+name=\glslink{pcap}{pcap},
+text=pcap,
+sort=pcap,
+description={I file con estensione .pcap contengono dati acquisiti dai programmi di tracciamento del pacchetto di trasmissione dati.
+I dati sono in forma grezza, il che significa esattamente la stessa forma in cui è stato catturato.
+I file sono spesso definiti come file di traccia o file ossei.
+Salvare i pacchetti catturati usando il formato pcap può essere fatto da molti tipi di app, chiamati sniffer.
+Questi programmi quindi analizzano i dati acquisiti come richiesto dall'utente, applicando la filtrazione e l'elaborazione appropriate.}
 }
-\newglossaryentry{APK}
+\newglossaryentry{walkthrough}
 {
-    name=\glslink{apk}{APK},
-    text=APK,
-    sort=apk,
-    description={L'estensione APK indica un file Android Package. Questo formato di file, una variante del formato .JAR, è utilizzato per la distribuzione e l'installazione di componenti in dotazione sulla piattaforma per dispositivi mobili Android}
+name=\glslink{walkthrough}{Walkthrough},
+text=walkthrough,
+sort=walkthrough,
+description={è una pratica dell’analisi statica che viene usata per rivelare la presenza di difetti.
+Richiede la rilettura ad ampio spettro del codice con attenzione, senza discriminare le parti meno significative}
+}
+\newglossaryentry{inspection}
+{
+name=\glslink{inspection}{Inspection},
+text=inspection,
+sort=inspection,
+description={Inspection è una pratica dell’analisi statica che viene usata per rivelare la presenza di difetti.
+Questa ricerca viene fatta in modo mirato solitamente in seguito al presentarsi di un errore, per poter effettura l'inspection bisogna aver prima stilato una lista di controllo che contiene i punti del codice con più probabilità di contenere un errore, inoltre, l'aggiornamento di quest'ultima è estremamente importante}
+}
+\newglossaryentry{ciclomatica}
+{
+name=\glslink{ciclomatica}{complessità ciclomatica},
+text=complessità ciclomatica,
+sort=complessità ciclomatica,
+description={è una metrica utilizzata per misurare la complessità di un programma.
+Misura direttamente il numero di cammini linearmente indipendenti attraverso il grafo di controllo di flusso.
+La complessità ciclomatica è calcolata utilizzando il grafo di controllo di flusso del programma: i nodi del grafo corrispondono a gruppi indivisibili d'istruzioni, mentre gli archi connettono due nodi se il secondo gruppo d'istruzioni può essere eseguito immediatamente dopo il primo gruppo.
+La complessità ciclomatica può, inoltre, essere applicata a singole funzioni, moduli, metodi o classi di un programma.\cite{site:complessita_ciclomatica} }
+}
+\newglossaryentry{buildautomation}
+{
+name=\glslink{buildautomation}{Build automation},
+text=build automation,
+sort=build automation,
+description={è il processo di automatizzazione della creazione del build software e i processi inclusi sono: compilazione del codice sorgente in codice binario, packaging del codice binario ed esecuzione dei test automatici}
 }
 
-\newglossaryentry{cap}
+\newglossaryentry{codecoverage}
 {
-    name=\glslink{cap}{cap},
-    text=cap,
-    sort=cap,
-    description={I  file con estensione .CAP contengono dati acquisiti dai programmi di tracciamento del pacchetto di trasmissione dati. I dati sono in forma grezza, il che significa esattamente la stessa forma in cui è stato catturato.
-    I file sono spesso definiti come file di traccia o file ossei. Salvare i pacchetti catturati usando il formato CAP può essere fatto da molti tipi di app, chiamati sniffer. Questi programmi quindi analizzano i dati acquisiti come richiesto dall'utente, applicando la filtrazione e l'elaborazione appropriate.}
+name=\glslink{codecoverage}{code coverage},
+text=code coverage,
+sort=code coverage,
+description={è la metrica utilizzata per descrivere il grado con il quale il codice sorgente è stato eseguito dai test.
+Un programma con un'alta percentuale di code coverage è meno probabile che contenga degli errori.}
 }
+\newglossaryentry{swing}
+{
+name=\glslink{swing}{swing},
+text=Swing,
+sort=swing,
+description={è una libreria di Java che permette di creare interfaccia grafica}
+}
+\newglossaryentry{reverse_engineering}
+{
+name=\glslink{reverse_engineering}{reverse engineering},
+text=Reverse engineering,
+sort=reverseengineering,
+description={è una tecnica di analisi delle funzioni, degli impieghi, della collocazione, dell'aspetto progettuale, geometrico e materiale di un manufatti i di un oggetto che è stato rivenuto.
+Lo scopo è quello di produrre un altro oggetto che abbia un funzionamento analogo o migliore, o più adatto al contesto in cui ci si trova}
+}
+\newglossaryentry{xml}
+{
+name=\glslink{xml}{XML},
+text=XML,
+sort=XML,
+description={ (acronimo di eXtensible Markup Language) è un metalinguaggio per la definizione dei linguaggi di markup, ovvero un linguaggio marcatore basato su un meccanismo sintattico che consente di definire e controllare il significato degli elementi contenuti in un documento o in un testo.
+Il nome indica che si tratta di un linguaggio marcatore estendibile, in quanto permettere di creare tag personalizzati.}
+}
+\newglossaryentry{android_studio}
+{
+    name=\glslink{android_studio}{Android Studio},
+    text=Android Studio,
+    sort=Android Studio,
+    description={è l'IDE ufficiale sviluppato e mantenuto da Google Inc.
+\`{E} basato sul software di JetBrains Intellij IDEA ed è progettato specificamente per lo sviluppo di applicazioni Android.
+Nasce per sostituire gli Android Development Tools (ADT) di Eclipse.}
+}
+%\newglossaryentry{}
+%{
+%    name=\glslink{}{},
+%    text=,
+%    sort=,
+%    description={}
+%}
+%\newglossaryentry{}
+%{
+%    name=\glslink{}{},
+%    text=,
+%    sort=,
+%    description={}
+%}
+%\newglossaryentry{}
+%{
+%    name=\glslink{}{},
+%    text=,
+%    sort=,
+%    description={}
+%}
+%\newglossaryentry{}
+%{
+%    name=\glslink{}{},
+%    text=,
+%    sort=,
+%    description={}
+%}
+%\newglossaryentry{}
+%{
+%    name=\glslink{}{},
+%    text=,
+%    sort=,
+%    description={}
+%}
+%\newglossaryentry{}
+%{
+%    name=\glslink{}{},
+%    text=,
+%    sort=,
+%    description={}
+%}
+%\newglossaryentry{}
+%{
+%    name=\glslink{}{},
+%    text=,
+%    sort=,
+%    description={}
+%}
+%\newglossaryentry{}
+%{
+%    name=\glslink{}{},
+%    text=,
+%    sort=,
+%    description={}
+%}
 %\newglossaryentry{}
 %{
 %    name=\glslink{}{},

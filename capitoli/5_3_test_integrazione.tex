@@ -1,0 +1,54 @@
+\section{Test d'integrazione}\label{sec:test-d'integrazione}
+In ingegneria del software con i test d'integrazione si indicano i test definiti come livello intermedio di testing e abitualmente seguono a quelli di unità e precedono quelli di sistema.
+Infatti, tali test vengono eseguiti quando due o più unità già testate vengono aggregate in una struttura più grande, rappresentando l'estensione logica del test di unità.
+
+\setcounter{rowcount}{0}
+
+\subsection{Specifica dei test}\label{subsec:specifica-dei-test-integrazione}
+Di seguito sono riportati i test d'integrazione che verificano il corretto funzionamento tra le unità.
+\begin{longtable}{ |C{3cm} | C{8.5cm}| C{1.5cm} |}
+    \hline
+    \textbf{Identificativo} &
+    \textbf{Descrizione} &
+    \textbf{Stato} \\\hline
+    \idTest{TI} & Verificare che la view riesca a ottenere correttamente la lista delle AVD presenti nel sistema dal modello.                & I \\\hline
+    \idTest{TI} & Verificare che la view riesca a ottenere correttamente il path di base dal modello.                                        & I \\\hline
+    \idTest{TI} & Verificare che la view riesca a ottenere correttamente il percorso verso il file APK da decompilare dal modello.           & I \\\hline
+    \idTest{TI} & Verificare che la view riesca a ottenere correttamente l'elenco dei file presenti nella cartella tmp dal modello.          & I \\\hline
+    \idTest{TI} & Verificare che la view riesca a ottenere correttamente il percorso verso il file whitelist dal modello.                    & I \\\hline
+    \idTest{TI} & Verificare che la view riesca a ottenere correttamente il percorso verso il file blacklist dal modello.                    & I \\\hline
+    \idTest{TI} & Verificare che la view riesca a ottenere correttamente le informazioni di proxy dal modello.                               & I \\\hline
+    \idTest{TI} & Verificare che il controller riesca a ottenere correttamente lo stato \textit{isRecompiled} dal modello.                   & I \\\hline
+    \idTest{TI} & Verificare che il controller riesca a ottenere correttamente lo stato \textit{isDecompiled} dal modello.                   & I \\\hline
+    \idTest{TI} & Verificare che il controller riesca a ottenere correttamente lo stato \textit{isDecoded} dal modello.                      & I \\\hline
+    \idTest{TI} & Verificare che il controller riesca a ottenere correttamente il path di base dal modello.                                  & I \\\hline
+    \idTest{TI} & Verificare che il controller riesca a ottenere correttamente il percorso verso il file APK da decompilare dal modello.     & I \\\hline
+    \idTest{TI} & Verificare che il controller riesca a ottenere correttamente l'elenco dei file presenti nella cartella tmp dal modello.    & I \\\hline
+    \idTest{TI} & Verificare che il controller riesca a ottenere correttamente il percorso verso il file whitelist dal modello.              & I \\\hline
+    \idTest{TI} & Verificare che il controller riesca a ottenere correttamente il percorso verso il file blacklist dal modello.              & I \\\hline
+    \idTest{TI} & Verificare che il controller riesca a ottenere correttamente le informazioni di proxy dal modello.                         & I \\\hline
+    \idTest{TI} & Verificare che il controller riesca a ottenere correttamente i comandi corretti dal CommandFactory.                        & I \\\hline
+    \idTest{TI} & Verificare che il controller riesca a eseguire correttamente i comandi ottenuti dal CommandFactory.                        & I \\\hline
+    \idTest{TI} & Verificare che il controller riesca a ottenere correttamente i risultati dal LambdaFinder.                                 & I \\\hline
+    \idTest{TI} & Verificare che il controller riesca a ottenere correttamente i risultati dal StringFinder.                                 & I \\\hline
+    \idTest{TI} & Verificare che il controller riesca a ottenere correttamente i risultati dal DumpDataBase.                                 & I \\\hline
+    \idTest{TI} & Verificare che il controller riesca a ottenere correttamente i risultati dal DumpedFileAnalyzer.                           & I \\\hline
+    \idTest{TI} & Verificare che il controller riesca a ottenere correttamente i risultati finali dal BaseAnalyzer.                          & I \\\hline
+    \idTest{TI} & Verificare che il controller riesca a ottenere correttamente il path dell'APK dalla view.                                  & I \\\hline
+    \idTest{TI} & Verificare che il controller riesca a ottenere correttamente le opzioni per avviare AVD dalla view.                        & I \\\hline
+    \idTest{TI} & Verificare che il controller riesca a ottenere correttamente le opzioni per effettuare il signing dell'APK dalla view.     & I \\\hline
+    \idTest{TI} & Verificare che il controller riesca a ottenere correttamente i path dei package da decodificare in java dalla view.        & I \\\hline
+    \idTest{TI} & Verificare che il controller riesca a ottenere correttamente la mappa delle analisi da effettuare dalla view.              & I \\\hline
+    \idTest{TI} & Verificare che il controller riesca a ottenere correttamente la blacklist selezionato per effettuare l'analisi dalla view. & I \\\hline
+    \idTest{TI} & Verificare che il controller riesca a ottenere correttamente la whitelist selezionato per effettuare l'analisi dalla view. & I \\\hline
+    \idTest{TI} & Verificare che il modello riesca a ricaricare correttamente i dati di state dal sistema.                                   & I \\\hline
+    \idTest{TI} & Verificare che il modello riesca a salvare correttamente i dati di state dal sistema.                                      & I \\\hline
+    \idTest{TI} & Verificare che il tool riesca a ottenere il path verso CFR dal sistema.                                                    & I \\\hline
+    \idTest{TI} & Verificare che il tool riesca a ottenere il path verso APKTool dal sistema.                                                & I \\\hline
+    \idTest{TI} & Verificare che il tool riesca a ottenere il path verso Jarsigner dal sistema.                                              & I \\\hline
+    \caption{Test d'integrazione}
+\end{longtable}
+
+I test d'integrazione sono superati effettuando tutte le operazioni che coinvolgono le due parti interessati, il totale corretto funzionamento del tool, dimostra il superamento dei test d'integrazione.
+\setcounter{rowcount}{0}
+

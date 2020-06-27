@@ -9,14 +9,14 @@
 % !TEX root = tesi.tex
 % !TEX spellcheck = it-IT
 
-\documentclass[10pt,                    % corpo del font principale
-               a4paper,                 % carta A4
-               twoside,                 % impagina per fronte-retro
-               openright,               % inizio capitoli a destra
-               english,
-               italian,
-                ctexart,
-               ]{book}
+\documentclass[11pt,                    % corpo del font principale
+a4paper,                 % carta A4
+twoside,                 % impagina per fronte-retro
+openright,               % inizio capitoli a destra
+english,
+italian,
+ctexart,
+]{book}
 
 %**************************************************************
 % Importazione package
@@ -24,13 +24,13 @@
 %\usepackage{amsmath,amssymb,amsthm}    % matematica
 \usepackage[UTF8]{ctex}
 \usepackage[T1]{fontenc}                % codifica dei font:
-                                        % NOTA BENE! richiede una distribuzione *completa* di LaTeX
+% NOTA BENE! richiede una distribuzione *completa* di LaTeX
 
 \usepackage[utf8]{inputenc}             % codifica di input; anche [latin1] va bene
-                                        % NOTA BENE! va accordata con le preferenze dell'editor
+% NOTA BENE! va accordata con le preferenze dell'editor
 
 \usepackage[english, italian]{babel}    % per scrivere in italiano e in inglese;
-                                        % l'ultima lingua (l'italiano) risulta predefinita
+% l'ultima lingua (l'italiano) risulta predefinita
 
 \usepackage{bookmark}                   % segnalibri
 
@@ -42,7 +42,7 @@
 
 \usepackage{emptypage}                  % pagine vuote senza testatina e piede di pagina
 
-\usepackage{epigraph}			% per epigrafi
+\usepackage{epigraph}            % per epigrafi
 
 \usepackage{eurosym}                    % simbolo dell'euro
 
@@ -54,7 +54,6 @@
 
 \usepackage[binding=5mm]{layaureo}      % margini ottimizzati per l'A4; rilegatura di 5 mm
 
-\usepackage{listings}                   % codici
 
 \usepackage{microtype}                  % microtipografia
 
@@ -77,54 +76,53 @@
 \usepackage{ltxtable}                   % tabelle su più pagine e adattabili in larghezza
 
 \usepackage[toc, acronym]{glossaries}   % glossario
-                                        % per includerlo nel documento bisogna:
-                                        % 1. compilare una prima volta tesi.tex;
-                                        % 2. eseguire: makeindex -s tesi.ist -t tesi.glg -o tesi.gls tesi.glo
-                                        % 3. eseguire: makeindex -s tesi.ist -t tesi.alg -o tesi.acr tesi.acn
-                                        % 4. compilare due volte tesi.tex.
+% per includerlo nel documento bisogna:
+% 1. compilare una prima volta tesi.tex;
+% 2. eseguire: makeindex -s tesi.ist -t tesi.glg -o tesi.gls tesi.glo
+% 3. eseguire: makeindex -s tesi.ist -t tesi.alg -o tesi.acr tesi.acn
+% 4. compilare due volte tesi.tex.
 
 \usepackage[backend=biber,style=verbose-ibid,hyperref,backref]{biblatex}
-                                        % eccellente pacchetto per la bibliografia;
-                                        % produce uno stile di citazione autore-anno;
-                                        % lo stile "numeric-comp" produce riferimenti numerici
-                                        % per includerlo nel documento bisogna:
-                                        % 1. compilare una prima volta tesi.tex;
-                                        % 2. eseguire: biber tesi
-                                        % 3. compilare ancora tesi.tex.
+% eccellente pacchetto per la bibliografia;
+% produce uno stile di citazione autore-anno;
+% lo stile "numeric-comp" produce riferimenti numerici
+% per includerlo nel documento bisogna:
+% 1. compilare una prima volta tesi.tex;
+% 2. eseguire: biber tesi
+% 3. compilare ancora tesi.tex.
 
 \input{tesi-config}                     % file con le impostazioni personali
-
+\raggedbottom
 \begin{document}
 %**************************************************************
 % Materiale iniziale
 %**************************************************************
-\frontmatter
-\input{inizio-fine/frontespizio}
-\input{inizio-fine/colophon}
-\input{inizio-fine/dedica}
-\input{inizio-fine/sommario}
-\input{inizio-fine/ringraziamenti}
-\input{inizio-fine/indici}
-\cleardoublepage
+    \frontmatter
+    \input{inizio-fine/frontespizio}
+    \input{inizio-fine/colophon}
+    \input{inizio-fine/dedica}
+    \input{inizio-fine/sommario}
+    \input{inizio-fine/ringraziamenti}
+    \input{inizio-fine/indici}
+    \cleardoublepage
 
 %**************************************************************
 % Materiale principale
 %**************************************************************
-\mainmatter
-\input{./capitoli/1_introduzione.tex}             % Introduzione
-%\input{./capitoli/2_processi_metodologie.tex}             % Processi da togliere
-\input{./capitoli/3_descrizione_stage.tex}             % Kick-Off
-\input{./capitoli/4_0_analisi_dei_requisiti.tex}             % Concept Preview
-%\input{./capitoli/5_progettazione_codifica.tex}             % Product Prototype
-%\input{./capitoli/6_verifica_validazione.tex}             % Product Design Freeze e SOP
-%\input{./capitoli/7_conclusioni.tex}             % Conclusioni
-%\appendix
-%\input{capitoli/capitolo-A}             % Appendice A
+    \mainmatter
+    \input{./capitoli/1_0_introduzione.tex}             % Introduzione
+    \input{./capitoli/2_0_descrizione_stage.tex}             % Kick-Off
+    \input{./capitoli/3_0_analisi_dei_requisiti.tex}             % Concept Preview
+    \input{./capitoli/4_0_progettazione_codifica.tex}             % Product Prototype
+    \input{./capitoli/5_0_verifica_validazione.tex}             % Product Design Freeze e SOP
+    \input{./capitoli/6_0_conclusioni.tex}             % Conclusioni
+    \appendix
+    \input{capitoli/capitolo-A}             % Appendice A
 
 %**************************************************************
 % Materiale finale
 %**************************************************************
-\backmatter
-\printglossaries
-\input{inizio-fine/bibliografia}
+    \backmatter
+    \printglossaries
+    \input{inizio-fine/bibliografia}
 \end{document}

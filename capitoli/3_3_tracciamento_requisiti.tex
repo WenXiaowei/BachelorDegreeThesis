@@ -1,0 +1,188 @@
+\section{Tracciamento fonte - requisiti}\label{sec:tracciamento-fonte---requisiti}
+Nella seguente tabella sono elencati i casi d'uso con i relativi requisiti derivanti da quest'ultimo.
+\begin{center}
+    \begin{longtable}{| C{6cm} |C{6cm}|}
+        \hline
+        \textbf{Fonte} & \textbf{Requisito} \\\hline
+        UC-1 &
+        \begin{itemize}\itemsep0em
+            \item R-1-F-O
+            \item R-1.1-F-O
+        \end{itemize}
+        \\\hline
+        UC-2 &
+        \begin{itemize}\itemsep0em
+            \item R-2-F-O
+            \item R-2.1-F-O
+            \item R-2.2-F-O
+        \end{itemize}
+        \\\hline
+        UC-3 &
+        \begin{itemize}\itemsep0em
+            \item R-3-F-O
+        \end{itemize} \\\hline
+        UC-4 &
+        \begin{itemize}\itemsep0em
+            \item R-4-F-O
+            \item R-4.1-F-D
+            \item R-4.2-F-D
+            \item R-4.3-F-O
+            \item R-4.4-F-O
+            \item R-4.5-F-O
+            \item R-4.6-F-O
+        \end{itemize} \\\hline
+        UC-5 &
+        \begin{itemize}\itemsep0em
+            \item R-6-F-O
+        \end{itemize} \\\hline
+        UC-6 &
+        \begin{itemize}\itemsep0em
+            \item R-7-F-O
+        \end{itemize} \\\hline
+        UC-7 &
+        \begin{itemize}\itemsep0em
+            \item R-8-F-O
+            \item R-8.1-F-O
+        \end{itemize} \\\hline
+        UC-8 &
+        \begin{itemize}\itemsep0em
+            \item R-9-F-D
+            \item R-9.1-F-O
+            \item R-9.2-F-O
+            \item R-9.3-F-O
+        \end{itemize} \\\hline
+        UC-8.2 &
+        \begin{itemize}\itemsep0em
+            \item R-9.4-F-O
+        \end{itemize} \\\hline
+        UC-9 & \begin{itemize}\itemsep0em
+                   \item R-10-F-O
+        \end{itemize} \\\hline
+        UC-10 &
+        \begin{itemize}\itemsep0em
+            \item R-11-F-F
+            \item R-11.1-F-F
+            \item R-11.2-F-F
+            \item R-11.3-F-F
+            \item R-11.4-F-F
+            \item R-11.4-F-F
+        \end{itemize}
+        \\\hline
+
+        UC-11 &
+        \begin{itemize}\itemsep0em
+            \item R-12-F-F
+        \end{itemize}
+        \\\hline
+
+        UC-12 &
+        \begin{itemize}\itemsep0em
+            \item R-13-F-O
+        \end{itemize}
+        \\\hline
+
+        UC-13 &
+        \begin{itemize}\itemsep0em
+            \item R-14-F-O
+        \end{itemize} \\\hline
+        UC-14 &
+        \begin{itemize}\itemsep0em
+            \item R-15-F-O
+            \item R-15.1-F-O
+            \item R-15.2-F-O
+        \end{itemize} \\\hline
+
+        UC-15 &
+        \begin{itemize}\itemsep0em
+            \item R-16-F-D
+            \item R-16.1-F-D
+            \item R-16.2-F-D
+            \item R-16.3-F-D
+        \end{itemize} \\\hline
+        UC-17 &
+        \begin{itemize}\itemsep0em
+            \item R-17-F-D
+            \item R-17.1-F-D
+            \item R-17.2-F-D
+        \end{itemize} \\\hline
+        UC-18 &
+        \begin{itemize}\itemsep0em
+            \item R-18-F-D
+            \item R-18.1-F-D
+            \item R-18.2-F-D
+            \item R-18.3-F-D
+        \end{itemize} \\\hline
+        Piano di stage &
+        \begin{itemize}\itemsep0em
+            \item R-1-V-D,
+            \item R-2-V-D,
+            \item R-3-V-D,
+            \item R-4-V-F,
+            \item R-1-Q-O,
+            \item R-2-Q-O,
+            \item R-3-Q-D,
+            \item R-4-Q-O
+        \end{itemize} \\\hline
+        \caption{Tracciamento fonte - requisiti}
+    \end{longtable}
+\end{center}
+
+\subsection{Tracciamento requisito - fonte}\label{subsec:tracciamento-requisiti---fonte}
+Nella seguente tabella sono presenti i requisiti individuati nella sezione \S3.2, e per ognuno di questi viene indicato il caso d'uso dal quale deriva.
+\begin{longtable}{| C{6cm} |C{6cm}|}
+    \hline
+    \textbf{Requisito} & \textbf{Fonte}  \\\hline
+    R-1-F-O            & UC-1            \\\hline
+    R-1.1-F-O          & UC-1            \\\hline
+    R-2-F-O            & UC-2            \\\hline
+    R-2.1-F-O          & UC-2            \\\hline
+    R-2.2-F-O          & UC-2            \\\hline
+    R-3-F-O            & UC-3            \\\hline
+    R-4-F-O            & UC-4            \\\hline
+    R-4.1-F-D          & UC-4            \\\hline
+    R-5-F-O            & UC-4.1          \\\hline
+    R-5.1-F-O          & UC-4.1          \\\hline
+    R-5.2-F-O          & UC-4.1          \\\hline
+    R-5.3-F-O          & UC-4.1          \\\hline
+    R-6-F-O            & UC-5            \\\hline
+    R-7-F-O            & UC-6            \\\hline
+    R-8-F-O            & UC-7            \\\hline
+    R-8.1-F-O          & UC-7            \\\hline
+    R-9-F-D            & UC-8            \\\hline
+    R-9.1-F-O          & UC-8            \\\hline
+    R-9.2-F-O          & UC-8.1          \\\hline
+    R-9.3-F-O          & UC-8.1          \\\hline
+    R-9.4-F-O          & UC-8.2          \\\hline
+    R-10-F-O           & UC-9            \\\hline
+    R-11-F-F           & UC-10           \\\hline
+    R-11.1-F-F         & UC-10.1         \\\hline
+    R-11.2-F-F         & UC-10.2         \\\hline
+    R-11.3-F-F         & UC-10.3         \\\hline
+    R-11.4-F-F         & UC-10.4         \\\hline
+    R-12-F-F           & UC-11           \\\hline
+    R-13-F-O           & UC-12           \\\hline
+    R-14-F-O           & UC-13           \\\hline
+    R-15-F-O           & UC-14           \\\hline
+    R-15.1-F-O         & UC-14           \\\hline
+    R-15.2-F-O         & UC-14           \\\hline
+    R-16-F-D           & UC-15           \\\hline
+    R-16.1-F-D         & UC-15           \\\hline
+    R-16.2-F-D         & UC-15           \\\hline
+    R-16.3-F-D         & UC-15           \\\hline
+    R-17-F-D           & UC-17           \\\hline
+    R-17.1-F-D         & UC-17           \\\hline
+    R-17.2-F-D         & UC-17           \\\hline
+    R-18-F-D           & UC-18           \\\hline
+    R-18.1-F-D         & UC-18           \\\hline
+    R-18.2-F-D         & UC-18           \\\hline
+    R-18.3-F-D         & UC-18           \\\hline
+    R-19-V-D            & Piano di lavoro \\\hline
+    R-20-V-D            & Piano di lavoro \\\hline
+    R-21-V-D            & Piano di lavoro \\\hline
+    R-22-V-F            & Piano di lavoro \\\hline
+    R-23-Q-O            & Piano di lavoro \\\hline
+    R-24-Q-O            & Piano di lavoro \\\hline
+%        R-2-Q-O& Piano di lavoro\\\hline
+%        R-3-Q-D& Piano di lavoro\\\hline
+    \caption{Tracciamento requisiti - fonte}
+\end{longtable}

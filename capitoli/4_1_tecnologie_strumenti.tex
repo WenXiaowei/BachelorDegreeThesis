@@ -1,0 +1,112 @@
+% !TEX encoding = UTF-8
+% !TEX TS-program = pdflatex
+% !TEX root = ../tesi.tex
+
+\section{Tecnologie}\label{sec:tecnologie}
+Di seguito viene data una panoramica delle tecnologie e degli strumenti utilizzati.
+
+\subsection*{CFR - decompilatore java}
+Un decompilatore è un software che prende come input un file eseguibile e tenta creare del codice sorgente ad alto livello che può essere ricompilato successivamente.
+\`{E} lo strumento che effettua l'operazione inversa del compilatore.
+I decompilatori solitamente non riescono a ricostruire il codice sorgente nella forma originale, ma spesso potrebbe ottenere del codice offuscato.
+L'offuscamento del codice è la tecnica che viene applicata al codice sorgente o codice macchina per rendere il codice meno leggibile per rendere l'applicazione della tecnica del reverse engineering più complicata.\\
+Nonostante ciò, i decompilatori rimangono uno dei strumenti più importanti tool utilizzato nell'ambito del reverse engineering del software.
+CFR è il decompilatore utilizzato per trasformare il codice bytecode \textit{.class} in codice sorgente \textit{.java};
+\url{http://www.benf.org/other/cfr/index.html}
+
+\subsection*{Apk Tool}
+Apktool è un tool per effettuare il reverse engineering delle applicazioni Android.
+Può decodificare le risorse contenute nell'APK in una forma quasi uguale a quelli originali, può anche di ricostruire l'APK dopo le modifiche alle risorse modificate.
+Nel tool APAT è stato utilizzato per poter decompattare un'APK in questo modo permette di avere a disposizione i file che compongono l'APK originale.
+L'apktool permette anche di ricomporre un'apk utilizzando le risorse ottenute precedentemente.
+\url{https://ibotpeaches.github.io/Apktool/}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=6cm, height=3cm]{./immagini/apktool.png}
+    \caption{Icona Apktool}\label{fig:apktool}
+\end{figure}
+
+\subsection*{Dex2Jar}
+Questo strumento permette di trasformare i file \textit{.dex} in formato \textit{.jar} in modo che possa essere letta attraverso un software di compressione, come 7Zip, per poter accedere quindi ai file di tipo \textit{.class}.
+\url{https://github.com/pxb1988/dex2jar}
+
+\subsection*{XPath}\label{subsec:xpath}
+In informatica XPath è un linguaggio, parte della famiglia \gls{xml}, che permette d'individuare i nodi all'interno di un documento XML. Le espressioni XPath, a differenza delle espressioni XML, non servono a identificare la struttura di un documento, bensì a localizzarne con precisione i nodi.
+Nell'APAT è stato utilizzato per poter estrapolare alcuni dati necessari per poter effettuare il dump dei dati dall'area di storage dell'app e ottenere le informazioni per poter decompilare solamente presenti nel package dell'applicazione.
+
+\subsection*{Java}
+In informatica, Java\footcite{womak:effective-java} è un linguaggio di programmazione ad alto livello, orientato agli oggetti e tipizzazione statica, che si appoggia sull'omonima piattaforma software di esecuzione, specificamente progettato per essere il più possibile indipendente dalla piattaforma hardware di esecuzione.
+Nell'APAT è stato utilizzato per la stesura del codice, in particolare, per l'interfaccia grafica è stata utilizzata la libreria di java    \gls{swing}.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=8cm, height=5cm]{./immagini/java.jpg}
+    \caption{Icona Java}\label{fig:java}
+\end{figure}
+
+\subsection*{Json}
+JSON (JavaScript Object Notation) è un semplice formato per lo scambio di dati.
+Per le persone è facile da leggere e scrivere, mentre per le macchine risulta facile da generare e analizzarne la sintassi.
+JSON è basato su due strutture:
+\begin{itemize}
+    \item un insieme di coppie nome/valore, in diversi linguaggi, questo è realizzato come un oggetto, un record, uno struct, un dizionario, una tabella hash, un elenco di chiavi o un array associativo.
+    \item un elenco ordinato di valori, nella maggior parte dei linguaggi questo si realizza con un array, un vettore o una sequenza.
+\end{itemize}
+Nell'APAT è stato utilizzato per contenere i dati di stato del tool quando viene chiuso e alcuni dati che indicano i percorsi ai tool di terze parti.
+\url{https://www.json.org/json-it.html}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=5cm, height=5cm]{./immagini/json.png}
+    \caption{Icona JSON}\label{fig:json}
+\end{figure}
+
+
+
+\section{Strumenti}\label{sec:strumenti}
+
+\subsection*{Intellij IDEA}
+L'\gls{ide} utilizzato per la scrittura del codice in Java sviluppato da JetBrains.
+\url{https://www.jetbrains.com/idea/}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=5cm, height=5cm]{./immagini/intellij.png}
+    \caption{Icona Intellij Idea}\label{fig:intellij}
+\end{figure}
+
+\subsection*{Android Emulator}
+Lo strumento che permette di avviare degli emulatori Android, conosciuti anche come \gls{avd}.
+È stato utilizzato per eseguire l'applicazione ricompilata, per poter fare il dump dei dati presenti nell'area di storage dell'applicazione, come i file JSON, XML e SQLite, o come il file delle attività di rete.
+\url{https://developer.android.com/studio/run/emulator}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=4cm, height=4cm]{./immagini/emulator.png}
+    \caption{Icona Android Emulator}\label{fig:emulator}
+\end{figure}
+
+\subsection*{Maven}
+Maven è un tool di \gls{buildautomation}, basato sul concetto di Project Object Model (POM), maven può gestire i build, fare il report e la documentazione da un singolo centro d'informazione.
+\url{https://maven.apache.org/}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=6cm, height=3cm]{./immagini/maven.png}
+    \caption{Icona Maven}\label{fig:maven}
+\end{figure}
+Nel caso dell'APAT è stato utilizzato per la build del tool, generando in questo modo il file jar.
+
+\subsection*{Astah UML}
+Astah è uno strumento di modellazione \gls{uml}. Permette di creare vari diagrammi UML, come quelli di classe, di package, di sequenza e di attività.
+\url{https://astah.net/products/astah-community/}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=6cm, height=3cm]{./immagini/astah.png}
+    \caption{Icona Astah UML}\label{fig:astah}
+\end{figure}
+
+\subsection*{Git - GitLab}
+Gitlab è una piattaforma web open-source che permette la gestione di repository e di funzioni d'issue tracking system.
+Questa è un'istanza privata dell'azienda Imola Informatica S.p.A..
+\url{https://git.imolinfo.it/users/sign_in}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=6cm, height=3cm]{./immagini/gitlab.png}
+    \caption{Icona GitLab}\label{fig:gitlab}
+\end{figure}

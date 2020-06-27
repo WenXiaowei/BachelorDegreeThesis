@@ -1,0 +1,121 @@
+\section{Tracciamento dei requisiti}\label{sec:tracciamento-dei-requisiti}
+\newcounter{rowcount}
+\setcounter{rowcount}{0}
+\newcounter{subCount}
+\setcounter{subCount}{0}
+
+\subsection{Classificazione}\label{subsec:classificazione}
+Di seguito sono riportati i requisiti individuati durante l'attività di analisi.
+Tali requisiti sono stati individuati dai casi d'uso e dai colloqui con il tutor aziendale \tutorAziendale.
+I requisiti individuati sono stati divisi in:
+\begin{itemize}
+    \item \textbf{Requisiti funzionali:} insieme di requisiti che definiscono le azioni fondamentali che devono avvenire in grado di processare un input e di generare un output;
+    \item \textbf{Requisiti dichiarativi:} insieme di requisiti che rappresentano un vincolo di natura realizzativa, normativa o contrattuale;
+    \item \textbf{Requisiti qualitativi:} insieme di requisiti che garantiscono una certa qualità al prodotto e che indicano le best practice usate per la realizzazione.
+\end{itemize}
+Inoltre, a ogni requisito è stata assegnata un'importanza:
+\begin{itemize}
+    \item \textbf{Obbligatori:} requisito al quale non si può rinunciare, indispensabile per il corretto funzionamento del prodotto;
+    \item \textbf{Desiderabile:} requisito non necessario ma che porta valore aggiunto al prodotto;
+    \item \textbf{Facoltativo:} requisito che risulta essere relativamente utile oppure contrattabile con il proponente in un momento successivo.
+\end{itemize}
+
+\subsection{Requisiti funzionali}\label{subsec:requisiti-funzionali}
+Di seguiti sono elencati i requisiti derivanti dai casi d'uso individuati dalla sezione precedente.
+\begin{longtable}{ | c| C{7cm} |C{3cm} |}
+    \hline
+    \textbf{Identificativo} & \textbf{Descrizione}                                                                                                  & \textbf{Fonte} \\\hline
+    \idRequisiti{F-O}       & Il tool deve permettere di selezionare un file APK.                                                                   & UC-1           \\\hline
+    \idRequisitiSub{F-O}    & Il tool deve permettere di mostrare un messaggio di errore se file selezionato non è valido.                          & UC-1           \\\hline
+    \setcounter{subCount}{0}
+
+    \idRequisiti{F-O}       & Il tool deve permettere di avviare la decompilazione dell'APK selezionato.                                            & UC-2           \\\hline
+    \idRequisitiSub{F-O}    & Il tool deve permettere di visualizzare un messaggio di decompilazione avvenuto con successo.                         & UC-2           \\\hline
+    \idRequisitiSub{F-O}    & Il tool deve aggiungere il flag android:debuggable="true" nel AndroidManifest.xml del decompilato.                    & UC-2           \\\hline
+    \setcounter{subCount}{0}
+
+    \idRequisiti{F-O}       & Il tool deve permettere di visualizzare il messaggio di errore quando la decompilazione non è terminato con successo. & UC-3           \\\hline
+    \idRequisiti{F-O}       & Il tool deve permettere d'installare l'APK decompilato e manomesso su un AVD.                                         & UC-4           \\\hline
+    \idRequisitiSub{F-D}    & Il tool deve permettere di ricompilare l'APK decompilato.                                                             & UC-4           \\\hline
+    \idRequisitiSub{F-D}    & Il tool deve permettere di avviare l'applicazione.                                                                    & UC-4           \\\hline
+%        \setcounter{subCount}{0}
+
+    \idRequisitiSub{F-O}    & Il tool deve permettere di selezionare un'AVD presente nel sistema.                                                   & UC-4           \\\hline
+    \idRequisitiSub{F-O}    & Il tool deve permettere di visualizzare l'elenco delle AVD presenti nel sistema operativo.                            & UC-4           \\\hline
+    \idRequisitiSub{F-O}    & Il tool deve permettere di confermare la selezione dell'AVD.                                                          & UC-4           \\\hline
+    \setcounter{subCount}{0}
+
+    \idRequisiti{F-O}       & Il tool deve permettere di visualizzare il messaggio quando non sono stati rilevati nessun AVD.                       & UC-5           \\\hline
+    \idRequisiti{F-O}       & Il tool deve permettere di visualizzare il messaggio di errore se l'AVD selezionato non si è avviato correttamente.   & UC-6           \\\hline
+    \idRequisiti{F-O}       & Il tool deve permettere di fare il dump dello storage interna dell'applicazione.                                      & UC-7           \\\hline
+    \idRequisitiSub{F-O}    & Il tool deve permettere di selezionare il path dove collocare i dati copiati.                                         & UC-7           \\\hline
+    \setcounter{subCount}{0}
+
+    \idRequisiti{F-D}       & Il tool deve permettere di visualizzare i dex ottenuti dalla decompilazione.                                          & UC-8           \\\hline
+    \idRequisitiSub{F-O}    & Il tool deve permettere di visualizzare il messaggio quando la decodifica è avvenuto con successo.                    & UC-8           \\\hline
+    \idRequisitiSub{F-O}    & Il tool deve permettere di far selezionare il dex che l'utente vuole decodificare.                                    & UC-8           \\\hline
+    \idRequisitiSub{F-O}    & Il tool deve permettere di confermare la selezione del dex da decodificare.                                           & UC-8           \\\hline
+    \idRequisitiSub{F-O}    & Il tool deve permettere di far selezionare il path di dove salvare i file ottenuti dalla decodifica.                  & UC-8           \\\hline
+    \setcounter{subCount}{0}
+
+    \idRequisiti{F-O}       & Il tool deve permettere di visualizzare il messaggio d'errore se la decodifica non è andato a buon fine.              & UC-9           \\\hline
+
+    \idRequisiti{F-F}       & Il tool deve permettere di firmare l'APK ricompilato.                                                                 & UC-10          \\\hline
+    \idRequisitiSub{F-F}    & Il tool deve permettere di selezionare un file di tipo keystore.                                                      & UC-10          \\\hline
+    \idRequisitiSub{F-F}    & Il tool deve permettere di mostrare un messaggio di errore quando viene selezionato un file non keystore.             & UC-10          \\\hline
+    \idRequisitiSub{F-F}    & Il tool deve permettere d'inserire l'alias della chiave da utilizzare.                                                & UC-10          \\\hline
+    \idRequisitiSub{F-F}    & Il tool deve permettere d'inserire la password del keystore da utilizzare.                                            & UC-10          \\\hline
+    \setcounter{subCount}{0}
+
+    \idRequisiti{F-F}       & Il tool deve permettere di mostrare dei messaggi quando le credenziali inseriti non sono corretti.                    & UC-11          \\\hline
+    \idRequisiti{F-O}       & Il tool deve permettere di mostrare dei messaggi quando è stato selezionato un file non valido.                       & UC-12          \\\hline
+    \idRequisiti{F-O}       & Il tool deve permettere di decodificare i file \textit{.dex} in \textit{.java}                                        & UC-13          \\\hline
+    \idRequisiti{F-O}       & Il tool deve permettere di permettere di effettuare dell'analisi del codice java                                      & UC-14          \\\hline
+    \idRequisitiSub{F-O}    & Il tool deve permettere di selezionare diverse opzioni di analisi                                                     & UC-14.1        \\\hline
+    \idRequisitiSub{F-O}    & Il tool deve permettere di selezionare il path dove collocare i risultati dell'analisi.                               & UC-14.2        \\\hline
+    \setcounter{subCount}{0}
+
+    \idRequisiti{F-D}       & Il tool deve permettere di avviare un'AVD presente nel sistema.                                                       & UC-15          \\\hline
+    \idRequisitiSub{F-D}    & Il tool deve permettere di visualizzare l'elenco delle AVD presenti nel sistema operativo.                            & UC-15          \\\hline
+    \idRequisitiSub{F-D}    & Il tool deve permettere di selezionare un'AVD presente nel sistema.                                                   & UC-15          \\\hline
+    \idRequisitiSub{F-D}    & Il tool deve permettere di specificare se avviare l'AVD con opzione di proxy.                                         & UC-15          \\\hline
+    \setcounter{subCount}{0}
+    \idRequisiti{F-D}       & Il tool deve permettere d'inserire le informazioni per il proxy.                                                      & UC-17          \\\hline
+    \idRequisitiSub{F-D}    & Il tool deve permettere d'inserire l'indirizzo del server proxy.                                                      & UC-17          \\\hline
+    \idRequisitiSub{F-D}    & Il tool deve permettere d'inserire il numero di porta del server proxy.                                               & UC-17          \\\hline
+    \setcounter{subCount}{0}
+    \idRequisiti{F-D}       & Il tool deve permettere di registrare il traffico di rete.                                                            & UC-18          \\\hline
+    \idRequisitiSub{F-D}    & Il tool deve generare il file che contiene i dettagli del traffico di rete.                                           & UC-18          \\\hline
+    \caption{Requisiti funzionali}
+\end{longtable}
+
+\setcounter{rowcount}{0}
+
+\subsection{Requisiti di vincolo}\label{subsec:requisiti-vincolo}
+\begin{center}
+    \begin{longtable}{ | c| C{7cm} |C{3cm} |}
+        \hline
+        \textbf{Identificativo} & \textbf{Descrizione}                                              & \textbf{Fonte}   \\\hline
+        \idRequisiti{V-D}       & Il tool può essere un tool da righe di commando                   & Piano di lavoro. \\\hline
+        \idRequisiti{V-D}       & Il tool può essere un tool dotato di GUI                          & Piano di lavoro. \\\hline
+        \idRequisiti{V-D}       & Il tool può essere sviluppato in JAVA                             & Piano di lavoro. \\\hline
+        \idRequisiti{V-F}       & Il tool può essere sviluppato utilizzando i linguaggi funzionali. & Piano di lavoro. \\\hline
+        \caption{Requisiti di vincolo}
+    \end{longtable}
+\end{center}
+\setcounter{rowcount}{0}
+
+\subsection{Requisiti qualitativi}\label{subsec:requisiti-qualitativi}
+\begin{center}
+    \begin{longtable}{ | c| C{7cm} |C{3cm} |}
+        \hline
+        \textbf{Identificativo} & \textbf{Descrizione}                                                                           & \textbf{Fonte}  \\\hline
+        \idRequisiti{Q-O}       & Il codice sorgente deve essere versionato col sistema di versionamento dell'azienda ospitante. & Piano di lavoro \\\hline
+        \idRequisiti{Q-O}       & Il Il codice sorgente deve essere sotto licenza GPL v3.                                        & Piano di lavoro \\\hline
+%        \idRequisiti{Q-O}&Il code coverage dei test unitari deve superare 80\%.& Piano di lavoro\\\hline
+%        \idRequisiti{Q-D}&Il code coverage dei test unitari deve essere 100\%.& Piano di lavoro\\\hline
+        \caption{Requisiti qualitativi}
+    \end{longtable}
+\end{center}
+\setcounter{subCount}{0}
+\setcounter{rowcount}{0}

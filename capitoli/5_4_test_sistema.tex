@@ -1,0 +1,61 @@
+\section{Test di sistema}\label{sec:test-di-sistema}
+In ingegneria del software il test di sistema è un procedimento, parte del ciclo di vita del software, utilizzato per individuare le carenze di correttezza, completezza e affidabilità delle componenti software in corso di sviluppo.
+Consiste nell'esecuzione del software da parte del collaudatore per verificare le funzionalità offerte del software in relazione con i requisiti.
+\setcounter{rowcount}{0}
+
+\subsection{Specifica dei test}\label{subsec:specifica-dei-test-sistema}
+Di seguito sono riportati i test d'integrazione che verificano il corretto funzionamento del sistema.
+\begin{longtable}{ | C{2.5cm} |C{2cm} |C{7cm} |C{1.5cm}|}
+    \hline
+    \textbf{Identificativo} &
+    \textbf{Requisito} &
+    \textbf{Descrizione} &
+    \textbf{Stato} \\\hline
+
+    \idTest{TS} & R-1-F-O    & Verificare che il tool permetta di selezionare solo i file APK.                                                     & I \\\hline
+    \idTest{TS} & R-1.1-F-O  & Verificare che venga mostrato un messaggio di errore quando il file selezionato non è APK.                          & I \\\hline
+    \idTest{TS} & R-2-F-O    & Verificare che il file APK venga decompilato correttamente.& I \\\hline
+    \idTest{TS} & R-2.1-F-O  & Verificare che venga mostrato un messaggio quando l'APK è stato decompilato correttamente.& I \\\hline
+    \idTest{TS} & R-2.2-F-O  & Verificare che nel file AndroidManifest.xml venga aggiunto l'attributo debuggable correttamente.& I \\\hline
+    \idTest{TS} & R-3-F-O    & Verificare che venga mostrato il messaggio d'errore quando la decompilazione non è andato a buon fine.& I \\\hline
+    \idTest{TS} & R-4-F-O    & Verificare che l'applicazione ricompilato venga installata correttamente nell'AVD selezionato.& I \\\hline
+    \idTest{TS} & R-4.1-F-D  & Verificare che l'APK venga ricompilata correttamente.& I \\\hline
+    \idTest{TS} & R-4.2-F-D  & Verificare che venga avviata l'applicazione.& I \\\hline
+    \idTest{TS} & R-4.3-F-O  & Verificare che il tool permetta di selezionare un AVD presente nel sistema.& I \\\hline
+    \idTest{TS} & R-4.4-F-O  & Verificare che venga visualizzata l'elenco degli AVD presenti nel sistema.& I \\\hline
+    \idTest{TS} & R-4.5-F-O  & Verificare che il tool permetta di confermare la selezione dell'AVD.& I \\\hline
+    \idTest{TS} & R-5-F-O    & Verificare che venga mostrato un messaggio quando non sono stati rilevati nessun AVD nel sistema.& I \\\hline
+    \idTest{TS} & R-6-F-O    & Verificare che deve mostrare un messaggio d'errore quando l'AVD non è stato avviato correttamente.& I \\\hline
+    \idTest{TS} & R-7-F-O    & Verificare che vengano effettivamente scaricati i file dall'area di storage dell'applicazione.& I \\\hline
+    \idTest{TS} & R-7.1-F-O  & Verificare che sia permesso all'utente di selezionare il path dove collocare i file scaricati dall'area di storage.& I \\\hline
+    \idTest{TS} & R-8-F-D    & Verificare che vengano decodificati i file dex.& I \\\hline
+    \idTest{TS} & R-8.1-F-O  & Verificare che venga visualizzato il messaggio quando la decodifica dei file dex è avvenuto con successo.& I \\\hline
+    \idTest{TS} & R-8.2-F-O  & Verificare che venga fatta selezionare i file dex da decodificare.& I \\\hline
+    \idTest{TS} & R-8.3-F-O  & Verificare che confermata la selezione dei file dex.& I \\\hline
+    \idTest{TS} & R-8.4-F-O  & Verificare che sia permessa la selezione dei path di destinazione dei file decodificati.& I \\\hline
+    \idTest{TS} & R-9-F-O    & Verificare che venga mostrato il messaggio d'errore quando la decodificato dei file dex non è andato a buon fine.& I \\\hline
+    \idTest{TS} & R-10-F-F   & Verificare che il tool permetta di firmare l'apk ricompilato.& I \\\hline
+    \idTest{TS} & R-10.1-F-F & Verificare che il tool permetta di selezionare un file di tipo keystore.& I \\\hline
+    \idTest{TS} & R-10.2-F-F & Verificare che venga mostrato un messaggio d'errore quando il file selezionato non è di tipo keystore.& I \\\hline
+    \idTest{TS} & R-10.3-F-F & Verificare che il tool permetta l'inserimento dell'alias della chiave da utilizzare.& I \\\hline
+    \idTest{TS} & R-10.4-F-F & Verificare che il tool permetta l'inserimento della password del keystore da utilizzare.& I \\\hline
+
+    \idTest{TS} & R-11-F-F   & Verificare che venga mostrato il messaggio d'errore quando i dati inseriti non sono corretti.& I \\\hline
+    \idTest{TS} & R-12-F-O   & Verificare che venga mostrato un messaggio quando il file selezionato non è valido.& I \\\hline
+    \idTest{TS} & R-13-F-O   & Verificare che il tool permetta di decodificare i file dex in .java.& I \\\hline
+    \idTest{TS} & R-14-F-O   & Verificare che il tool permetta di effettuare l'analisi del codice java.& I \\\hline
+    \idTest{TS} & R-14.1-F-O & Verificare che il tool permetta di selezionare diversi tipi di analisi.& I \\\hline
+    \idTest{TS} & R-14.2-F-O & Verificare che il tool permetta di selezionare la destinazione per il file di report.& I \\\hline
+    \idTest{TS} & R-15-F-D   & Verificare che il tool permetta di avviare un AVD presente nel sistema.& I \\\hline
+    \idTest{TS} & R-15.1-F-D & Verificare che il tool permetta di selezionare l'AVD presente nel sistema.& I \\\hline
+    \idTest{TS} & R-15.2-F-D & Verificare che il tool permetta di visualizzare l'elenco degli AVD presenti nel sistema.& I \\\hline
+    \idTest{TS} & R-16-F-D   & Verificare che il tool permetta d'inserire le opzioni di proxy.& I \\\hline
+    \idTest{TS} & R-16.1-F-D & Verificare che il tool permetta d'inserire l'indirizzo del server proxy.& I \\\hline
+    \idTest{TS} & R-16.2-F-D & Verificare che il tool permetta d'inserire il numero di porta del server proxy.& I \\\hline
+    \idTest{TS} & R-17-F-D   & Verificare che il tool registri il traffico di rete.& I \\\hline
+    \idTest{TS} & R-17.1-F-D & Verificare che il tool generi un file di report al termine delle operazioni effettuate.& I \\\hline
+    \caption{Test di sistema}
+\end{longtable}
+\setcounter{subCount}{0}
+\setcounter{rowcount}{0}
+I test di sistema sono stati effettuati insieme al tutor aziendale, il quale si è ritenuto soddisfatto dei risultati ottenuti.
