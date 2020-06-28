@@ -2,9 +2,10 @@
 % !TEX TS-program = pdflatex
 % !TEX root = ../tesi.tex
 \section{L'idea}\label{sec:l'idea}
+Le applicazioni mobili rappresentano oggi una delle principali sfide per la sicurezza informatica.
+La rapida diffusione degli smartphone, infatti, ha visto emergere il settore mobile come uno dei principali canali per l’erogazione di servizi provocando, di conseguenza,  un aumento esponenziale degli attacchi contro  tali piattaforme.
+Tra le minacce\footcite{site:owasp} fondamentali, distinguiamo:
 
-Le applicazioni mobili rappresentano oggi una delle principali sfide per la sicurezza informatica: negli ultimi anni se la rapida diffusione degli smartphone ha visto emergere il mobile come uno dei principali canali per l'erogazione di servizi, sono aumentati esponenzialmente gli attacchi contro le piattaforme mobili.
-Le principali minacce\footcite{site:owasp} del mondo delle applicazioni mobile sono:
 \begin{itemize}
     \item \textit{Improper platform usage:} questa categoria di rischi comprende l'uso scorretto delle funzionalità offerte dalle piattaforme o il fallimento nell'utilizzo dei controlli di sicurezza offerti dalle piattaforme.
     \item \textit{Insecure data storage:} le minacce possono essere una delle seguenti:
@@ -19,16 +20,16 @@ Le principali minacce\footcite{site:owasp} del mondo delle applicazioni mobile s
     \item \textit{Insecure authentication:}
     gli agenti di minaccia che sfruttano le vulnerabilità di autenticazione in genere lo fanno attraverso attacchi automatizzati che utilizzano strumenti disponibili o personalizzati.
     \item \textit{Insufficient cryptography:} gli agenti delle minacce includono: chiunque abbia accesso fisico ai dati che sono stati crittografati in modo improprio o malware mobile che agisce per conto di un avversario.
-    Questa vulnerabilità comporta il recupero non autorizzato d'informazioni sensibili dal dispositivo mobile e violazione di privacy.
+    Questa vulnerabilità comporta il recupero non autorizzato d'informazioni sensibili dal dispositivo mobile e violazione della privacy.
     \item \textit{Insecure authorization:}
     gli agenti delle minacce che sfruttano le vulnerabilità delle autorizzazioni in genere lo fanno attraverso gli attacchi automatici che utilizzano strumenti disponibili o personalizzati.
     \item \textit{Client code quality:} include le entità che possono trasmettere in input dati non attendibili alle chiamate di metodo effettuate all'interno del codice mobile.
-    Questi tipi di problemi non sono necessariamente problemi di sicurezza in sé, ma possono causare problemi si vulnerabilità.
+    Tale categoria di problemi non rappresenta in sè una grave problematica di sicurezza, ma potrebbe provocare vulnerabilità indesiderate.
 
     \item \textit{Code tampering:}
     un utente malintenzionato sfrutta la modifica del codice tramite forme dannose delle app ospitante negli app store delle terze parti.
     L'utente malintenzionato può anche indurre l'utente a installare l'app tramite attacchi di phishing.
-    In genere, per sfruttare questo tipo di vulnerabilità, un utente malintenzionato eseguirà le seguenti operazioni: apportare modifiche direttamente al file binario principale del pacchetto dell'applicazione, apportare modifiche binarie dirette alle risorse, e reindirizzare o sostituire le API di sistema per intercettare ed eseguire il codice esterno dannoso.
+    In genere, per sfruttare questo tipo di vulnerabilità, un utente malintenzionato eseguirà le seguenti operazioni: apportare modifiche direttamente al file binario principale del pacchetto dell’app ospitante, apportare modifiche binarie dirette alle risorse, e reindirizzare o sostituire le API di sistema per intercettare ed eseguire il codice esterno dannoso.
 
     \item \textit{Reverse engineering:}
     un utente malintenzionato in genere scarica l'app di destinazione da un app store e la analizza nel proprio ambiente locale utilizzando una suite di strumenti.
@@ -39,25 +40,30 @@ Le principali minacce\footcite{site:owasp} del mondo delle applicazioni mobile s
 \end{itemize}
 Le applicazioni mobili soffrono spesso di debolezze intrinseche dovute al design dell'applicazione e al suo sviluppo, debolezze che possono prevedere la memorizzazione d'informazioni sensibili sul device, possibilità di modificare l'applicazione (mediante \gls{repackaging} dell'app), o la possibilità di un semplice \gls{reverse_engineering}.
 
-La sicurezza è diventata pertanto un fattore critico sulle piattaforme mobile: se tradizionalmente la sicurezza di un sistema viene declinata secondo la cosiddetta triade CIA\footcite{samonas2014cia}, ovvero dalla Confidenzialità, Integrità e Disponibilità (dall'inglese Availability) di un sistema;
-sulle piattaforme mobile garantire il rispetto di queste proprietà è assai più complesso rispetto ai sistemi tradizionali, per via della loro eterogeneità, diffusione e distribuzione, da cui è necessario ripensare alla sicurezza dei sistemi per garantire la protezione degli utenti, delle loro risorse e delle piattaforme.
+
+
+La sicurezza è diventata un fattore critico sulle piattaforme mobile.
+Tradizionalmente, essa viene declinata secondo la cosiddetta triade CIA\footcite{samonas2014cia} che, in italiano, è possibile tradurre come Confidenzialità, Integrità e Disponibilità (dall’inglese Availability) di un sistema.
+Sui dispositivi mobile garantire il rispetto di tali proprietà è assai più complesso rispetto ai sistemi tradizionali, per via della loro eterogeneità, diffusione e distribuzione, da cui è necessario ripensare alla sicurezza dei sistemi per garantire la protezione degli utenti, delle loro risorse e delle piattaforme.
+
 La sicurezza diviene sempre più un fattore fondamentale da prevedere in tutte le fasi del ciclo di vita del software e non relegata alle sole fasi post rilascio: da cui è fondamentale ridefinire il concetto di Software Development Lifecycle in Secure Software Development Lifecycle\footcite{site:ssdl}, con una connotazione più orientata alla sicurezza in tutte le sue fasi, ovvero:
 \begin{itemize}
-    \item \textit{Analisi:} in questa fase bisogna individuare quali sono i rischi che il software è sottoposto, quindi individuare i requisiti che il software deve soddisfare per contrastare i potenziali attacchi,
-    \item \textit{Progettazione:} in questa fase è necessario prestare attenzione nell'adozione delle librerie esterne, assicurandosi che quest'ultime non abbiano falle di sicurezza che minano l'integrità dell'intero software, inoltre, è necessario adottare i standard di sicurezza consolidati;
+    \item \textit{Analisi:} durante l'analisi bisogna individuare quali sono i rischi che il software è sottoposto, quindi individuare i requisiti che il software deve soddisfare per contrastare i potenziali attacchi;
+    \item \textit{Progettazione:} nel corso della fase di progettazione è necessario prestare attenzione nell'adozione delle librerie esterne, assicurandosi che quest'ultime non abbiano falle di sicurezza che minano l'integrità dell'intero software.
+    Inoltre, è necessario adottare i standard di sicurezza consolidati;
     \item \textit{Sviluppo:} in questa fase le azioni\footcite{site:security-best-practice} che si possono adottare sono molteplici, per esempio:
     \begin{itemize}
-        \item validazione dell'input;
-        \item controllo dell'accesso;
+        \item validare gli input;
+        \item controllare l'accesso;
         \item evitare le chiavi hardcoded;
         \item evitare di salvare le password in chiaro;
-        \item gestione degli utenti, sessioni e dei permessi;
+        \item gestire gli utenti, le sessioni e i permessi;
         \item standardizzare la documentazione in modo da facilitare la manutenzione del codice;
         \item adottare la pratica del code review;
         \item adottare il principio \gls{kiss};
         \item adottare la pratica del \gls{sast} e \gls{sca}.
     \end{itemize}
-    \item \textit{Test:} in questa fase è necessario invece adottare la \gls{dast};
-    \item \textit{Deployment e Maintenance:} si tratta di messa in produzione del software sviluppato, quindi bisogna effettuare l'analisi della sicurezza e quindi configurare sia software che l'hardware sul quale è in esecuzione in modo corretto.
+    \item \textit{Test:} durante la fase di test è necessario invece adottare la \gls{dast};
+    \item \textit{Deployment e Maintenance:} si tratta di messa in produzione del software sviluppato, quindi bisogna effettuare l'analisi della sicurezza e configurare sia il software che l'hardware sul quale è in esecuzione in modo corretto.
 \end{itemize}
 
