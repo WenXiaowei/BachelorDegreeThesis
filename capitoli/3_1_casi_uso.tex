@@ -5,7 +5,7 @@ Di seguito sono elencati i casi d'uso individuati dallo stagista durante la fase
     \item \textbf{attori:} utente generico;
     \item \textbf{descrizione:} serve per permettere all'utente di selezionare il file APK da analizzare;
     \item \textbf{pre-condizioni:} l'utente ha avviato il tool;
-    \item \textbf{post-condizioni:} l'utente ha selezionato un file di con estensione APK valido;
+    \item \textbf{post-condizioni:} l'utente ha selezionato un file di estensione APK valido;
     \item \textbf{flusso degli eventi principali:}
     \begin{itemize}
         \item l'utente seleziona il file;
@@ -17,11 +17,11 @@ Di seguito sono elencati i casi d'uso individuati dallo stagista durante la fase
     \item \textbf{attori:} utente generico;
     \item \textbf{descrizione:} l'utente deve avviare la decompilazione del file APK;
     \item \textbf{pre-condizioni:} l'utente ha selezionato con successo un file APK;
-    \item \textbf{post-condizioni:} la decompilazione è avvenuto con successo;
+    \item \textbf{post-condizioni:} la decompilazione è avvenuta con successo;
     \item \textbf{flusso degli eventi principali:}
     \begin{itemize}
         \item l'utente avvia la decompilazione;
-        \item l'utente visualizza il messaggio della decompilazione avvenuto con successo;
+        \item l'utente visualizza il messaggio della decompilazione avvenuta con successo;
     \end{itemize}
     \item \textbf{Estensione:}
     \begin{itemize}
@@ -44,13 +44,13 @@ Di seguito sono elencati i casi d'uso individuati dallo stagista durante la fase
 \begin{itemize}
     \item \textbf{attori:} utente generico;
     \item \textbf{descrizione:} permette all'utente d'installare l'apk, decompilato, manomesso e ricompilato, su un AVD;
-    \item \textbf{pre-condizioni:} la decompilazione dell'APK è stato eseguito con successo;
+    \item \textbf{pre-condizioni:} la decompilazione dell'APK è stata eseguita con successo;
     \item \textbf{post-condizioni:} l'APK è stato installato sull'AVD con successo;
     \item \textbf{flusso degli eventi principali:}
     \begin{itemize}
         \item l'utente seleziona un'AVD presente sul proprio computer;
         \item l'utente avvia l'installazione dell'APK ricompilato;
-        \item l'utente visualizza un messaggio d'installazione avvenuto con successo;
+        \item l'utente visualizza un messaggio che segnala l'installazione avvenuto con successo.
     \end{itemize}
 \end{itemize}
 \subsubsection*{UC-4.1 Selezione AVD}\label{subsubsec:uc-4.1-selezione-avd}
@@ -64,7 +64,7 @@ Di seguito sono elencati i casi d'uso individuati dallo stagista durante la fase
         \item l'utente visualizza un elenco delle AVD presenti nel proprio computer;
         \item l'utente seleziona un'AVD;
         \item l'utente conferma la selezione;
-        \item l'AVD selezionato si è avviato con successo
+        \item l'AVD selezionato si è avviato con successo.
     \end{itemize}
     \item \textbf{Estensione}
     \begin{itemize}
@@ -103,19 +103,19 @@ Di seguito sono elencati i casi d'uso individuati dallo stagista durante la fase
 \begin{itemize}
     \item \textbf{attori:} utente generico;
     \item \textbf{descrizione:} nel caso l'utente volesse una copia dei dati interni dell'applicativo, ha bisogno di fare il dump;
-    \item \textbf{pre-condizioni:} l'installazione dell'APK manomesso è andato a buon fine;
-    \item \textbf{post-condizioni:} è stato fatto una copia dello storage interno;
+    \item \textbf{pre-condizioni:} l'installazione dell'APK manomesso è andata a buon fine;
+    \item \textbf{post-condizioni:} l'area di storage dell'app è stata copiata con successo;
     \item \textbf{flusso degli eventi principali:}
     \begin{itemize}
         \item l'utente seleziona la voce "copia i dati interni";
-        \item l'utente seleziona il path dove collocare i dati;
+        \item l'utente seleziona il path dove collocare i dati.
     \end{itemize}
 \end{itemize}
 \subsection*{UC-8 Decodifica del codice}\label{subsec:uc-8-decodifica-del-codice}
 \begin{itemize}
     \item \textbf{attori:} utente generico;
     \item \textbf{descrizione:} durante la decompilazione dell'APK vengono creati dei file .dex che contengono il codice sorgente dell'APK, e questo caso d'uso serve per permettere all'utente di ottenere il codice sorgente;
-    \item \textbf{pre-condizioni:} la decompilazione è avvenuto con successo;
+    \item \textbf{pre-condizioni:} la decompilazione è avvenuta con successo;
     \item \textbf{post-condizioni:} l'utente ha ottenuto una copia del codice sorgente in java;
     \item \textbf{flusso degli eventi principali:}
     \begin{itemize}
@@ -128,8 +128,8 @@ Di seguito sono elencati i casi d'uso individuati dallo stagista durante la fase
 \begin{itemize}
     \item \textbf{attori:} utente generico;
     \item \textbf{descrizione:} serve all'utente per avviare la decodifica dei file .dex;
-    \item \textbf{pre-condizioni:} la decompilazione dell'APK è avvenuto correttamente;
-    \item \textbf{post-condizioni:} la decodifica è avvenuto con successo;
+    \item \textbf{pre-condizioni:} la decompilazione dell'APK è avvenuta correttamente;
+    \item \textbf{post-condizioni:} la decodifica è avvenuta con successo;
     \item \textbf{flusso degli eventi principali:}
     \begin{itemize}
         \item l'utente seleziona la funzionalità di decodifica dei file .dex;
@@ -139,7 +139,7 @@ Di seguito sono elencati i casi d'uso individuati dallo stagista durante la fase
 \begin{itemize}
     \item \textbf{attori:} utente generico;
     \item \textbf{descrizione:} serve all'utente per salvare i codici sorgenti decodificati;
-    \item \textbf{pre-condizioni:} la decompilazione è avvenuto con successo;
+    \item \textbf{pre-condizioni:} la decompilazione è avvenuta con successo;
     \item \textbf{post-condizioni:} i file con i codici sorgenti sono stati salvati correttamente;
     \item \textbf{flusso degli eventi principali:}
     \begin{itemize}
@@ -179,8 +179,8 @@ Di seguito sono elencati i casi d'uso individuati dallo stagista durante la fase
 \begin{itemize}
     \item \textbf{attori:} utente generico;
     \item \textbf{descrizione:} dopo la ricompilazione si può firmare l'APK;
-    \item \textbf{pre-condizioni:} la ricompilazione dell'APK è avvenuto correttamente;
-    \item \textbf{post-condizioni:} l'APK è stata firmata correttamente;
+    \item \textbf{pre-condizioni:} la ricompilazione dell'APK è avvenuta correttamente;
+    \item \textbf{post-condizioni:} l'APK è stata firmato correttamente;
     \item \textbf{flusso degli eventi principali:}
     \begin{itemize}
         \item UC-10.1 selezione keystore;
@@ -189,14 +189,14 @@ Di seguito sono elencati i casi d'uso individuati dallo stagista durante la fase
     \end{itemize}
     \item \textbf{Estensione}
     \begin{itemize}
-        \item UC-11 Visualizzazione credenziali keystore errati;
+        \item UC-11 Visualizzazione credenziali keystore errate;
     \end{itemize}
 \end{itemize}
 \subsubsection*{UC-10.1 Selezione keystore}\label{subsubsec:uc-10.1-selezione-keystore}
 \begin{itemize}
     \item \textbf{attori:} utente generico;
-    \item \textbf{descrizione:} permettere all'utente di selezionare il keystore da utilizzare per firmare l'APK;
-    \item \textbf{pre-condizioni:} la ricompilazione dell'APK è avvenuto correttamente;
+    \item \textbf{descrizione:} l'utente deve selezionare il keystore da utilizzare per firmare l'APK
+    \item \textbf{pre-condizioni:} la ricompilazione dell'APK è avvenuta correttamente;
     \item \textbf{post-condizioni:} è stato selezionato un file di tipo keystore corretto (estensione: \textbf{.jks});
     \item \textbf{flusso degli eventi principali:}
     \begin{itemize}
@@ -205,7 +205,7 @@ Di seguito sono elencati i casi d'uso individuati dallo stagista durante la fase
     \end{itemize}
     \item \textbf{flussi secondari}
     \begin{itemize}
-        \item UC-10.2 Visualizzazione messaggio file selezionato non valido;
+        \item UC-10.2 visualizzazione messaggio che mostra che il file selezionato non è valido;
     \end{itemize}
 \end{itemize}
 \subsubsection*{UC-10.2 Visualizzazione messaggio file selezionato non valido}
@@ -250,7 +250,7 @@ Di seguito sono elencati i casi d'uso individuati dallo stagista durante la fase
 \subsection*{UC-11 Visualizzazione credenziali keystore errati}\label{subsec:uc-11-visualizzazione-credenziali-keystore-errati}
 \begin{itemize}
     \item \textbf{attori:} utente generico;
-    \item \textbf{descrizione:} per firmare l'APK l'utente deve inserire dei credenziali, e quando quest'ultimi sono errati viene mostrato un messaggio di errore;
+    \item \textbf{descrizione:} per firmare l'APK l'utente deve inserire delle credenziali, e quando quest'ultime sono errate viene mostrato un messaggio di errore;
     \item \textbf{pre-condizioni:} l'utente ha selezionato la funzionalità per ricompilare l'APK;
     \item \textbf{post-condizioni:} l'utente ha visualizzato il messaggio di errore;
     \item \textbf{flusso degli eventi principali:}
@@ -292,8 +292,8 @@ Di seguito sono elencati i casi d'uso individuati dallo stagista durante la fase
     \begin{itemize}
         \item l'utente seleziona la voce "analyze";
         \item l'utente seleziona le opzioni di analisi;
-        \item all'analisi completato, l'utente specifica dove posizionare il file pdf con i risultati dell'analisi;
-        \item il file viene salvato nel percorso da lui specificato.
+        \item al completamento dell'analisi, l'utente specifica dove posizionare il file pdf con i risultati dell'analisi;
+        \item il file viene salvato nel percorso specificato dall'utente.
     \end{itemize}
 \end{itemize}
 \begin{figure}[H]
@@ -353,7 +353,7 @@ Di seguito sono elencati i casi d'uso individuati dallo stagista durante la fase
     \item \textbf{attori:} attore generico;
     \item \textbf{descrizione:} l'utente vuole avviare l'AVD con le opzioni di proxy;
     \item \textbf{pre-condizioni:} il tool è stato avviato correttamente ed è riuscito a rilevare gli AVD presenti nel sistema;
-    \item \textbf{post-condizioni:} l'opzione di proxy è stato selezionato;
+    \item \textbf{post-condizioni:} l'opzione di proxy è stata selezionata;
     \item \textbf{flusso degli eventi principali:}
     \begin{itemize}
         \item l'utente seleziona la voce per avviare l'AVD.
@@ -362,12 +362,12 @@ Di seguito sono elencati i casi d'uso individuati dallo stagista durante la fase
 \subsubsection*{UC-17.2 selezione voce avvio AVD}
 \begin{itemize}
     \item \textbf{attori:} attore generico;
-    \item \textbf{descrizione:} l'utente avviare l'AVD;
+    \item \textbf{descrizione:} l'utente avvia l'AVD;
     \item \textbf{pre-condizioni:} l'utente ha selezionato le opzioni per avviare l'AVD;
     \item \textbf{post-condizioni:} il tool avvia l'AVD;
     \item \textbf{flusso degli eventi principali:}
     \begin{itemize}
-        \item il tool seleziona la voce avvio di avviare l'AVD.
+        \item l'utente seleziona la voce avvio l'AVD.
     \end{itemize}
 \end{itemize}
 \subsubsection*{UC-17.3 inserimento indirizzo e porta proxy}

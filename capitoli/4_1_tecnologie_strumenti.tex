@@ -6,19 +6,20 @@
 Di seguito viene data una panoramica delle tecnologie e degli strumenti utilizzati.
 
 \subsection*{CFR - decompilatore java}
-Un decompilatore è un software che prende come input un file eseguibile e tenta creare del codice sorgente ad alto livello che può essere ricompilato successivamente.
-\`{E} lo strumento che effettua l'operazione inversa del compilatore.
-I decompilatori solitamente non riescono a ricostruire il codice sorgente nella forma originale, ma spesso potrebbe ottenere del codice offuscato.
-L'offuscamento del codice è la tecnica che viene applicata al codice sorgente o codice macchina per rendere il codice meno leggibile per rendere l'applicazione della tecnica del reverse engineering più complicata.\\
-Nonostante ciò, i decompilatori rimangono uno dei strumenti più importanti tool utilizzato nell'ambito del reverse engineering del software.
+Un decompilatore è un software che prende come input un file eseguibile e tenta di creare del codice sorgente ad alto livello che può essere ricompilato successivamente.
+È lo strumento che effettua l’operazione inversa del compilatore.
+I decompilatori solitamente non riescono a ricostruire il codice sorgente nella forma originale, ma riescono spesso a ottenere del codice offuscato.
+Con offuscamento del codice si intende la tecnica che viene applicata al codice sorgente o codice macchina per rendere il codice meno leggibile in modo da rendere l’operazione di reverse engineering più complicata.
+Nonostante ciò, i decompilatori rimangono uno più importanti tool
+utilizzati nell’ambito del reverse engineering del software.
 CFR è il decompilatore utilizzato per trasformare il codice bytecode \textit{.class} in codice sorgente \textit{.java};
 \url{http://www.benf.org/other/cfr/index.html}
 
 \subsection*{Apk Tool}
 Apktool è un tool per effettuare il reverse engineering delle applicazioni Android.
-Può decodificare le risorse contenute nell'APK in una forma quasi uguale a quelli originali, può anche di ricostruire l'APK dopo le modifiche alle risorse modificate.
-Nel tool APAT è stato utilizzato per poter decompattare un'APK in questo modo permette di avere a disposizione i file che compongono l'APK originale.
-L'apktool permette anche di ricomporre un'apk utilizzando le risorse ottenute precedentemente.
+Può decodificare le risorse contenute nell’APK in una forma quasi uguale a quella originale e può ricostruire l’APK dopo le modifiche effettuate alle risorse modificate.
+Nel tool APAT è stato utilizzato per poter decompattare un’APK in modo da ottenere i file che compongono l’APK originale.
+Apktool permette anche di ricomporre un’apk utilizzando le risorse ottenute precedentemente.
 \url{https://ibotpeaches.github.io/Apktool/}
 \begin{figure}[H]
     \centering
@@ -27,7 +28,8 @@ L'apktool permette anche di ricomporre un'apk utilizzando le risorse ottenute pr
 \end{figure}
 
 \subsection*{Dex2Jar}
-Questo strumento permette di trasformare i file \textit{.dex} in formato \textit{.jar} in modo che possa essere letta attraverso un software di compressione, come 7Zip, per poter accedere quindi ai file di tipo \textit{.class}.
+Questo strumento permette di trasformare i file \textit{.dex} in formato \textit{.jar} in modo
+che il contenuto del file possa essere letto attraverso un software di compressione, come 7Zip.
 \url{https://github.com/pxb1988/dex2jar}
 
 \subsection*{XPath}\label{subsec:xpath}
@@ -35,7 +37,7 @@ In informatica XPath è un linguaggio, parte della famiglia \gls{xml}, che perme
 Nell'APAT è stato utilizzato per poter estrapolare alcuni dati necessari per poter effettuare il dump dei dati dall'area di storage dell'app e ottenere le informazioni per poter decompilare solamente presenti nel package dell'applicazione.
 
 \subsection*{Java}
-In informatica, Java\footcite{womak:effective-java} è un linguaggio di programmazione ad alto livello, orientato agli oggetti e tipizzazione statica, che si appoggia sull'omonima piattaforma software di esecuzione, specificamente progettato per essere il più possibile indipendente dalla piattaforma hardware di esecuzione.
+In informatica, Java\footcite{womak:effective-java} è un linguaggio di programmazione ad alto livello, orientato agli oggetti e tipizzazione statica, che si appoggia sull'omonima piattaforma software di esecuzione, specificamente progettato per essere il più possibile indipendente dal sistema hardware di esecuzione.
 Nell'APAT è stato utilizzato per la stesura del codice, in particolare, per l'interfaccia grafica è stata utilizzata la libreria di java    \gls{swing}.
 \begin{figure}[H]
     \centering
@@ -45,7 +47,8 @@ Nell'APAT è stato utilizzato per la stesura del codice, in particolare, per l'i
 
 \subsection*{Json}
 JSON (JavaScript Object Notation) è un semplice formato per lo scambio di dati.
-Per le persone è facile da leggere e scrivere, mentre per le macchine risulta facile da generare e analizzarne la sintassi.
+Per le persone è facile da leggere e scrivere, mentre per le macchine risulta facile generare il codice e analizzarne la sintassi.
+
 JSON è basato su due strutture:
 \begin{itemize}
     \item un insieme di coppie nome/valore, in diversi linguaggi, questo è realizzato come un oggetto, un record, uno struct, un dizionario, una tabella hash, un elenco di chiavi o un array associativo.
@@ -64,7 +67,7 @@ Nell'APAT è stato utilizzato per contenere i dati di stato del tool quando vien
 \section{Strumenti}\label{sec:strumenti}
 
 \subsection*{Intellij IDEA}
-L'\gls{ide} utilizzato per la scrittura del codice in Java sviluppato da JetBrains.
+L'\gls{ide} che è stato utilizzato per la scrittura del codice in Java sviluppato da JetBrains.
 \url{https://www.jetbrains.com/idea/}
 \begin{figure}[H]
     \centering
@@ -83,7 +86,7 @@ Lo strumento che permette di avviare degli emulatori Android, conosciuti anche c
 \end{figure}
 
 \subsection*{Maven}
-Maven è un tool di \gls{buildautomation}, basato sul concetto di Project Object Model (POM), maven può gestire i build, fare il report e la documentazione da un singolo centro d'informazione.
+Maven è un tool di \gls{buildautomation}, basato sul concetto di Project Object Model (POM), maven può gestire le build, generare i report e la documentazione da un singolo centro d'informazione.
 \url{https://maven.apache.org/}
 \begin{figure}[H]
     \centering

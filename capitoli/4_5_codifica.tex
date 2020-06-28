@@ -7,12 +7,15 @@ Per la fase di codifica sono state adottate le seguenti convenzioni:
 \begin{itemize}
     \item il nome delle classi seguirà la notazione a Cammello, un esempio corretto è: \textit{WindowsCommandFactory};
     \item il nome degli attributi seguirà sempre la notazione a Cammello, ma con la prima lettera in minuscolo, un esempio corretto è: \textit{commandsFactory};
-    \item ove possibile, si deve utilizzare le espressioni lambda;
-    \item la gestione delle eccezioni deve essere venir fatta sempre dal chiamante;
+    \item ove possibile, si devono utilizzare le espressioni lambda;
+    \item la gestione delle eccezioni deve essere fatta sempre dal chiamante;
     \item per ogni classe e ogni metodo deve essere fornita una descrizione in JavaDoc.
 \end{itemize}
 \subsection{Inizializzazione View}\label{subsec:inizializzazione-view}
-Il seguente segmento del codice è necessario per creare completare la relazione di osservazione che esiste tra la View e il Model.
+Il seguente segmento di codice è necessario per creare  la relazione di osservazione che esiste tra la View e il Model.
+Nella View è presente un’etichetta che mostra il file APK selezionato da decompilare.
+Questa componente della view osserva l’attributo apkName del modello, e una volta selezionato il file, viene ottenuto il path del file APK e aggiornato il modello, l’etichetta riceverà la notifica con il path aggiornato
+
 \begin{lstlisting}[caption={Inizializzazione relazione di osservazione View e Model},label={lst:lstlisting}]
 model.getApkName().observe(newValue -> {
     view.getPackageInfo().setText(newValue);
@@ -28,13 +31,14 @@ Nella View è presente un'eticchetta che mostra il file APK selezionato da decom
 
 \subsection{Analisi del codice e generazione del pdf}\label{subsec:analisi-del-codice-e-generazione-del-pdf}
 Dopo aver decompilato un file \textit{.apk}, e decodificato i file \textit{dex} l'utente può scegliere di effettuare l'operazione di analisi offerta dal tool.
-Questa funzionalità si deve istanziare un oggetto di tipo BaseAnalyzer, e in base alle opzioni di analisi che l'utente ha scelta dalla vista:
+Per questa funzionalità si deve istanziare un oggetto di tipo BaseAnalyzer, e in base alle opzioni di analisi che l'utente ha selezionato dalla vista, decorare l'oggetto base.
 \begin{figure}[H]
     \centering
     \includegraphics{./immagini/tool/analysis_chooser.png}
     \caption{Schermata delle opzioni dell'analisi}\label{fig:analysis_chooser}
 \end{figure}
-Di seguito è il codice che si occupa di "decorare" l'oggetto base, effettuare l'analisi e quindi generare un file pdf contenente il risultato:
+Di seguito è presente il codice che si occupa di "decorare" l’oggetto base, effettuare l’analisi e quindi generare un file pdf contenente il risultato:
+
 
 \begin{lstlisting}[caption={Decorator},label={lst:analyze}]
 public void analyze(Map< String, Boolean > thingsTodo, File blackList, File whiteList) {
@@ -54,7 +58,7 @@ pdfWriter.addParagraphs(analyze.getResult());
 }
 \end{lstlisting}
 
-Con l'utilizzo del pattern decorator \`{e} estremamente semplice aggiungere un tipo di analisi, poiché è sufficiente aggiungere nella map \textit{thingsToDo} al momento della chiamata del metodo \textit{analyze}, creare una nuova classe che eredita dalla classe base dei decorator implementandone il metodo astratto e aggiungere due righe d'istruzione.
+Con l'utilizzo del pattern decorator \`{e} estremamente semplice aggiungere un nuovo tipo di analisi, poiché è sufficiente aggiungere nella map \textit{thingsToDo} al momento della chiamata del metodo \textit{analyze}, creare una nuova classe che eredita dalla classe base dei decorator implementandone il metodo astratto e aggiungere due righe d'istruzione per decorare l'oggetto base con il decorator nuovo.
 
 \subsection{Istanziazione di Commands}\label{subsec:istanziazione-di-commands}
 Per il corretto funzionamento del tool è necessario che all'avvio venga instanziata una delle seguenti classi:
