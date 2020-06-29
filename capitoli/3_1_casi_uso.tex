@@ -291,17 +291,91 @@ Di seguito sono elencati i casi d'uso individuati dallo stagista durante la fase
     \item \textbf{flusso degli eventi principali:}
     \begin{itemize}
         \item l'utente seleziona la voce "analyze";
-        \item l'utente seleziona le opzioni di analisi;
-        \item al completamento dell'analisi, l'utente specifica dove posizionare il file pdf con i risultati dell'analisi;
+        \item selezione delle opzioni di analisi;
         \item il file viene salvato nel percorso specificato dall'utente.
+    \end{itemize}
+    \item \textbf{Estensione:}
+    \begin{itemize}
+        \item UC-14.1 Selezione path per salvare i risultati;
+        \item UC-14.2 Elencare i file analizzati;
+        \item UC-14.3 Trovare le stringhe hard-coded;
+        \item UC-14.4 Selezionare un file black list;
+        \item UC-14.5 Analizzare i dati dello storage interno;
+        \item UC-14.6 Selezionare un file di white list.
     \end{itemize}
 \end{itemize}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=10cm, height=8cm]{./immagini/usecase/uc_14_1_14_2.png}
+    \includegraphics[width=10cm, height=12cm]{./immagini/usecase/subcases_14_1.png}
     \caption{Sottocasi d'uso del caso d'uso 14}
 \end{figure}
 
+\subsection*{UC-14.1 Selezione path per salvare i risultati}
+\begin{itemize}
+    \item \textbf{attori:} attore generico;
+    \item \textbf{descrizione:} l'utente deve specificare il path di destinazione del pdf che contiene i risultati dell'analisi;
+    \item \textbf{pre-condizioni:} l'utente ha selezionato l'opzione di analisi del tool;
+    \item \textbf{post-condizioni:} l'utente ha specificato il path di destinazione del pdf;
+    \item \textbf{flusso degli eventi principali:}
+    \begin{itemize}
+        \item l'utente seleziona il path di destinazione.
+    \end{itemize}
+\end{itemize}
+\subsection*{UC-14.2 Elencare i file analizzati}
+\begin{itemize}
+    \item \textbf{attori:} attore generico;
+    \item \textbf{descrizione:} l'utente specifica che il pdf risultante deve contenere una lista dei file analizzati;
+    \item \textbf{pre-condizioni:} l'utente ha selezionato l'opzione di analisi;
+    \item \textbf{post-condizioni:} l'utente ha selezionato l'opzione di elencare i file analizzati;
+    \item \textbf{flusso degli eventi principali:}
+    \begin{itemize}
+        \item l'utente selezionare l'opzione di elencare i file analizzati.
+    \end{itemize}
+\end{itemize}
+\subsection*{UC-14.3 Trovare le stringhe hard-coded}
+\begin{itemize}
+    \item \textbf{attori:} attore generico;
+    \item \textbf{descrizione:} l'utente specifica che il pdf risultante deve contenere tutte le stringhe hard-coded presenti nei codici sorgenti analizzati;
+    \item \textbf{pre-condizioni:} l'utente ha selezionato l'opzione di analisi;
+    \item \textbf{post-condizioni:}; l'utente ha selezionato l'opzione per trovare le stringhe hard-coded presenti nei codici sorgenti;
+    \item \textbf{flusso degli eventi principali:}
+    \begin{itemize}
+        \item l'utente seleziona la voce Trovare le stringhe hard-coded.
+    \end{itemize}
+\end{itemize}
+\subsection*{UC-14.4 Selezionare un file blacklist}
+\begin{itemize}
+    \item \textbf{attori:} attore generico;
+    \item \textbf{descrizione:} l'utente seleziona un file di blacklist;
+    \item \textbf{pre-condizioni:} l'utente ha selezionato l'opzione di analisi;
+    \item \textbf{post-condizioni:} l'utente ha selezionato un file di blacklist;
+    \item \textbf{flusso degli eventi principali:}
+    \begin{itemize}
+        \item l'utente seleziona il file path verso il file di blacklist.
+    \end{itemize}
+\end{itemize}
+\subsection*{UC-14.5 Analizzare i dati dello storage interno}
+\begin{itemize}
+    \item \textbf{attori:} attore generico;
+    \item \textbf{descrizione:} l'utente seleziona la voce analisi dei dati presenti nell'area dello storage dell'app;
+    \item \textbf{pre-condizioni:} l'utente ha selezionato l'opzione di analisi;
+    \item \textbf{post-condizioni:} l'utente ha selezionato la voce di analisi dei dati dati dell'area dello storage;
+    \item \textbf{flusso degli eventi principali:}
+    \begin{itemize}
+        \item l'utente ha selezionato la voce analisi dei dati presenti nell'area dello storage dell'app.
+    \end{itemize}
+\end{itemize}
+\subsection*{UC-14.6 Selezionare un file whitelist}
+\begin{itemize}
+    \item \textbf{attori:} attore generico;
+    \item \textbf{descrizione:} l'utente seleziona un file di whitelist;
+    \item \textbf{pre-condizioni:} l'utente ha selezionato l'opzione di analisi;
+    \item \textbf{post-condizioni:} l'utente ha selezionato un file di whitelist;
+    \item \textbf{flusso degli eventi principali:}
+    \begin{itemize}
+        \item l'utente seleziona il file path verso il file di whitelist.
+    \end{itemize}
+\end{itemize}
 
 
 \subsection*{UC-15 avvio AVD}\label{subsec:uc-15-avvio-avd}
