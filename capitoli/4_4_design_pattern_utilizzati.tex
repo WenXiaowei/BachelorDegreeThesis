@@ -21,8 +21,7 @@ Il pattern observer\footcite{womak:observer} permette di definire una dipendenza
 oggetti, in modo tale che se un oggetto cambia il proprio stato, tutti gli oggetti
 dipendenti da questo siano notificati e aggiornati automaticamente.
 L’implementazione di tale pattern avviene attraverso una classe Observable e un’interfaccia Observer entrambe template.
-Per modificare il valore dell’observable è sufficiente utilizzare il metodo setValue(newValue:T): in questo modo, su ogni ele-
-mento della lista observables viene invocato il metodo onChanged passando il nuovo valore.
+Per modificare il valore dell’observable è sufficiente utilizzare il metodo setValue(newValue:T): in questo modo, su ogni elemento della lista observables viene invocato il metodo onChanged passando il nuovo valore.
 Tale pattern viene applicato nel tool perché i componenti delle viste possano osservare i contenuti del modello.
 
 \begin{figure}[H]
@@ -39,7 +38,7 @@ dell’applicazione presenti nell’Android Emulator Device.\\
 Il vantaggio ottenuto per aver utilizzato questo pattern è quello di poter "decorare" l’oggetto base di analisi, ovvero l’istanza della classe \textit{BaseAnalyzer} con i vari decorator.
 Un altro importante vantaggio è quello di poter aggiungere altre funzionalità
 di analisi facilmente nel tool.
-È, infatti, sufficiente creare un’altra sottoclasse della classe \textit{BaseAnalyzeDecorator} quindi implementare il metodo astratto corrispondente
+È, infatti, sufficiente creare un’altra sottoclasse della classe \textit{BaseAnalyzeDecorator} quindi implementare il metodo astratto corrispondente.
 
 \begin{figure}[H]
     \centering
@@ -49,7 +48,7 @@ di analisi facilmente nel tool.
 
 \newpage
 \subsection{Factory Method}\label{subsec:factory-method}
-Il pattern factory method\footcite{womak:factory-method} è stato utilizzato per poter fornire al controller dei comandi da eseguire nei processi, essendo i comandi dipendente dal sistema operativo, sono state create due classi, una per Windows chiamata \textit{WindowsCommandFactory} e una per Linux chiamata \textit{LinuxCommandFactory}.
+Il pattern Factory Method\footcite{womak:factory-method} è stato utilizzato per poter fornire al controller dei comandi da eseguire nei processi, essendo i comandi dipendente dal sistema operativo. Sono state create due classi, una per Windows chiamata \textit{WindowsCommandFactory} e una per Linux chiamata \textit{LinuxCommandFactory}.
 Allo start-up del tool, viene letta dalla JVM una variabile chiamata \textit{os.name}, e dipendentemente da valore letto, viene deciso quale delle sottoclassi istanziare per il corretto funzionamento del tool.
 \begin{figure}[H]
     \centering

@@ -21,7 +21,7 @@ Questo è il package che contiene la classe Controller e ciò che riguarda l'int
     \caption{Package Controller}\label{fig:controller_diagram}
 \end{figure}
 \begin{namespacedesc}
-    \classdesc{AndroidManifestEditor.java}{È la classe che si occupa, dato un oggetto di tipo File Android Manifest, di modificare e/o aggiungere il tag \textit{debugabble} impostando il suo valore a \textit{true};}
+    \classdesc{AndroidManifestEditor.java}{È la classe che si occupa, dato un oggetto di tipo File Android Manifest, di modificare e/o aggiungere il tag \textit{debuggable} impostando il suo valore a \textit{true};}
     \classdesc{Controller}{È il controller del MVC, si occupa di effettuare le operazioni di decompilazione, ricompilazione, decodifica e analisi dei file;}
 \end{namespacedesc}
 
@@ -50,7 +50,7 @@ Il package analyzer è composto dalle seguenti classi:
     \classdesc{analyzer.BaseAnalyzer}{È la classe dell'oggetto base che viene decorato.}
     \classdesc{analyzer.BaseAnalyzeDecorator}{È il classe astratta del decorator di base che implementa l'interfaccia Analyze, e ha un metodo astratto \textit{doAnalysis()} che deve essere implementato dai decorator concreti.}
     \classdesc{analyzer.DumpDataBase}{È il decorator che si occupa di estrarre i contenuti dei file \textit{.db} scaricati dall'area di storage dell'app.}
-    \classdesc{analyzer.DumpedFilesAnalyzer}{È il decorator che si occupa di analizzare i file dell'area di storage dell'applicazione con estensione \textit{XML} e \textit{json}, principalmente, legge il contenuto di tali file, e in base ad una whitelist, seleziona quali risultati restituire al chiamante.}
+    \classdesc{analyzer.DumpedFilesAnalyzer}{È il decorator che si occupa di analizzare i file dell'area di storage dell'applicazione con estensione \textit{XML} e \textit{JSON}. Principalmente, legge il contenuto di tali file, e in base ad una whitelist, seleziona quali risultati restituire al chiamante.}
     \classdesc{analyzer.LambdaCounter}{È il decorator che conta il numero di lambda presente per ogni classe di codice \textit{.java} decompilato.}
     \classdesc{analyzer.StringFinder}{È il decorator che analizza i file di tipo \textit{.java}, ed estrae le stringhe hardcoded, può essere utilizzato insieme a un blacklist delle stringhe che devono essere ignorate.}
 \end{namespacedesc}

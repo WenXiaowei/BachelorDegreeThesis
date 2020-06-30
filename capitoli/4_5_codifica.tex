@@ -5,16 +5,16 @@
 \section{Codifica}\label{sec:codifica}
 Per la fase di codifica sono state adottate le seguenti convenzioni:
 \begin{itemize}
-    \item il nome delle classi seguirà la notazione a Cammello, un esempio corretto è: \textit{WindowsCommandFactory};
-    \item il nome degli attributi seguirà sempre la notazione a Cammello, ma con la prima lettera in minuscolo, un esempio corretto è: \textit{commandsFactory};
-    \item ove possibile, si devono utilizzare le espressioni lambda;
+    \item il nome delle classi seguirà la notazione a CamelCase, un esempio corretto è: \textit{WindowsCommandFactory};
+    \item il nome degli attributi seguirà sempre la notazione a CamelCase, ma con la prima lettera in minuscolo, un esempio corretto è: \textit{commandsFactory};
+    \item ove possibile, si devono utilizzare le lambda espressioni;
     \item la gestione delle eccezioni deve essere fatta sempre dal chiamante;
     \item per ogni classe e ogni metodo deve essere fornita una descrizione in JavaDoc.
 \end{itemize}
 \subsection{Inizializzazione View}\label{subsec:inizializzazione-view}
 Il seguente segmento di codice è necessario per creare  la relazione di osservazione che esiste tra la View e il Model.
 Nella View è presente un’etichetta che mostra il file APK selezionato da decompilare.
-Questa componente della view osserva l’attributo apkName del modello, e una volta selezionato il file, viene ottenuto il path del file APK e aggiornato il modello, l’etichetta riceverà la notifica con il path aggiornato
+Questa componente della view osserva l’attributo apkName del modello, e una volta selezionato il file, viene ottenuto il path del file APK e aggiornato il modello, l’etichetta riceverà la notifica con il path aggiornato.
 
 \begin{lstlisting}[caption={Inizializzazione relazione di osservazione View e Model},label={lst:lstlisting}]
 model.getApkName().observe(newValue -> {
