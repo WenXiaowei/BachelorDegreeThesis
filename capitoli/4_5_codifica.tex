@@ -13,8 +13,8 @@ Per la fase di codifica sono state adottate le seguenti convenzioni:
 \end{itemize}
 \subsection{Inizializzazione View}\label{subsec:inizializzazione-view}
 Il seguente segmento di codice è necessario per creare  la relazione di osservazione che esiste tra la View e il Model.
-Nella View è presente un’etichetta che mostra il file APK selezionato da decompilare.
-Questa componente della view osserva l’attributo apkName del modello, e una volta selezionato il file, viene ottenuto il path del file APK e aggiornato il modello, l’etichetta riceverà la notifica con il path aggiornato.
+Nella View è presente un'etichetta che mostra il file APK selezionato da decompilare.
+Questa componente della view osserva l'attributo apkName del modello, e una volta selezionato il file, viene ottenuto il path del file APK e aggiornato il modello, l'etichetta riceverà la notifica con il path aggiornato.
 
 \begin{lstlisting}[caption={Inizializzazione relazione di osservazione View e Model},label={lst:lstlisting}]
 model.getApkName().observe(newValue -> {
@@ -37,7 +37,7 @@ Per questa funzionalità si deve istanziare un oggetto di tipo BaseAnalyzer, e i
     \includegraphics{./immagini/tool/analysis_chooser.png}
     \caption{Schermata delle opzioni dell'analisi}\label{fig:analysis_chooser}
 \end{figure}
-Di seguito è presente il codice che si occupa di "decorare" l’oggetto base, effettuare l’analisi e quindi generare un file pdf contenente il risultato:
+Di seguito è presente il codice che si occupa di "decorare" l'oggetto base, effettuare l'analisi e quindi generare un file pdf contenente il risultato:
 
 
 \begin{lstlisting}[caption={Decorator},label={lst:analyze}]
