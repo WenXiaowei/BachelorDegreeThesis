@@ -27,7 +27,7 @@ model.getIsDecompiled().observe(newValue -> {
     for (JButton controlledButton : controlledButtons) controlledButton.setEnabled(newValue);
 });
 \end{lstlisting}
-Nella View è presente un'eticchetta che mostra il file APK selezionato da decompilare, questa componente della view osserva l'attributo \textit{apkName} del modello, e una volta selezionato il file, viene ottenuto il path del file APK e aggiornato il modello, l'etichetta riceverà la notifica con il path aggiornato.
+Nella View è presente un'eticchetta che mostra il file APK selezionato da decompilare, questa componente della view osserva l'attributo \textit{apkName} del modello, e una volta selezionato il file, viene ottenuto il path del file APK e aggiornato il modello; quindi l'etichetta riceverà la notifica con il path aggiornato.
 
 \subsection{Analisi del codice e generazione del pdf}\label{subsec:analisi-del-codice-e-generazione-del-pdf}
 Dopo aver decompilato un file \textit{.apk}, e decodificato i file \textit{dex} l'utente può scegliere di effettuare l'operazione di analisi offerta dal tool.
@@ -58,7 +58,7 @@ pdfWriter.addParagraphs(analyze.getResult());
 }
 \end{lstlisting}
 
-Con l'utilizzo del pattern decorator \`{e} estremamente semplice aggiungere un nuovo tipo di analisi, poiché è sufficiente aggiungere nella map \textit{thingsToDo} al momento della chiamata del metodo \textit{analyze}, creare una nuova classe che eredita dalla classe base dei decorator implementandone il metodo astratto e aggiungere due righe d'istruzione per decorare l'oggetto base con il decorator nuovo.
+Con l'utilizzo del pattern decorator \`{e} estremamente semplice aggiungere un nuovo tipo di analisi, poiché è sufficiente aggiungere nella map \textit{thingsToDo} al momento della chiamata del metodo \textit{analyze}, una nuova classe che eredita dalla classe base dei decorator implementandone il metodo astratto e aggiungere due righe d'istruzione per decorare l'oggetto base con il decorator nuovo.
 
 \subsection{Istanziazione di Commands}\label{subsec:istanziazione-di-commands}
 Per il corretto funzionamento del tool è necessario che all'avvio venga instanziata una delle seguenti classi:
