@@ -3,16 +3,16 @@
 % !TEX root = ../tesi.tex
 
 \section{Requisiti e obiettivi}\label{sec:requisiti-e-obiettivi}
-Lo scopo dello stage è la realizzazione di un tool di analisi di applicazioni Android che permetta di automatizzare operazioni di reverse engineering dei pacchetti delle app mobile (APK), effettuando nell'ordine:
+Lo scopo dello stage è la realizzazione di un tool di analisi delle applicazioni Android che permetta di automatizzare le operazioni di reverse engineering dei pacchetti delle app mobile (APK), effettuando nell'ordine:
 \begin{enumerate}
     \setlength\itemsep{0.1em}
     \item decompilazione sorgenti;
     \item analisi dei file sorgenti ottenuti dalla decompilazione;
     \item generazione di un report dell'analisi;
-    \item creazione di un file \gls{pcap} che contiene i dettagli delle attività di rete;
     \item repackaging dell'applicativo;
     \item installazione dell'APK ricompilato su un AVD;
     \item avvio dell'AVD con opzioni di proxy;
+    \item creazione di un file \gls{pcap} che contiene i dettagli delle attività di rete;
     \item firma dell'APK ottenuto dal repackaging.
 \end{enumerate}
 Al termine dell'esecuzione dovranno essere rese disponibili informazioni quali:

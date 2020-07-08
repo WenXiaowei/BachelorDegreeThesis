@@ -21,7 +21,7 @@ Il pattern observer\footcite{womak:observer} permette di definire una dipendenza
 oggetti, in modo tale che se un oggetto cambia il proprio stato, tutti gli oggetti
 dipendenti da questo siano notificati e aggiornati automaticamente.
 L'implementazione di tale pattern avviene attraverso una classe Observable e un'interfaccia Observer entrambe template.
-Per modificare il valore dell'observable è sufficiente utilizzare il metodo setValue(newValue:T): in questo modo, su ogni elemento della lista observables viene invocato il metodo onChanged passando il nuovo valore.
+Per modificare il valore dell'observable è sufficiente utilizzare il metodo setValue(newValue:T): in questo modo, su ogni elemento della lista observers viene invocato il metodo onChanged passando il nuovo valore.
 Tale pattern viene applicato nel tool perché i componenti delle viste possano osservare i contenuti del modello.
 
 \begin{figure}[H]
