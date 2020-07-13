@@ -5,12 +5,12 @@ Consiste nell'esecuzione del software da parte del collaudatore per verificare l
 
 \subsection{Specifica dei test}\label{subsec:specifica-dei-test-sistema}
 Di seguito sono riportati i test di sistema che verificano il corretto funzionamento del sistema.
-\begin{longtable}{ | C{2.5cm} |C{2cm} |C{7cm} |C{1.5cm}|}
+\begin{longtable}{ | C{1.5cm} |C{2cm} |C{7cm} |C{1.5cm}|}
     \hline
-    \textbf{Identificativo} &
+    \textbf{ID} &
     \textbf{Requisito} &
     \textbf{Descrizione} &
-    \textbf{Stato} \\\hline
+    \textbf{Stato\footnote{I: Implementato, NI: Non Implementato}} \\\hline
 
     \idTest{TS} & R-1-F-O    & Verificare che il tool permetta di selezionare solo i file APK.                                                     & I \\\hline
     \idTest{TS} & R-1.1-F-O  & Verificare che venga mostrato un messaggio di errore quando il file selezionato non è APK.                          & I \\\hline
@@ -54,7 +54,7 @@ Di seguito sono riportati i test di sistema che verificano il corretto funzionam
     \idTest{TS} & R-16.2-F-D & Verificare che il tool permetta d'inserire il numero di porta del server proxy.& I \\\hline
     \idTest{TS} & R-17-F-D   & Verificare che il tool registri il traffico di rete.& I \\\hline
     \idTest{TS} & R-17.1-F-D & Verificare che il tool generi un file di report al termine delle operazioni effettuate.& I \\\hline
-    \caption{Test di sistema}
+    \caption{Test di sistema.}
 \end{longtable}
 \setcounter{subCount}{0}
 \setcounter{rowcount}{0}

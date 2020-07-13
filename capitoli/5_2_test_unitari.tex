@@ -5,7 +5,7 @@ Per unità si intende normalmente il componente più piccolo con funzionamento a
 Dipendentemente dal tipo di linguaggio di programmazione, l'unità può essere una funzione, una classe o un metodo.
 Come le altre forme di test, i test d'unità possono essere completamente manuali o automatici.
 Specialmente nel caso dello unit testing automatico, lo sviluppo dei test case può essere considerato parte integrante dell'attività di sviluppo.\\
-Nel caso del progetto \gls{apat} i test unitari sono stati fatti utilizzando il framework JUnit4\footcite{site:junit4} integrato con il tool di \gls{buildautomation}.
+Nel caso del progetto \gls{apat} i test unitari sono stati fatti utilizzando il framework JUnit4\cite{site:junit4} integrato con il tool di \gls{buildautomation}.
 
 \setcounter{rowcount}{0}
 
@@ -14,11 +14,11 @@ Nel caso del progetto \gls{apat} i test unitari sono stati fatti utilizzando il 
 
 \subsection{Specifica dei test}\label{subsec:specifica-dei-test-unitari}
 Di seguito sono riportati i test d'unità che verificano il corretto funzionamento delle singole unità.
-\begin{longtable}{ |C{3cm} | C{8.5cm}| C{1.5cm} |}
+\begin{longtable}{ |C{1.5cm} | C{8.5cm}| C{1.5cm} |}
     \hline
-    \textbf{Identificativo} &
+    \textbf{ID} &
     \textbf{Descrizione} &
-    \textbf{Stato} \\\hline
+    \textbf{Stato\footnote{I: Implementato, NI: Non Implementato}} \\\hline
     \idTest{TU} & Verificare che il file AndroidManifest.xml venga modificato correttamente.
     & I \\\hline
     \idTest{TU} & Verificare che dal file AndroidManifest.xml venga estratto il package corretto.
@@ -109,7 +109,7 @@ Di seguito sono riportati i test d'unità che verificano il corretto funzionamen
     & I \\\hline
     \idTest{TU} & Verificare che l'arrotondamento avviene correttamente.
     & I \\\hline
-    \caption{Test d'unità}
+    \caption{Test d'unità.}
 \end{longtable}
 \setcounter{rowcount}{0}
 
@@ -117,7 +117,7 @@ Di seguito sono riportati i test d'unità che verificano il corretto funzionamen
 La seguente tabella associa ogni singolo test unitario all'unità verificata.
 \begin{longtable}{ |C{3cm} |C{10.5cm}|}
     \hline
-    \textbf{Identificativo} &
+    \textbf{ID} &
     \textbf{Componente} \\\hline
     \idTest{TU} & AndroidManifest.editDebugAttribute()       \\\hline
     \idTest{TU} & AndroidManifest.getPackageName()           \\\hline
@@ -164,7 +164,7 @@ La seguente tabella associa ogni singolo test unitario all'unità verificata.
     \idTest{TU} & Utils.getDate()                            \\\hline
     \idTest{TU} & Utils.listAllFiles()                       \\\hline
     \idTest{TU} & Utils.round()                              \\\hline
-    \caption{Tracciamento dei test d'unità}
+    \caption{Tracciamento dei test d'unità.}
 \end{longtable}
 
 I test sopraelencati sono stati superati con successo, con una \gls{codecoverage} del \textit{84.2\%}.

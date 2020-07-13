@@ -4,7 +4,7 @@
 \section{L'idea}\label{sec:l'idea}
 Le applicazioni mobili rappresentano oggi una delle principali sfide per la sicurezza informatica.
 La rapida diffusione degli smartphone, infatti, ha visto emergere il settore mobile come uno dei principali canali per l'erogazione di servizi provocando, di conseguenza, un aumento esponenziale degli attacchi contro tali piattaforme.
-Tra le minacce\footcite{site:owasp} fondamentali, distinguiamo:
+Tra le minacce\cite{site:owasp} fondamentali, distinguiamo:
 
 \begin{itemize}
     \item \textit{Improper platform usage:} questa categoria di rischi comprende l'uso scorretto delle funzionalità offerte dalle piattaforme o il fallimento nell'utilizzo dei controlli di sicurezza offerti dalle piattaforme.
@@ -41,15 +41,15 @@ Tra le minacce\footcite{site:owasp} fondamentali, distinguiamo:
 Le applicazioni mobili soffrono spesso di debolezze intrinseche dovute al design dell'applicazione e al suo sviluppo, debolezze che possono prevedere la memorizzazione d'informazioni sensibili sul device, possibilità di modificare l'applicazione (mediante \gls{repackaging} dell'app), o la possibilità di un semplice \gls{reverse_engineering}.
 
 La sicurezza è diventata un fattore critico sulle piattaforme mobile.
-Tradizionalmente, essa viene declinata secondo la cosiddetta triade CIA\footcite{samonas2014cia} che, in italiano, è possibile tradurre come Confidenzialità, Integrità e Disponibilità (dall'inglese Availability) di un sistema.
+Tradizionalmente, essa viene declinata secondo la cosiddetta triade CIA\cite{samonas2014cia} che, in italiano, è possibile tradurre come Confidenzialità, Integrità e Disponibilità (dall'inglese Availability) di un sistema.
 Sui dispositivi mobile garantire il rispetto di tali proprietà è assai più complesso rispetto ai sistemi tradizionali, per via della loro eterogeneità, diffusione e distribuzione, per questi motivi è necessario ripensare alla sicurezza dei sistemi per garantire la protezione degli utenti, delle loro risorse e delle piattaforme.
 
-La sicurezza diviene sempre più un fattore fondamentale da prevedere in tutte le fasi del ciclo di vita del software e non relegata alle sole fasi post rilascio: quindi è fondamentale ridefinire il concetto di Software Development Lifecycle in Secure Software Development Lifecycle\footcite{site:ssdl}, con una connotazione più orientata alla sicurezza in tutte le sue fasi, ovvero:
+La sicurezza diviene sempre più un fattore fondamentale da prevedere in tutte le fasi del ciclo di vita del software e non relegata alle sole fasi post rilascio: quindi è fondamentale ridefinire il concetto di Software Development Lifecycle in Secure Software Development Lifecycle\cite{site:ssdl}, con una connotazione più orientata alla sicurezza in tutte le sue fasi, ovvero:
 \begin{itemize}
     \item \textit{Analisi:} durante l'analisi bisogna individuare quali sono i rischi che il software è sottoposto, quindi individuare i requisiti che il software deve soddisfare per contrastare i potenziali attacchi;
     \item \textit{Progettazione:} nel corso della fase di progettazione è necessario prestare attenzione nell'adozione delle librerie esterne, assicurandosi che quest'ultime non abbiano falle di sicurezza che minano l'integrità dell'intero software.
     Inoltre, è necessario adottare gli standard di sicurezza consolidati;
-    \item \textit{Sviluppo:} in questa fase le azioni\footcite{site:security-best-practice} che si possono adottare sono molteplici, per esempio:
+    \item \textit{Sviluppo:} in questa fase le azioni\cite{site:security-best-practice} che si possono adottare sono molteplici, per esempio:
     \begin{itemize}
         \item validare gli input;
         \item controllare l'accesso;
