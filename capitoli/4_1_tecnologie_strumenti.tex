@@ -12,19 +12,18 @@ Di seguito viene data una panoramica delle tecnologie e degli strumenti utilizza
         \textbf{Consigliato dall'azienda}&
         \textbf{Motivazioni della scelta} \\\hline
         CFR & Sì & - \\\hline
-        ApkTool                  & Sì & - \\\hline
-        Dex2Jar                  & Sì & - \\\hline
-        XPath                    & No & La scelta di utilizzare XPath è dovuta alle necessità di dover interagire con un documento in formato XML, l'utilizzo di XPath ha semplificato di l'estrazione dei dati dal documento AndroidManifest.xml\\\hline
-        Java                     & No & \`{E} stato scelta questo linguaggio di programmazione perché è bene conosciuto dallo stagista, offre una libreria per le interfacce grafiche, è portabile, ciò ha consentito la creazione dello strumento anche per la piattaforma Linux. \\\hline
-        Intellij Idea            & No & Essendo un'IDE molto potente, ha permesso d'interagire con lo strumento di \gls{buildautomation} e di effettuare la compilazione del codice sorgente. \\\hline
-        Android Emulator         & Sì & - \\\hline
-        Maven                    & Sì & - \\\hline
-        Astah UML                & No & Astah UML è un prodotto software per la realizzazione di diagrammi UML già conosciuto dallo stagista in quanto già utilizzato in precedenza. \\\hline
-        GitLab                   & Sì & -\\\hline
+        ApkTool& Sì & - \\\hline
+        Dex2Jar& Sì & - \\\hline
+        XPath& No & La scelta di utilizzare XPath è dovuta alle necessità di dover interagire con un documento in formato XML, l'utilizzo di XPath ha semplificato di l'estrazione dei dati dal documento AndroidManifest.xml.\\\hline
+        Java& No & È stato scelta questo linguaggio di programmazione perché è bene conosciuto dallo stagista, offre una libreria per le interfacce grafiche, è portabile, ciò ha consentito la creazione dello strumento anche per la piattaforma Linux.\\\hline
+        Intellij Idea& No & Essendo un IDE molto potente, ha permesso d'interagire con lo strumento di \gls{buildautomation} e di effettuare la compilazione del codice sorgente.\\\hline
+        Android Emulator& Sì & - \\\hline
+        Maven& Sì & - \\\hline
+        Astah UML& No & Astah UML è un prodotto software per la realizzazione di diagrammi UML già conosciuto dallo stagista in quanto già utilizzato in precedenza.\\\hline
+        GitLab& Sì & -\\\hline
         \caption{Panoramica tecnologie e strumenti utilizzati.}
     \end{longtable}
 \end{center}
-
 
 Di seguito, ogni tecnologia utilizzata nello sviluppo del prodotto finale verranno introdotte con maggiori dettagli.
 \subsection*{CFR - decompilatore java}
@@ -55,7 +54,7 @@ che il contenuto del file possa essere letto attraverso un software di compressi
 
 \subsection*{XPath}\label{subsec:xpath}
 In informatica XPath è un linguaggio, parte della famiglia \gls{xml}, che permette d'individuare i nodi all'interno di un documento XML. Le espressioni XPath, a differenza delle espressioni XML, non servono a identificare la struttura di un documento, bensì a localizzarne con precisione i nodi.
-Nell'APAT XPATH è stato utilizzato per poter estrapolare alcuni dati necessari per poter effettuare il dump dei dati dall'area di storage dell'app e ottenere le informazioni per poter decompilare solamente nel package dell'applicazione.
+Nell'APAT XPath è stato utilizzato per poter estrapolare alcuni dati necessari per poter effettuare il dump dei dati dall'area di storage dell'app e ottenere le informazioni per poter decompilare solamente nel package dell'applicazione.
 
 \subsection*{Java}
 In informatica, Java\cite{womak:effective-java} è un linguaggio di programmazione ad alto livello, orientato agli oggetti e tipizzazione statica, che si appoggia sull'omonima piattaforma software di esecuzione, specificamente progettato per essere il più possibile indipendente dal sistema hardware di esecuzione.
